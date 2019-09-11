@@ -75,6 +75,13 @@ h3 {
     line-height: 1.4;
 }
 
+strong{
+  font-family: 'Raleway', sans-serif;
+
+  color: #070707;
+  font-size: 1.1em;
+}
+
 p {
   font-family: 'Libre Baskerville', serif;
 
