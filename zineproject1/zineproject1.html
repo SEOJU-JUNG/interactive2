@@ -5,20 +5,167 @@
     <title>Interactive2 - Seoju Jung</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="./css/zineproject1.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xlg0qae.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
+<script type="text/javascript">
+$(document).ready(function(){
+  // First
+  $("#FirstCode").click(function(){
+    $(this).toggleClass("disappear");
+    $('#really').toggleClass("disappear");
+    $('#SecondCode').toggleClass("show");
+    $("#Lights-1").toggleClass("show");
+    $("#mining").toggleClass("show");
+  // Second
+      $("#SecondCode").click(function(){
+    $(this).toggleClass("disappear");
+    $('#ThirdCode').toggleClass("show");
+      $("#Lights-2").toggleClass("show");
+  // Third
+    $("#ThirdCode").click(function(){
+  $(this).toggleClass("disappear");
+  $('#FourthCode').toggleClass("show");
+    $("#Lights-3").toggleClass("show");
+  // Fifith
+  $("#FourthCode").click(function(){
+$(this).toggleClass("disappear");
+$('#FifthCode').toggleClass("show");
+  $("#Lights-4").toggleClass("show");
 
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+
+
+});
+});
+});
+});
+});
+</script>
+
+
 </head>
 
-
-
-
 <body>
+
+    <div class="cursor">
+    </div>
   <div class="containerA">
-    <h1>You are mining bitcoin...</h1>
-    <p>00000000000000xxxx…
-        00000000000000a000000000000000a0571
-        571…..858500000000000000a05716b3ab0309c2ccc7908
-        6b3ab0309c2ccc295
+    <!-- imge -->
+    <div id="Lights-1" class="Hide2">
+      <div class="light1-1">
+      </div>
+      <div class="light1-2">
+      </div>
+    </div>
+
+    <div id="Lights-2" class="Hide3">
+      <div class="light1-1">
+      </div>
+      <div class="light1-2">
+      </div>
+      <div class="light2-1">
+      </div>
+      <div class="light2-2">
+      </div>
+    </div>
+
+    <div id="Lights-3" class="Hide4">
+      <div class="light1-1">
+      </div>
+      <div class="light1-2">
+      </div>
+      <div class="light2-1">
+      </div>
+      <div class="light2-2">
+      </div>
+      <div class="light3-1">
+      </div>
+      <div class="light3-2">
+      </div>
+    </div>
+
+    <div id="Lights-4" class="Hide5">
+      <div class="light1-1" >
+      </div>
+      <div class="light1-2">
+      </div>
+      <div class="light2-1">
+      </div>
+      <div class="light2-2">
+      </div>
+      <div class="light3-1">
+      </div>
+      <div class="light3-2">
+      </div>
+      <div class="light4-1">
+      </div>
+      <div class="light4-2">
+      </div>
+    </div>
+
+
+
+    <h1 id="mining" class="Hide2">Mining...</h1>
+    <h1 id="really">Really need bitcoin?</h1>
+
+    <p id=FirstCode >
+      package org.usfirst.frc.team871.robot;
+
+  import edu.wpi.first.wpilibj.Joystick; 
+
+  public class Logitech extends Joystick{ <block>
+
+      public Logitech(int port) { <block>
+          super(port); <block>
+      } <block>
+      /** <block>
+       * Returns true when the button is just pressed <block>
+       * @param bt <block>
+       * @return <block>
+       */ <block>
+      public boolean getRisingEdge(ButtonType bt){ <block>
+          boolean press = false; <block>
+
+           if(!bt.wasPressed && getRawButton(bt.get())){ <block>
+               press = true; <block>
+           } <block>
+
+           bt.wasPressed = getRawButton(bt.get()); <block>
+           return press; <block>
+      } <block>
+      /** <block>
+       * Returns the value of the toggled variable <block>
+       * @param bt <block>
+       * @return <block>
+       */ <block>
+      public boolean getToggledButton(ButtonType bt){ <block>
+
+          return bt.toggled; <block>
+      } <block>
+      /** <block>
+       * Toggles the value of the toggle variable <block>
+       * @param bt <block>
+       */ <block>
+      public void toggleButton(ButtonType bt){ <block>
+          if(getRisingEdge(bt)){ <block>
+              bt.toggled = <block>
+    </p>
+
+    <p id="SecondCode" class="Hide2">
+The quick brown fox jumps over the lazy dog
+      2<span class"blue">2222222222222222222222333
+        2c0b3420b4aabb24ff969a320f8c</span>
+        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+        934199141504624183378801987468
+        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+        2952c0b3420b4aabb2
+
+    </p>
+
+    <p id=ThirdCode class="Hide3">33333333333333333333
+      333333333333333333333333333333333333333
+      333333333333333333333333333333333333333
         2c0b3420b4aabb24ff969a320f8c
         value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
         934199141504624183378801987468
@@ -28,6 +175,32 @@
         7908083785100068964
         934199141504624183378801987468
     </p>
+
+    <p id=FourthCode class="Hide4">
+        444444444444444444444444444444444444444444444444
+        2c0b3420b4aabb24ff969a320f8c
+        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+        934199141504624183378801987468
+        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+        2952c0b3420b4aabb24ff969a320f8c
+        has a numeric value of 100647168585
+        7908083785100068964
+        934199141504624183378801987468
+    </p>
+
+    <p id=FifthCode class="Hide5">
+      5555555555555555555555555555555555555555555555555555
+      5555555555555555555555555555555555555555555555555555
+        2c0b3420b4aabb24ff969a320f8c
+        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+        934199141504624183378801987468
+        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+        2952c0b3420b4aabb24ff969a320f8c
+        has a numeric value of 100647168585
+        7908083785100068964
+        934199141504624183378801987468
+    </p>
+
   </div>
 
   <div class="containerA BK-B">

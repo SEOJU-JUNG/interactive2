@@ -3,6 +3,15 @@
 	margin: 0px;
 }
 
+
+p:hover{
+
+	color: blue;
+}
+body {
+  cursor: url(../img/mouse3.gif), auto;
+}
+
 .container{
 
   width:100vw;
@@ -33,22 +42,50 @@ h1{
   left: 50%;
   margin-left: calc(-1000px/2);
 /* top */
-  margin-top: 270px;
+  margin-top: 320px;
   width: 1000px;
   height: 100px;
   display: inline;
   text-align: center;
-	font-size: 1.7em;
+	font-size: 1.9em;
 	font-weight: normal;
 }
 
+#mining {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-1000px/2);
+/* top */
+  margin-top: 320px;
+  width: 1000px;
+  height: 100px;
+  display: inline;
+  text-align: center;
+	font-size: 1.9em;
+	font-weight: normal;
+	animation: blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+	0%{		color: #000;	}
+
+	70%{	color: transparent;	}
+	99%{	color:transparent;	}
+	100%{	color: #000;	}
+}
+
+
+
+
 p{
-  font-family: 'Roboto Mono', monospace;
+	font-family: courier-prime,monospace;
+	font-weight: 400;
+	font-style: normal;
   position: absolute;
   left: 48.5%;
   margin-left: calc(-600px/2);
   /* top */
-  margin-top: 330px;
+  margin-top: 380px;
   width: 600px;
   height: 700px;
   display: inline;
@@ -56,4 +93,217 @@ p{
   font-size: 0.9em;
   font-weight: normal;
 
+}
+
+.Hide2, .Hide3, .Hide4, .Hide5{
+	display: none;
+}
+
+.show{
+	display:block;
+}
+.disappear{
+	display:none;
+}
+.SecondCode{display:block;
+}
+
+.light1-1{
+top: 10%;
+left: 80%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 60px;
+height: 60px;
+background-image: url(../img/light-R.png);
+background-repeat: no-repeat;
+background-size: contain;
+
+		-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(10deg);
+		}
+}
+
+
+
+.light1-2{
+top: 20%;
+left: 20%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 70px;
+height: 70px;
+background-image: url(../img/light-L.png);
+background-repeat: no-repeat;
+background-size: contain;
+transform:rotateY(180deg);
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light2-1{
+top: 25%;
+left: 45%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 50px;
+height: 50px;
+background-image: url(../img/light-R.png);
+background-repeat: no-repeat;
+background-size: contain;
+
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light2-2{
+	top: 60%;
+	left: 5%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	transform: rotateX(45deg);
+	background-image: url(../img/light-L.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light3-1{
+	top: 55%;
+	left: 75%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	transform: rotateX(45deg);
+	background-image: url(../img/light-R.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light3-2{
+	top: 80%;
+	left: 55%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	transform: rotateX(45deg);
+	background-image: url(../img/light-R.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light4-1{
+	top: 30%;
+	left: 5%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-image: url(../img/light-L.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.8s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light4-2{
+	top: 80%;
+	left: 90%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+
+	background-image: url(../img/light-R.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
 }
