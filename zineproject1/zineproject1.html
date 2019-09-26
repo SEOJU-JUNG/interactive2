@@ -9,11 +9,26 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
 <script type="text/javascript">
+var i = 0;
+var txt = 'Generally speaking, money has their central control department. In Korea, Bank of Korea is in charge of production and supply of money, also they control the supply amount of currencies, but Bitcoin does not have such department. In other words, there is no department which in charges their supply. However, everyone is able to produce Bitcoin which can be done with the high-performance computer that can solve the mathematical problem and as a reward Bitcoins are given. Process of Bitcoin productions are also called as mining and miners are the one who produces Bitcoin. Thus, miners are the currency issuer in Bitcoin world.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
 $(document).ready(function(){
+
   // First
-  $("#FirstCode").click(function(){
+  $("#wrapD3Cube").click(function(){
     $(this).toggleClass("disappear");
+    $('#FirstCode').toggleClass("show");
     $('#really').toggleClass("disappear");
+
     $('#SecondCode').toggleClass("show");
     $("#Lights-1").toggleClass("show");
     $("#mining").toggleClass("show");
@@ -40,7 +55,9 @@ $('#FifthCode').toggleClass("show");
 });
 });
 });
+typeWriter();
 });
+
 </script>
 
 
@@ -51,6 +68,113 @@ $('#FifthCode').toggleClass("show");
     <div class="cursor">
     </div>
   <div class="containerA">
+    <div class="letter-container">
+
+      <div id="wrapD3Cube">
+          <div id="D3Cube">
+              <div id="side1"></div>
+              <div id="side2"></div>
+              <div id="side3"></div>
+              <div id="side4"></div>
+              <div id="side5"></div>
+              <div id="side6"></div>
+          </div>
+      </div>
+      <p style="text-align: center;">
+          <a onclick="turnLeft()"></a>
+          <a onclick="turnRight()"></a> <br />
+          <a onclick="flipCube()"></a>
+      </p>
+
+      <p class="miner">Bitcoin Miner</p>
+
+
+
+      <h1 id="mining" class="Hide2">Mining...</h1>
+      <!-- <h1 id="really">Really need bitcoin?</h1> -->
+
+      <p id=FirstCode class="Hide1">
+        package org.usfirst.frc.team871.robot; <br>
+
+    import edu.wpi.first.wpilibj.Joystick; <br>
+
+    public class Logitech extends Joystick{ <br>
+
+        public Logitech(int port) { <br>
+            super(port); <br>
+        } <br>
+
+         * Returns true when the button is just pressed <br>
+         * @param bt <br>
+         * @return <br>
+        public boolean getRisingEdge(ButtonType bt){<br>
+            boolean press = false; <br>
+
+             if(!bt.wasPressed && getRawButton(bt.get())){ <br>
+                 press = true; <br>
+             } <br>
+             bt.wasPressed = getRawButton(bt.get()); <br>
+             return press; <br>
+        } <br>
+         * Returns the value of the toggled variable <br>
+         * @param bt<br>
+         * @return <br>
+         */<br>
+        public boolean getToggledButton(ButtonType bt){ <br>
+
+            return bt.toggled; <br>
+        }
+      </p>
+
+      <p id="SecondCode" class="Hide2">
+  The quick brown fox jumps over the lazy dog
+        2<span class"blue">2222222222222222222222333
+          2c0b3420b4aabb24ff969a320f8c</span>
+          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+          934199141504624183378801987468
+          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+          2952c0b3420b4aabb2
+
+      </p>
+
+      <p id=ThirdCode class="Hide3">33333333333333333333
+        333333333333333333333333333333333333333
+        333333333333333333333333333333333333333
+          2c0b3420b4aabb24ff969a320f8c
+          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+          934199141504624183378801987468
+          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+          2952c0b3420b4aabb24ff969a320f8c
+          has a numeric value of 100647168585
+          7908083785100068964
+          934199141504624183378801987468
+      </p>
+
+      <p id=FourthCode class="Hide4">
+          444444444444444444444444444444444444444444444444
+          2c0b3420b4aabb24ff969a320f8c
+          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+          934199141504624183378801987468
+          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+          2952c0b3420b4aabb24ff969a320f8c
+          has a numeric value of 100647168585
+          7908083785100068964
+          934199141504624183378801987468
+      </p>
+
+      <p id=FifthCode class="Hide5">
+        5555555555555555555555555555555555555555555555555555
+        5555555555555555555555555555555555555555555555555555
+          2c0b3420b4aabb24ff969a320f8c
+          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+          934199141504624183378801987468
+          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+          2952c0b3420b4aabb24ff969a320f8c
+          has a numeric value of 100647168585
+          7908083785100068964
+          934199141504624183378801987468
+      </p>
+    </div>
     <!-- imge -->
     <div id="Lights-1" class="Hide2">
       <div class="light1-1">
@@ -70,7 +194,7 @@ $('#FifthCode').toggleClass("show");
       </div>
     </div>
 
-    <div id="Lights-3" class="Hide4">
+    <div id="Lights-3" class="Hide4"  >
       <div class="light1-1">
       </div>
       <div class="light1-2">
@@ -106,104 +230,15 @@ $('#FifthCode').toggleClass("show");
 
 
 
-    <h1 id="mining" class="Hide2">Mining...</h1>
-    <h1 id="really">Really need bitcoin?</h1>
 
-    <p id=FirstCode >
-      package org.usfirst.frc.team871.robot;
-
-  import edu.wpi.first.wpilibj.Joystick; 
-
-  public class Logitech extends Joystick{ <block>
-
-      public Logitech(int port) { <block>
-          super(port); <block>
-      } <block>
-      /** <block>
-       * Returns true when the button is just pressed <block>
-       * @param bt <block>
-       * @return <block>
-       */ <block>
-      public boolean getRisingEdge(ButtonType bt){ <block>
-          boolean press = false; <block>
-
-           if(!bt.wasPressed && getRawButton(bt.get())){ <block>
-               press = true; <block>
-           } <block>
-
-           bt.wasPressed = getRawButton(bt.get()); <block>
-           return press; <block>
-      } <block>
-      /** <block>
-       * Returns the value of the toggled variable <block>
-       * @param bt <block>
-       * @return <block>
-       */ <block>
-      public boolean getToggledButton(ButtonType bt){ <block>
-
-          return bt.toggled; <block>
-      } <block>
-      /** <block>
-       * Toggles the value of the toggle variable <block>
-       * @param bt <block>
-       */ <block>
-      public void toggleButton(ButtonType bt){ <block>
-          if(getRisingEdge(bt)){ <block>
-              bt.toggled = <block>
-    </p>
-
-    <p id="SecondCode" class="Hide2">
-The quick brown fox jumps over the lazy dog
-      2<span class"blue">2222222222222222222222333
-        2c0b3420b4aabb24ff969a320f8c</span>
-        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-        934199141504624183378801987468
-        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-        2952c0b3420b4aabb2
-
-    </p>
-
-    <p id=ThirdCode class="Hide3">33333333333333333333
-      333333333333333333333333333333333333333
-      333333333333333333333333333333333333333
-        2c0b3420b4aabb24ff969a320f8c
-        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-        934199141504624183378801987468
-        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-        2952c0b3420b4aabb24ff969a320f8c
-        has a numeric value of 100647168585
-        7908083785100068964
-        934199141504624183378801987468
-    </p>
-
-    <p id=FourthCode class="Hide4">
-        444444444444444444444444444444444444444444444444
-        2c0b3420b4aabb24ff969a320f8c
-        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-        934199141504624183378801987468
-        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-        2952c0b3420b4aabb24ff969a320f8c
-        has a numeric value of 100647168585
-        7908083785100068964
-        934199141504624183378801987468
-    </p>
-
-    <p id=FifthCode class="Hide5">
-      5555555555555555555555555555555555555555555555555555
-      5555555555555555555555555555555555555555555555555555
-        2c0b3420b4aabb24ff969a320f8c
-        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-        934199141504624183378801987468
-        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-        2952c0b3420b4aabb24ff969a320f8c
-        has a numeric value of 100647168585
-        7908083785100068964
-        934199141504624183378801987468
-    </p>
 
   </div>
+<!-- 2222 -->
+  <div class="containerA container2 BK-B">
 
-  <div class="containerA BK-B">
+    <button onclick="typeWriter()">Click me</button>
+
+    <p id="demo"></p>
   </div>
   <div class="containerA">
   </div>
