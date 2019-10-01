@@ -26,35 +26,41 @@ $(document).ready(function(){
   // First
   $("#wrapD3Cube").click(function(){
     $(this).toggleClass("disappear");
-    $('#FirstCode').toggleClass("show");
-    $('#really').toggleClass("disappear");
+    $(".miner").addClass("disappear");
 
-    $('#SecondCode').toggleClass("show");
-    $("#Lights-1").toggleClass("show");
+    $('#FirstCode').addClass("show");
     $("#mining").toggleClass("show");
-  // Second
-      $("#SecondCode").click(function(){
+
+    $("#FirstCode").click(function(){
+        $(this).removeClass("show");
+        $('#SecondCode').toggleClass("show");
+        $("#Lights-1").addClass("show");
+
+    // Second
+        $("#SecondCode").click(function(){
+      $(this).removeClass("disappear");
+      $('#ThirdCode').toggleClass("show");
+        $("#Lights-2").toggleClass("show");
+    // Third
+      $("#ThirdCode").click(function(){
     $(this).toggleClass("disappear");
-    $('#ThirdCode').toggleClass("show");
-      $("#Lights-2").toggleClass("show");
-  // Third
-    $("#ThirdCode").click(function(){
+    $('#FourthCode').toggleClass("show");
+      $("#Lights-3").toggleClass("show");
+    // Fifith
+    $("#FourthCode").click(function(){
   $(this).toggleClass("disappear");
-  $('#FourthCode').toggleClass("show");
-    $("#Lights-3").toggleClass("show");
-  // Fifith
-  $("#FourthCode").click(function(){
-$(this).toggleClass("disappear");
-$('#FifthCode').toggleClass("show");
-  $("#Lights-4").toggleClass("show");
+  $('#FifthCode').toggleClass("show");
+    $("#Lights-4").toggleClass("show");
 
 
 
 
-});
-});
-});
-});
+  });
+  });
+  });
+  });
+
+  });
 typeWriter();
 });
 
@@ -70,21 +76,25 @@ typeWriter();
   <div class="containerA">
     <div class="letter-container">
 
-      <div id="wrapD3Cube">
-          <div id="D3Cube">
-              <div id="side1"></div>
-              <div id="side2"></div>
-              <div id="side3"></div>
-              <div id="side4"></div>
-              <div id="side5"></div>
-              <div id="side6"></div>
-          </div>
-      </div>
-      <p style="text-align: center;">
-          <a onclick="turnLeft()"></a>
-          <a onclick="turnRight()"></a> <br />
-          <a onclick="flipCube()"></a>
-      </p>
+
+        <div id="WholeCube">
+              <div id="wrapD3Cube">
+                  <div id="D3Cube">
+                      <div id="side1"></div>
+                      <div id="side2"></div>
+                      <div id="side3"></div>
+                      <div id="side4"></div>
+                      <div id="side5"></div>
+                      <div id="side6"></div>
+                  </div>
+              </div>
+              <p style="text-align: center;">
+                  <a onclick="turnLeft()"></a>
+                  <a onclick="turnRight()"></a> <br />
+                  <a onclick="flipCube()"></a>
+              </p>
+        </div>
+
 
       <p class="miner">Bitcoin Miner</p>
 
@@ -94,6 +104,7 @@ typeWriter();
       <!-- <h1 id="really">Really need bitcoin?</h1> -->
 
       <p id=FirstCode class="Hide1">
+111111111111111111111111111
         package org.usfirst.frc.team871.robot; <br>
 
     import edu.wpi.first.wpilibj.Joystick; <br>

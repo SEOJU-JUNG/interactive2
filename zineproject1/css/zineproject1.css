@@ -5,18 +5,38 @@
 
 #wrapD3Cube {
 	position: absolute;
-	left: 89%;
-	margin-left: calc(-80vw/2);
+	left: 50%;
+	top: 50%;
+
+	margin-left: -125px;
 /* top */
-	margin-top: 250px;
+	margin-top: -140px;
 
 	align-items: center;
 
     width: 250px;
     height: 213px;
+}
 
+.miner{
+	font-family: courier-prime,monospace;
+	font-weight: 400;
+	font-style: normal;
+  position: absolute;
+  left: 50%;
+  /* margin-left: calc(-600px/2); */
+  /* top */
+  margin-top: 34%;
+	margin-left: -300px;
+  width: 600px;
+  height: 700px;
+  display: inline;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: normal;
 
 }
+
 #D3Cube {
 
     width: 112px;
@@ -166,9 +186,9 @@ h1{
 }
 @keyframes blinkingText{
 	0%{		color: #000;	}
+	60%{	color: transparent;	}
+	65%{	color:#000;	}
 
-	70%{	color: transparent;	}
-	99%{	color:transparent;	}
 	100%{	color: #000;	}
 }
 
@@ -192,30 +212,12 @@ p{
   font-weight: normal;
 }
 
-.miner{
-	font-family: courier-prime,monospace;
-	font-weight: 400;
-	font-style: normal;
-  position: absolute;
-  left: 48.5%;
-  margin-left: calc(-600px/2);
-  /* top */
-  margin-top: 34%;
-  width: 600px;
-  height: 700px;
-  display: inline;
-  text-align: center;
-  font-size: 0.9em;
-  font-weight: normal;
-
-}
 
 
-.Hide2, .Hide3, .Hide4, .Hide5, .Hide1{
+
+.Hide2, .Hide3, .Hide4, .Hide5, .Hide1, .Hide0{
 	display: none;
 }
-
-
 
 .disappear{
 	display:none;
@@ -225,6 +227,7 @@ p{
 
 .FirstCode{display:block;
 }
+
 
 .light1-1{
 top: 10%;
@@ -445,7 +448,7 @@ to {
 
 .letter-container{
 	z-index: 999;
-	filter: drop-shadow(8px 8px 10px rgba(0, 10, 10, 0.3));
+	filter: drop-shadow(8px 8px 10px rgba(0, 4, 4, 0.7));
 	top: 0px;
 	align-items: center;
 	background-color: #FFDE00;
