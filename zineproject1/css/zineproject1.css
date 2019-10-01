@@ -3,6 +3,8 @@
 	margin: 0px;
 }
 
+
+
 #wrapD3Cube {
 	position: absolute;
 	left: 50%;
@@ -121,10 +123,10 @@ background-color: rgba(21,21,21,.9);
 }
 
 
-p:hover{
+/* p:hover{
 
 	color: blue;
-}
+} */
 body {
   cursor: url(../img/mouse2.gif), auto;
 }
@@ -192,7 +194,21 @@ h1{
 	100%{	color: #000;	}
 }
 
+#demo {
+	font-family: courier-prime,monospace;
+	font-weight: 400;
+	font-style: normal;
+	text-align: right;
+	float: right;
+	right: 0;
+  width: 600px;
+  height: 700px;
+  display: inline;
 
+  font-size: 0.9em;
+  font-weight: normal;
+
+}
 
 
 p{
