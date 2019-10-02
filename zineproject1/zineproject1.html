@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://use.typekit.net/xlg0qae.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 <script type="text/javascript">
 var i = 0;
 var txt  = "struct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n echo('Hello World')";
 
 
-var speed = 50;
+var speed = 40;
 
 function typeWriter() {
   if (i < txt.length) {
@@ -36,23 +37,27 @@ $(document).ready(function(){
     $("#FirstCode").click(function(){
         $(this).removeClass("show");
         $('#SecondCode').toggleClass("show");
+        $('#Lights-1').toggleClass("show");
+// Second
+    $("#SecondCode").click(function(){
+        $(this).removeClass("show");
+        $('#ThirdCode').toggleClass("show");
+        $('#Lights-2').toggleClass("show");
+        $('#Lights-1').addClass("disappear");
 
-
-    // Second
-        $("#SecondCode").click(function(){
-      $(this).removeClass("disappear");
-      $('#ThirdCode').toggleClass("show");
-        $("#Lights-2").toggleClass("show");
-    // Third
-      $("#ThirdCode").click(function(){
-    $(this).toggleClass("disappear");
+// Third
+$("#ThirdCode").click(function(){
+    $(this).removeClass("show");
     $('#FourthCode').toggleClass("show");
-      $("#Lights-3").toggleClass("show");
+    $('#Lights-3').toggleClass("show");
+    $('#Lights-2').addClass("disappear");
+
     // Fifith
     $("#FourthCode").click(function(){
-  $(this).toggleClass("disappear");
-  $('#FifthCode').toggleClass("show");
-    $("#Lights-4").toggleClass("show");
+        $(this).removeClass("show");
+        $('#FifthCode').toggleClass("show");
+        $('#Lights-4').toggleClass("show");
+        $('#Lights-3').addClass("disappear");
 
 
 
@@ -67,6 +72,7 @@ typeWriter();
 });
 
 </script>
+
 
 
 </head>
@@ -98,148 +104,116 @@ typeWriter();
         </div>
 
 
-      <p class="miner">Bitcoin Miner</p>
+      <div class="miner" class="codetext">Bitcoin Miner </div>
 
 
 
-      <h1 id="mining" class="Hide2">Mining...</h1>
+      <h1 id="mining" class="HideM">Mining...</h1>
       <!-- <h1 id="really">Really need bitcoin?</h1> -->
 
-      <p id=FirstCode class="Hide1">
-111111111111111111111111111
-        package org.usfirst.frc.team871.robot; <br>
+      <div id=FirstCode class="Hide1" class="codetext">
+        <br>
+          <br>
+        8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
+        4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
+        7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
+        7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
+        2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
+        3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br>
+        2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
+        3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br>
 
-    import edu.wpi.first.wpilibj.Joystick; <br>
 
-    public class Logitech extends Joystick{ <br>
+      </div>
 
-        public Logitech(int port) { <br>
-            super(port); <br>
-        } <br>
+      <div id=SecondCode class="Hide2" class="codetext">
+      2 <br>
+      <br>
 
-         * Returns true when the button is just pressed <br>
-         * @param bt <br>
-         * @return <br>
-        public boolean getRisingEdge(ButtonType bt){<br>
-            boolean press = false; <br>
+          8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
+          4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
+          7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
+          7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
+          2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
+          3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
+</div>
 
-             if(!bt.wasPressed && getRawButton(bt.get())){ <br>
-                 press = true; <br>
-             } <br>
-             bt.wasPressed = getRawButton(bt.get()); <br>
-             return press; <br>
-        } <br>
-         * Returns the value of the toggled variable <br>
-         * @param bt<br>
-         * @return <br>
-         */<br>
-        public boolean getToggledButton(ButtonType bt){ <br>
+      <div id=ThirdCode class="Hide3" class="codetext">
+        3 <br><br>
+            8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
+            4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
+            7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
+            7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
+            2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
+            3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
+      </div>
 
-            return bt.toggled; <br>
-        }
-      </p>
+      <div id=FourthCode class="Hide4" class="codetext">
+        4 <br><br>
+            8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
+            4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
+            7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
+            7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
+            2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
+            3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
 
-      <p id="SecondCode" class="Hide2">
-  The quick brown fox jumps over the lazy dog
-        2<span class"blue">2222222222222222222222333
-          2c0b3420b4aabb24ff969a320f8c</span>
-          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-          934199141504624183378801987468
-          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-          2952c0b3420b4aabb2
+      </div>
 
-      </p>
+      <div id=FifthCode class="Hide5" class="codetext">
+        5 <br>
+            8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
+            4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
+            7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
+            7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
+            2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
+            3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
 
-      <p id=ThirdCode class="Hide3">33333333333333333333
-        333333333333333333333333333333333333333
-        333333333333333333333333333333333333333
-          2c0b3420b4aabb24ff969a320f8c
-          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-          934199141504624183378801987468
-          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-          2952c0b3420b4aabb24ff969a320f8c
-          has a numeric value of 100647168585
-          7908083785100068964
-          934199141504624183378801987468
-      </p>
+      </div>
+<!-- LIGHTS -->
+      <div id="Lights-1" class="HideA">
+          <div class="light1-1"></div>
+          <div class="light1-2"></div>
+      </div>
 
-      <p id=FourthCode class="Hide4">
-          444444444444444444444444444444444444444444444444
-          2c0b3420b4aabb24ff969a320f8c
-          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-          934199141504624183378801987468
-          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-          2952c0b3420b4aabb24ff969a320f8c
-          has a numeric value of 100647168585
-          7908083785100068964
-          934199141504624183378801987468
-      </p>
+      <div id="Lights-2" class="HideB">
+        <div class="light2-1"></div>
+        <div class="light2-2"></div>
+      </div>
 
-      <p id=FifthCode class="Hide5">
-        5555555555555555555555555555555555555555555555555555
-        5555555555555555555555555555555555555555555555555555
-          2c0b3420b4aabb24ff969a320f8c
-          value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
-          934199141504624183378801987468
-          00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
-          2952c0b3420b4aabb24ff969a320f8c
-          has a numeric value of 100647168585
-          7908083785100068964
-          934199141504624183378801987468
-      </p>
+      <div id="Lights-3" class="HideC"  >
+        <div class="light3-1"></div>
+        <div class="light3-2"></div>
+          <div class="light3-3"></div>
+      </div>
+
+      <div id="Lights-4" class="HideD">
+        <div class="light4-1"></div>
+        <div class="light4-2"></div>
+        <div class="light4-3"></div>
+        <div class="light4-4"></div>
+      </div>
+
     </div>
     <!-- imge -->
-    <div id="Lights-1" class="Hide2">
-      <div class="light1-1">
-      </div>
-      <div class="light1-2">
-      </div>
+    <!-- <div id="Lights-1" class="HideA">
+        <div class="light1-1"></div>
+        <div class="light1-2"></div>
     </div>
 
-    <div id="Lights-2" class="Hide3">
-      <div class="light1-1">
-      </div>
-      <div class="light1-2">
-      </div>
-      <div class="light2-1">
-      </div>
-      <div class="light2-2">
-      </div>
+    <div id="Lights-2" class="HideB">
+      <div class="light2-1"></div>
+      <div class="light2-2"></div>
     </div>
 
-    <div id="Lights-3" class="Hide4"  >
-      <div class="light1-1">
-      </div>
-      <div class="light1-2">
-      </div>
-      <div class="light2-1">
-      </div>
-      <div class="light2-2">
-      </div>
-      <div class="light3-1">
-      </div>
-      <div class="light3-2">
-      </div>
+    <div id="Lights-3" class="HideC"  >
+      <div class="light3-1"></div>
+      <div class="light3-2"></div>
     </div>
 
-    <div id="Lights-4" class="Hide5">
-      <div class="light1-1" >
-      </div>
-      <div class="light1-2">
-      </div>
-      <div class="light2-1">
-      </div>
-      <div class="light2-2">
-      </div>
-      <div class="light3-1">
-      </div>
-      <div class="light3-2">
-      </div>
-      <div class="light4-1">
-      </div>
-      <div class="light4-2">
-      </div>
-    </div>
+    <div id="Lights-4" class="HideD">
+      <div class="light4-1"></div>
+      <div class="light4-2"></div>
+    </div> -->
 
 
 
@@ -249,17 +223,62 @@ typeWriter();
 <!-- 2222 -->
   <div class="containerA container2 BK-B">
 
+
+      <nav id="contantNav">
+        <div id="WholeCube">
+              <div id="wrapD3Cube2">
+                  <div id="D3Cube">
+                      <div id="side1"></div>
+                      <div id="side2"></div>
+                      <div id="side3"></div>
+                      <div id="side4"></div>
+                      <div id="side5"></div>
+                      <div id="side6"></div>
+                  </div>
+              </div>
+              <p style="text-align: center;">
+                  <a onclick="turnLeft()"></a>
+                  <a onclick="turnRight()"></a> <br />
+                  <a onclick="flipCube()"></a>
+              </p>
+        </div>
+      </nav>
+
+
     <button onclick="typeWriter()">Click me</button>
 
-    <p id="demo"></p>
+    <div id="demo"></div>
+
+<p id ="explanation1">
+<span class="About">About Bitcoin</span> <br>
+Bitcoin is a type of crypto currency and it explains its currency mechanism. But those currency cannot be physically hold by
+our hands. It is just a code which floats on online. Crypto currency, Bitcoin does not have an issuer since bitcoin is not run by specified individuals or companies. They
+use P2P mechanism which spreads their system into multiple user’s computer. For the micropayment or
+transfer of funds, its popularity is rapidly increasing, due to easy account making.
+
+</p>
   </div>
+
   <div class="containerA">
+    <p id ="explanation2">
+    <span class="consumption">Electricity consumption</span> <br>
+    <br>The increase in power consumption due to Bitcoin became a controversial subject. With the current trend of electricity usage increment, by July 2019 it will exceed USA’s entire electricity consumption.
+
+  <br>Eric Holthaus, a meteorologist who intensively declares this problem, in December 2017, at the news website called ‘Grist’ he mentioned that by the year 2020 February, the electricity usage of Bitcoin would reach the same amount of the global power consumption.
+
+  <br>Holthaus said that the majority of Bitcoin mining is currently produced in China, whereby China uses 72% of its electricity generation from coal power plants. In other words, they are burning massive amounts of coal to mine Bitcoin. Ant pool(22.4%), BTC.com(17.1%) whereby all of the monopolized Bitcoin firms are from China. Digital currency website ‘Digiconomist.’
+
+  <br>Estimated 2,31.6 million ton of CO2 annual production due to Bitcoin. According to Digiconomist’s Bitcoin Energy Consumption Index, on February 5th, 2018, 47.26TW amount of electricity is used for Bitcoin mining, which is the same amount of USA’s 43.7 million households power usage.
+    </p>
   </div>
   <div class="containerA BK-B">
+    <div class="msg"></div>
+<div id="console">
+</div>
   </div>
 
 
-
+<script src=”scripts.js”></script>
 </body>
 
 </html>
