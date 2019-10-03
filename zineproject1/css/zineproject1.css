@@ -931,6 +931,8 @@ text-shadow: 0px 0px 10px limegreen;
 	/* margin: 50px auto; */
 }
 
+
+
 /* OVERALL */
 .bbox{
 
@@ -1020,7 +1022,7 @@ line-height: 1.2em;
 
 
 img{
-
+    top: -15px;
 fill: red;
 margin-top:-300px;
 position: relative;
@@ -1150,6 +1152,28 @@ margin-top: 200px;
 		top: 0;
 }
 
+.ccc{
+	font-family: 'Montserrat', sans-serif;
+		font-size: .7em;
+
+
+	text-align: left;
+	    font-family: courier-prime,monospace;
+	    position: absolute;
+	    /* font-family: 'Raleway', sans-serif; */
+	    font-size: .9;
+	    color: white;
+	    z-index: 999;
+	    top: 270px;
+	    width: 50vw;
+
+	    margin: 430px 0px 10vw 42vw;
+
+
+	    color: white;
+	    font-weight: 400;
+}
+
 #explanation2{
 columns: 2;
 	font-family: courier-prime,monospace;
@@ -1174,6 +1198,7 @@ columns: 2;
 	color: black;
 text-align: center;
 	font-family: 'Montserrat', sans-serif;
+		font-size: .7em;
 
 	/* font-family: 'Press Start 2P', cursive; */
 	width: 100%;
@@ -1181,7 +1206,6 @@ text-align: center;
 	bottom:0;
 	margin-bottom: 16px;
 
-	font-size: .7em;
 
 	z-index: 9999;
 
@@ -1206,11 +1230,9 @@ text-align: center;
 	width: 300px;
 	position: relative;
 	display: inline-block;
-	width: 300px;
-	font-kerning: 10;
-
+	color: black;
 	font-size: .9em;
 	line-height: 1.5em;
 	margin-top: -100px;
-	color: black;
+
 }
