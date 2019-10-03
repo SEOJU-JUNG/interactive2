@@ -10,6 +10,13 @@
 <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 <script type="text/javascript">
+$(function() {
+  $('#wrapD3Cube2').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $(".containerA").offset().top}, 300, 'linear');
+  });
+});
+
 var i = 0;
 var txt  = "struct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n echo('Hello World')";
 
@@ -29,15 +36,18 @@ $(document).ready(function(){
   // First
   $("#wrapD3Cube").click(function(){
     $(this).toggleClass("disappear");
+
     $(".miner").addClass("disappear");
 
     $('#FirstCode').addClass("show");
     $("#mining").toggleClass("show");
+    $(".firstSts").addClass("stsmv");
 
     $("#FirstCode").click(function(){
         $(this).removeClass("show");
         $('#SecondCode').toggleClass("show");
         $('#Lights-1').toggleClass("show");
+        $(".secondSts").addClass("stsmv");
 // Second
     $("#SecondCode").click(function(){
         $(this).removeClass("show");
@@ -48,9 +58,12 @@ $(document).ready(function(){
 // Third
 $("#ThirdCode").click(function(){
     $(this).removeClass("show");
+    $("#mining").removeClass("show");
     $('#FourthCode').toggleClass("show");
     $('#Lights-3').toggleClass("show");
-    $('#Lights-2').addClass("disappear");
+
+
+
 
     // Fifith
     $("#FourthCode").click(function(){
@@ -58,6 +71,7 @@ $("#ThirdCode").click(function(){
         $('#FifthCode').toggleClass("show");
         $('#Lights-4').toggleClass("show");
         $('#Lights-3').addClass("disappear");
+        $("#mining").addClass("disappear");
 
 
 
@@ -82,6 +96,7 @@ typeWriter();
     <div class="cursor">
     </div>
   <div class="containerA">
+
     <div class="letter-container">
 
 
@@ -113,61 +128,76 @@ typeWriter();
 
       <div id=FirstCode class="Hide1" class="codetext">
         <br>
-          <br>
-        8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
-        4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
-        7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
-        7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
-        2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
-        3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br>
-        2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
-        3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br>
+            <br>
+            <span class="firstSts sts sts1">8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125<br></span>
+            <span class="firstSts sts sts2">4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br></span>
+            <span class="firstSts sts sts3">7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br></span>
+            <span class="firstSts sts sts4">7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br></span>
+            <span class="firstSts sts sts5">2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
+            <span class="firstSts sts sts6-1"> #### SUCCESS @ 1999. | Resp: Zeb*850199 | Vallet +1 BTC – [16:28:05] ####<br></span>
+            <span class="firstSts sts sts7">2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
+            <span class="firstSts sts sts8">3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br></span>
 
+            <span class="firstSts sts sts9">SCAN: __ 0100.0000.0554.0080</span>
+            <span class="firstSts sts sts10"> FORCE: XX0022. ENCYPT://000.222.2345</span>
 
       </div>
 
       <div id=SecondCode class="Hide2" class="codetext">
-      2 <br>
       <br>
+      <br>
+        <span class="secondSts sts sts1"> FORCE: XX0022. ENCYPT://000.222.2345<br></span>
+        <span class="secondSts sts sts2"> TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1<br></span>
+        <span class="secondSts sts sts3"> 2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105 <br></span>
+        <span class="secondSts sts sts4"> Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0<br></span>
+        <span class="secondSts sts sts5"> ========================================================================<br></span>
+        <span class="secondSts sts sts6"> Priority 1 // local / scanning... <br></span>
+        <span class="secondSts sts sts7">scanning ports...<br></span>
+        <span class="secondSts sts sts8">BACKDOOR FOUND (23.45.23.12.00000000) SCAN: __ 0100.0000.0554.0080<br></span>
+        <span class="secondSts sts sts9">BACKDOOR FOUND (13.66.23.12.00110000) SCAN: __ 0100.0000.0554.0080<br></span>
+        <span class="secondSts sts sts10">BACKDOOR FOUND (13.66.23.12.00110044) SCAN: __ 0100.0000.0554.0080</span>
 
-          8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
-          4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
-          7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
-          7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
-          2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
-          3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
 </div>
-
+<!-- code3 -->
       <div id=ThirdCode class="Hide3" class="codetext">
-        3 <br><br>
-            8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
-            4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
-            7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
-            7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
-            2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
-            3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
+<br><br>
+
+<span class="firstSts sts sts1">127.0.0.1>nulping -n 2 127.0.0.1>nulping -n 4 SCAN: __ 0020.0$%0.0553.<br></span>
+<span class="firstSts sts sts2">128.0.0.1>nulping -n 2 199.0.0.1>nulping -n 0 SCAN: __ 0020.8##$.0553.<br></span>
+<span class="firstSts sts sts3">129.0.0.1>nulping -n 2 137.0.0.1>nulping -n 4 SCAN: __ 0020.www0.0553.<br></span>
+<span class="firstSts sts sts4">130.0.0.1>nulping -n 2 427.0.0.1>nulping -n 1 SCAN: __ 0020.i2!0.0553.<br></span>
+<span class="firstSts sts sts5">...locating vulnerabilities...<br></span>
+<span class="firstSts sts sts6">..vulnerabilities found...<br></span>
+<span class="firstSts sts sts7">2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
+<span class="firstSts sts sts8">3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br></span>
+<span class="secondSts sts sts9"> TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1<br></span>
+<span class="secondSts sts sts10"> 2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105 <br></span>
+<span class="secondSts sts sts11"> Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0<br></span>
+<span class="firstSts sts sts12"> #### SUCCESS @ 1999. | Resp: Zeb*850199 | Vallet +1 BTC – [16:28:05] ####</span>
+
       </div>
 
       <div id=FourthCode class="Hide4" class="codetext">
-        4 <br><br>
-            8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
-            4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
-            7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
-            7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
-            2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
-            3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
 
-      </div>
+            <div id="ErrorBox">
+              <span class="error"> Error:404 </span> <br>
+              <span class="Toomuch">Too much energy was used.</span>
+
+            </div>
+
+        </div>
+
 
       <div id=FifthCode class="Hide5" class="codetext">
-        5 <br>
-            8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125 <br>
-            4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br>
-            7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br>
-            7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br>
-            2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br>
-            3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234
-
+    <br><br>
+    <span class="firstSts sts sts1">8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125<br></span>
+    <span class="firstSts sts sts2">4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br></span>
+    <span class="firstSts sts sts3">7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br></span>
+    <span class="firstSts sts sts4">7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br></span>
+    <span class="firstSts sts sts5">2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
+    <span class="firstSts sts sts6-1"> #### SUCCESS @ 1999. | Resp: Zeb*850199 | Vallet +1 BTC – [16:28:05] ####<br></span>
+    <span class="firstSts sts sts7">2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
+    <span class="firstSts sts sts8">3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br></span>
       </div>
 <!-- LIGHTS -->
       <div id="Lights-1" class="HideA">
@@ -178,19 +208,21 @@ typeWriter();
       <div id="Lights-2" class="HideB">
         <div class="light2-1"></div>
         <div class="light2-2"></div>
+        <div class="light3-1"></div>
       </div>
 
       <div id="Lights-3" class="HideC"  >
-        <div class="light3-1"></div>
+
         <div class="light3-2"></div>
           <div class="light3-3"></div>
+          <div class="light4-1"></div>
+          <div class="light4-2"></div>
+          <div class="light4-3"></div>
+          <div class="light4-4"></div>
       </div>
 
       <div id="Lights-4" class="HideD">
-        <div class="light4-1"></div>
-        <div class="light4-2"></div>
-        <div class="light4-3"></div>
-        <div class="light4-4"></div>
+
       </div>
 
     </div>
@@ -243,23 +275,73 @@ typeWriter();
               </p>
         </div>
       </nav>
-
-
-    <button onclick="typeWriter()">Click me</button>
+    <!-- <button onclick="typeWriter()">Click me</button> -->
 
     <div id="demo"></div>
 
-<p id ="explanation1">
-<span class="About">About Bitcoin</span> <br>
-Bitcoin is a type of crypto currency and it explains its currency mechanism. But those currency cannot be physically hold by
+<div id ="explanation1">
+<span class="About">About Bitcoin<span class="dash">_</span></span> <br>
+<p class="ex1">Bitcoin is a type of crypto currency and it explains its currency mechanism. But those currency cannot be physically hold by
 our hands. It is just a code which floats on online. Crypto currency, Bitcoin does not have an issuer since bitcoin is not run by specified individuals or companies. They
 use P2P mechanism which spreads their system into multiple user’s computer. For the micropayment or
 transfer of funds, its popularity is rapidly increasing, due to easy account making.
-
 </p>
   </div>
+</div>
 
-  <div class="containerA">
+
+
+
+
+
+
+<!-- 333333 -->
+  <div style="background-color:red"class="containerA">
+    <div class="page3">
+
+<!-- 11111111 -->
+      <div class="sec-3-img img-1">
+            <div class="bbox">
+              Carbon Footprint <br>
+                  287.24 kgCO2
+            </div>
+      <img src="img/image1.svg" alt="">
+
+      </div>
+
+<!-- 2222222222 -->
+      <div class="sec-3-img img-2">
+        <div class="bbox">
+          Electrical Energy <br>
+          604.71kWh
+        </div>
+
+      <img src="img/image2.svg" alt="">
+      </div>
+
+  <!-- 3333333333     -->
+    <div class="sec-3-img img-3">
+      <div class="bbox">
+        Electronic Waste <br>
+        88.10 grams
+      </div>
+
+        <img src="img/image1.svg" alt="">
+    </div>
+    </div>
+
+  <!-- <div class="image11">
+
+  </div> -->
+
+  </div>
+    </div>
+
+
+  <!-- 444444444 -->
+  <div class="containerA BK-B">
+
+
     <p id ="explanation2">
     <span class="consumption">Electricity consumption</span> <br>
     <br>The increase in power consumption due to Bitcoin became a controversial subject. With the current trend of electricity usage increment, by July 2019 it will exceed USA’s entire electricity consumption.
@@ -270,11 +352,6 @@ transfer of funds, its popularity is rapidly increasing, due to easy account mak
 
   <br>Estimated 2,31.6 million ton of CO2 annual production due to Bitcoin. According to Digiconomist’s Bitcoin Energy Consumption Index, on February 5th, 2018, 47.26TW amount of electricity is used for Bitcoin mining, which is the same amount of USA’s 43.7 million households power usage.
     </p>
-  </div>
-  <div class="containerA BK-B">
-    <div class="msg"></div>
-<div id="console">
-</div>
   </div>
 
 
