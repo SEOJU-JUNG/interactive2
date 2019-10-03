@@ -61,9 +61,7 @@
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-/* #D3Cube :hover{
-background-color: #00FF45;
-} */
+
 
 #D3Cube > div {
     position: absolute;
@@ -310,6 +308,7 @@ body {
 }
 
 .containerA{
+
   /* margin-top: -30px; */
   height: 100vh;
   width: 100vw;
@@ -330,6 +329,7 @@ body {
 	width: 100vw;
 	height: 47vw;
 	margin: 0px auto;
+
 
 }
 h1{
@@ -378,7 +378,8 @@ h1{
 	font-family: courier-prime,monospace;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 0.8em;
+	font-size: 0.7em;
+	line-height: 1.7em;
   font-weight: normal;
 
 	text-align: right;
@@ -454,8 +455,8 @@ left: 80%;
 position: absolute;
 float: left;
 display: inline-block;
-width: 60px;
-height: 60px;
+width: 50px;
+height: 50px;
 background-image: url(../img/right.svg);
 background-repeat: no-repeat;
 background-size: contain;
@@ -534,24 +535,23 @@ background-size: contain;
 
 
 .light1-2{
-top: 20%;
-left: 20%;
-position: absolute;
-float: left;
-display: inline-block;
-width: 50px;
-height: 50px;
-background-image: url(../img/left.svg);
-background-repeat: no-repeat;
-background-size: contain;
-transform:rotate(15deg);
-
--webkit-animation: rotation 0.5s infinite linear;
+	top: 29%;
+left: 10%;
+	    position: absolute;
+	    float: left;
+	    display: inline-block;
+	    width: 50px;
+	    height: 50px;
+	    background-image: url(../img/left.svg);
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    transform: rotate(15deg);
+	    -webkit-animation: rotation 0.5s infinite linear;
 }
 
 @-webkit-keyframes rotation {
 from {
-		-webkit-transform: rotate(-15deg);
+		-webkit-transform: rotate(-35deg);
 }
 to {
 		-webkit-transform: rotate(100deg);
@@ -560,16 +560,17 @@ to {
 
 
 .light2-1{
-top: 15%;
-left: 45%;
-position: absolute;
-float: left;
-display: inline-block;
-width: 40px;
-height: 40px;
-background-image: url(../img/right.svg);
-background-repeat: no-repeat;
-background-size: contain;
+	top: 21%;
+	    left: 64%;
+	    position: absolute;
+	    float: left;
+	    display: inline-block;
+	    width: 40px;
+	    height: 40px;
+	    background-image: url(../img/right.svg);
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    -webkit-animation: rotation 0.5s infinite linear;
 
 
 -webkit-animation: rotation 0.5s infinite linear;
@@ -586,19 +587,19 @@ to {
 
 .light2-2{
 	top: 60%;
-	left: 5%;
-	position: absolute;
-	float: left;
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-	transform: rotateX(45deg);
-	background-image: url(../img/left.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-
--webkit-animation: rotation 0.5s infinite linear;
+    left: 16.5%;
+    position: absolute;
+    float: left;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    transform: rotateX(45deg);
+    background-image: url(../img/left.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-animation: rotation 0.5s infinite linear;
 }
+
 
 @-webkit-keyframes rotation {
 from {
@@ -611,7 +612,7 @@ to {
 
 .light3-1{
 	top: 55%;
-	left: 75%;
+	left: 84%;
 	position: absolute;
 	float: left;
 	display: inline-block;
@@ -661,18 +662,17 @@ to {
 
 
 .light3-3{
-top: 10%;
-left: 30%;
+	top: 79%;
+left: 61%;
 position: absolute;
 float: left;
 display: inline-block;
-width: 40px;
-height: 40px;
+width: 45px;
+height: 45px;
 background-image: url(../img/right.svg);
 background-repeat: no-repeat;
 background-size: contain;
-
-		-webkit-animation: rotation 0.5s infinite linear;
+-webkit-animation: rotation 0.5s infinite linear;
 }
 
 @-webkit-keyframes rotation {
@@ -686,8 +686,8 @@ background-size: contain;
 
 
 .light4-1{
-	top: 30%;
-	left: 5%;
+	top: 80%;
+	left: 6%;
 	position: absolute;
 	float: left;
 	display: inline-block;
@@ -710,18 +710,16 @@ to {
 }
 
 .light4-2{
-	top: 80%;
-	left: 90%;
-	position: absolute;
-	float: left;
-	display: inline-block;
-	width: 40px;
-	height: 40px;
-
-	background-image: url(../img/right.svg);
-	background-repeat: no-repeat;
-	background-size: contain;
-
+	top: 72%;
+left: 92%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 40px;
+height: 40px;
+background-image: url(../img/right.svg);
+background-repeat: no-repeat;
+background-size: contain;
 -webkit-animation: rotation 0.5s infinite linear;
 }
 
@@ -735,18 +733,17 @@ to {
 }
 
 .light4-3{
-top: 30%;
-left: 70%;
-position: absolute;
-float: left;
-display: inline-block;
-width: 50px;
-height: 50px;
-background-image: url(../img/right.svg);
-background-repeat: no-repeat;
-background-size: contain;
-
-		-webkit-animation: rotation 0.5s infinite linear;
+	top: 29%;
+	    left: 93%;
+	    position: absolute;
+	    float: left;
+	    display: inline-block;
+	    width: 45px;
+	    height: 45px;
+	    background-image: url(../img/right.svg);
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    -webkit-animation: rotation 0.5s infinite linear;
 }
 
 @-webkit-keyframes rotation {
@@ -761,8 +758,8 @@ background-size: contain;
 
 
 .light4-4{
-top: 83%;
-left: 20%;
+top: 85%;
+left: 30%;
 position: absolute;
 float: left;
 display: inline-block;
@@ -782,6 +779,56 @@ from {
 }
 to {
 		-webkit-transform: rotate(10deg);
+}
+}
+
+.light4-5{
+top: 15%;
+left: 45%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 40px;
+height: 40px;
+background-image: url(../img/right.svg);
+background-repeat: no-repeat;
+background-size: contain;
+
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotate(10deg);
+}
+to {
+		-webkit-transform: rotate(20deg);
+}
+}
+
+.light4-5{
+top: 15%;
+left: 45%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 40px;
+height: 40px;
+background-image: url(../img/right.svg);
+background-repeat: no-repeat;
+background-size: contain;
+
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotate(10deg);
+}
+to {
+		-webkit-transform: rotate(20deg);
 }
 }
 
@@ -811,7 +858,7 @@ to {
 	color: white;
 	z-index: 999;
 	top: 300px;
-	width: 37vw;
+	width: 39.6vw;
 	height: 47vw;
 	margin: 0px 0px 30vw 10vw;
 
@@ -823,11 +870,11 @@ to {
 	  /* font-family: 'Press Start 2P', cursive;
 	font-family: 'Raleway', sans-serif; */
 	font-size: 2em;
-	line-height: 2.2;
+
 	color: white;
 	font-weight: bold;
 
-	text-shadow: 0px 0px 10px limegreen; */
+	text-shadow: 0px 0px 10px limegreen;
 }
 
 .ex1{
@@ -841,8 +888,8 @@ color: white;
 margin: 0;
 padding: 0;
 line-height: 1.7;
-color: white;
-text-shadow: 0px 0px 10px limegreen; */
+
+text-shadow: 0px 0px 10px limegreen;
 }
 
 .dash{
@@ -853,7 +900,7 @@ text-shadow: 0px 0px 10px limegreen; */
 .page3{
 
 
-	padding: 0px 10vw 0vw 10vw;
+	padding: 0px 4.5vw 0vw 4.5vw;
 	/* background: yellow; */
 }
 
@@ -868,45 +915,131 @@ text-shadow: 0px 0px 10px limegreen; */
 	/* margin: 50px auto; */
 }
 
+/* OVERALL */
 .bbox{
-	height: 300px;
+
 	width : 300px;
-	margin: 50px auto;
+	margin: 230px auto;
+}
+.tt{
+	text-transform: uppercase;
+	line-height: 2em;
+font-family: 'Montserrat', sans-serif;
+line-height: 3em;
+color: white;
+font-size: 0.8em;
+font-weight: 500;
+padding-bottom: 20px;
+}
+
+ .amount{
+
+/* text-shadow: 0px 0px 10px limegreen; */
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+
+	/* font-family: courier-prime,monospace; */
+	/* font-family: 'Montserrat', sans-serif; */
+
+	color:#FFD04E;
+	font-size: 2.8em;
+	line-height: 1em;
+	text-align: center;
+	margin-top: 100px;
+}
+.mea{
+	color:#FFD04E;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-kerning: 10;
+	/* font-family: 'Press Start 2P', cursive; */
+	width: 300px;
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	font-kerning: 10;
+
+	font-size: .9em;
+	line-height: 1.2em;
 
 }
+.body{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-kerning: 10;
+	/* font-family: 'Press Start 2P', cursive; */
+	width: 300px;
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	font-kerning: 10;
+	color: white;
+	font-size: .9em;
+	line-height: 1.5em;
+	margin-top: -100px;
+
+
+}
+
 
 img{
 
-	transform: scale(.5);
+fill: red;
+margin-top:-300px;
+position: relative;
+transform: scale(.4);
+margin: -17;
+}
 
-
+.colorimg{
+	fill: red;
 }
 .img-1{
-	background-color: skyblue;
+	fill: red;
+padding: 50px 0;
+	display: inline-block;
+	/* background-color: skyblue; */
 }
 .img-2{
-	background-color: tan;
+	padding: 50px 0;
+		display: inline-block;
+	/* background-color: tan; */
 }
 .img-3{
-	background-color: yellow;
+	padding: 50px 0;
+	display: inline-block;
+	/* background-color: yellow; */
 }
 /* img end */
 
+
+
+
+
+
+
+
+
+
 #explanation2{
 columns: 2;
-		font-family: courier-prime,monospace;
+	font-family: courier-prime,monospace;
 	position: absolute;
 	/* font-family: 'Raleway', sans-serif; */
-	font-size: 15px;
+	font-size: 1.17;
 	color: white;
 
 	z-index: 999;
 	top: 300px;
 	width: 50vw;
 	height: 47vw;
-	margin: 0px 0px 30vw 10vw;
+	margin: 0px 0px 10vw 42vw;
 		line-height: 1.7em;
 		float: left;
+		color: white;
+		font-weight: 400;
+
+
 
 }
 
@@ -938,7 +1071,7 @@ background-repeat: no-repeat; */
 
 
 #wrapD3Cube2{
-	transform: scale(.5);
+	transform: scale(.6);
 }
 
 
@@ -954,7 +1087,7 @@ background-repeat: no-repeat; */
   left: 50%;
   margin-left: calc(-1000px/2);
 /* top */
-  margin-top: 15%;
+  margin-top: 17%;
   width: 1000px;
   height: 100px;
 
@@ -996,5 +1129,50 @@ background-repeat: no-repeat; */
   text-align: center;
   font-size: 0.9em;
   font-weight: normal;
+
+}
+
+.containerA{
+	background: BLACK;
+}
+
+.consumption{
+	font-family: 'Press Start 2P', cursive;
+	/* font-family: courier-prime,monospace; */
+	  /* font-family: 'Press Start 2P', cursive;
+	font-family: 'Raleway', sans-serif; */
+	font-size: 2em;
+	color: white;
+	font-weight: bold;
+	text-shadow: 0px 0px 10px limegreen;
+	position: absolute;
+	display: inline-block;
+
+margin-right: 10vw;
+margin-top: 220px;
+		text-align: right;
+		float: right;
+		right: 0;
+	  width: 50%;
+	  height: 30%;
+	  display: inline-block;
+		top: 0;
+}
+
+caption{
+	color: white;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-kerning: 10;
+	/* font-family: 'Press Start 2P', cursive; */
+	width: 300px;
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	font-kerning: 10;
+	color: white;
+	font-size: .9em;
+	line-height: 1.5em;
+	margin-top: -100px;
 
 }
