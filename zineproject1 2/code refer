@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactive2 - Seoju Jung</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/zineproject1.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xlg0qae.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|VT323&display=swap" rel="stylesheet">
+<script type="text/javascript">
+var i = 0;
+var txt = 'Generally speaking, money has their central control department. In Korea, Bank of Korea is in charge of production and supply of money, also they control the supply amount of currencies, but Bitcoin does not have such department. In other words, there is no department which in charges their supply. However, everyone is able to produce Bitcoin which can be done with the high-performance computer that can solve the mathematical problem and as a reward Bitcoins are given. Process of Bitcoin productions are also called as mining and miners are the one who produces Bitcoin. Thus, miners are the currency issuer in Bitcoin world.';
+var speed = 50;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+$(document).ready(function(){
+
+  // First
+  $("#FirstCode").click(function(){
+    $(this).toggleClass("disappear");
+    $('#really').toggleClass("disappear");
+    $('#SecondCode').toggleClass("show");
+    $("#Lights-1").toggleClass("show");
+    $("#mining").toggleClass("show");
+  // Second
+      $("#SecondCode").click(function(){
+    $(this).toggleClass("disappear");
+    $('#ThirdCode').toggleClass("show");
+      $("#Lights-2").toggleClass("show");
+  // Third
+    $("#ThirdCode").click(function(){
+  $(this).toggleClass("disappear");
+  $('#FourthCode').toggleClass("show");
+    $("#Lights-3").toggleClass("show");
+  // Fifith
+  $("#FourthCode").click(function(){
+$(this).toggleClass("disappear");
+$('#FifthCode').toggleClass("show");
+  $("#Lights-4").toggleClass("show");
+
+
+
+
+});
+});
+});
+});
+});
+
+</script>
+
+
+</head>
+
+<body>
+
+    <div class="cursor">
+    </div>
+  <div class="containerA">
+    <!-- imge -->
+    <div id="Lights-1" class="Hide2">
+      <div class="light1-1">
+      </div>
+      <div class="light1-2">
+      </div>
+    </div>
+
+    <div id="Lights-2" class="Hide3">
+      <div class="light1-1">
+      </div>
+      <div class="light1-2">
+      </div>
+      <div class="light2-1">
+      </div>
+      <div class="light2-2">
+      </div>
+    </div>
+
+    <div id="Lights-3" class="Hide4">
+      <div class="light1-1">
+      </div>
+      <div class="light1-2">
+      </div>
+      <div class="light2-1">
+      </div>
+      <div class="light2-2">
+      </div>
+      <div class="light3-1">
+      </div>
+      <div class="light3-2">
+      </div>
+    </div>
+
+    <div id="Lights-4" class="Hide5">
+      <div class="light1-1" >
+      </div>
+      <div class="light1-2">
+      </div>
+      <div class="light2-1">
+      </div>
+      <div class="light2-2">
+      </div>
+      <div class="light3-1">
+      </div>
+      <div class="light3-2">
+      </div>
+      <div class="light4-1">
+      </div>
+      <div class="light4-2">
+      </div>
+    </div>
+
+
+
+    <h1 id="mining" class="Hide2">Mining...</h1>
+    <h1 id="really">Really need bitcoin?</h1>
+
+    <p id=FirstCode >
+      package org.usfirst.frc.team871.robot; <block>
+
+  import edu.wpi.first.wpilibj.Joystick; <block>
+
+  public class Logitech extends Joystick{ <block>
+
+      public Logitech(int port) { <block>
+          super(port); <block>
+      } <block>
+      /** <block>
+       * Returns true when the button is just pressed <block>
+       * @param bt <block>
+       * @return <block>
+       */ <block>
+      public boolean getRisingEdge(ButtonType bt){ <block>
+          boolean press = false; <block>
+
+           if(!bt.wasPressed && getRawButton(bt.get())){ <block>
+               press = true; <block>
+           } <block>
+
+           bt.wasPressed = getRawButton(bt.get()); <block>
+           return press; <block>
+      } <block>
+      /** <block>
+       * Returns the value of the toggled variable <block>
+       * @param bt <block>
+       * @return <block>
+       */ <block>
+      public boolean getToggledButton(ButtonType bt){ <block>
+
+          return bt.toggled; <block>
+      } <block>
+      /** <block>
+       * Toggles the value of the toggle variable <block>
+       * @param bt <block>
+       */ <block>
+      public void toggleButton(ButtonType bt){ <block>
+          if(getRisingEdge(bt)){ <block>
+              bt.toggled = <block>
+    </p>
+
+    <p id="SecondCode" class="Hide2">
+The quick brown fox jumps over the lazy dog
+      2<span class"blue">2222222222222222222222333
+        2c0b3420b4aabb24ff969a320f8c</span>
+        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+        934199141504624183378801987468
+        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+        2952c0b3420b4aabb2
+
+    </p>
+
+    <p id=ThirdCode class="Hide3">33333333333333333333
+      333333333333333333333333333333333333333
+      333333333333333333333333333333333333333
+        2c0b3420b4aabb24ff969a320f8c
+        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+        934199141504624183378801987468
+        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+        2952c0b3420b4aabb24ff969a320f8c
+        has a numeric value of 100647168585
+        7908083785100068964
+        934199141504624183378801987468
+    </p>
+
+    <p id=FourthCode class="Hide4">
+        444444444444444444444444444444444444444444444444
+        2c0b3420b4aabb24ff969a320f8c
+        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+        934199141504624183378801987468
+        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+        2952c0b3420b4aabb24ff969a320f8c
+        has a numeric value of 100647168585
+        7908083785100068964
+        934199141504624183378801987468
+    </p>
+
+    <p id=FifthCode class="Hide5">
+      5555555555555555555555555555555555555555555555555555
+      5555555555555555555555555555555555555555555555555555
+        2c0b3420b4aabb24ff969a320f8c
+        value of 10064716858500000000000000a05716b3ab0309c2ccc7908083785100068964
+        934199141504624183378801987468
+        00000000000000a05716b3ab0309c2ccc00000000000000a05716b3ab0309c2ccc
+        2952c0b3420b4aabb24ff969a320f8c
+        has a numeric value of 100647168585
+        7908083785100068964
+        934199141504624183378801987468
+    </p>
+
+  </div>
+<!-- 2222 -->
+  <div class="containerA container2 BK-B">
+    <button onclick="typeWriter()">Click me</button>
+    <p id="demo"></p>
+  </div>
+  <div class="containerA">
+  </div>
+  <div class="containerA BK-B">
+  </div>
+
+
+
+</body>
+
+</html>
+
+
+
+
+---------
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+p:hover{
+
+	color: blue;
+}
+body {
+  cursor: url(../img/mouse3.gif), auto;
+}
+
+.container{
+
+  width:100vw;
+  margin:  auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.containerA{
+  /* margin-top: -30px; */
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  float: left;
+  background-color:rgba(255, 222, 0, 1);
+  overflow: hidden;
+}
+.BK-B{
+  background-color: black;
+}
+
+h1{
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-1000px/2);
+/* top */
+  margin-top: 320px;
+  width: 1000px;
+  height: 100px;
+  display: inline;
+  text-align: center;
+	font-size: 1.9em;
+	font-weight: normal;
+}
+
+#mining {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-1000px/2);
+/* top */
+  margin-top: 320px;
+  width: 1000px;
+  height: 100px;
+
+  text-align: center;
+	font-size: 1.9em;
+	font-weight: normal;
+	animation: blinkingText 1s infinite;
+}
+@keyframes blinkingText{
+	0%{		color: #000;	}
+
+	70%{	color: transparent;	}
+	99%{	color:transparent;	}
+	100%{	color: #000;	}
+}
+
+
+
+
+p{
+	font-family: courier-prime,monospace;
+	font-weight: 400;
+	font-style: normal;
+  position: absolute;
+  left: 48.5%;
+  margin-left: calc(-600px/2);
+  /* top */
+  margin-top: 380px;
+  width: 600px;
+  height: 700px;
+  display: inline;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: normal;
+
+}
+
+.Hide2, .Hide3, .Hide4, .Hide5{
+	display: none;
+}
+
+.disappear{
+	display:none;
+}
+.SecondCode{display:block;
+}
+
+.light1-1{
+top: 10%;
+left: 80%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 60px;
+height: 60px;
+background-image: url(../img/light-R.png);
+background-repeat: no-repeat;
+background-size: contain;
+
+		-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(10deg);
+		}
+}
+
+
+
+.light1-2{
+top: 20%;
+left: 20%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 70px;
+height: 70px;
+background-image: url(../img/light-L.png);
+background-repeat: no-repeat;
+background-size: contain;
+transform:rotateY(180deg);
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light2-1{
+top: 25%;
+left: 45%;
+position: absolute;
+float: left;
+display: inline-block;
+width: 50px;
+height: 50px;
+background-image: url(../img/light-R.png);
+background-repeat: no-repeat;
+background-size: contain;
+
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light2-2{
+	top: 60%;
+	left: 5%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 120px;
+	height: 120px;
+	transform: rotateX(45deg);
+	background-image: url(../img/light-L.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light3-1{
+	top: 55%;
+	left: 75%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+	transform: rotateX(45deg);
+	background-image: url(../img/light-R.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light3-2{
+	top: 80%;
+	left: 55%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 45px;
+	height: 45px;
+	transform: rotateX(45deg);
+	background-image: url(../img/light-R.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light4-1{
+	top: 30%;
+	left: 5%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	background-image: url(../img/light-L.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.8s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		-webkit-transform: rotateY(10deg);
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.light4-2{
+	top: 80%;
+	left: 90%;
+	position: absolute;
+	float: left;
+	display: inline-block;
+	width: 80px;
+	height: 80px;
+
+	background-image: url(../img/light-R.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+
+-webkit-animation: rotation 0.5s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+from {
+		/* -webkit-transform: rotateY(10deg); */
+}
+to {
+		-webkit-transform: rotateY(20deg);
+}
+}
+
+.mining{
+	/* display: none; */
+}
+
+.show{
+	display:block;
+}
+
+
+
+/* 22222 */
+.container2{
+	z-index: 99;
+	color: red;
+}
