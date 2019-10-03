@@ -977,8 +977,6 @@ padding-bottom: 20px;
 	font-size: .9em;
 	line-height: 1.5em;
 	margin-top: -100px;
-
-
 }
 
 
@@ -991,9 +989,7 @@ transform: scale(.4);
 margin: -17;
 }
 
-.colorimg{
-	fill: red;
-}
+
 .img-1{
 	fill: red;
 padding: 50px 0;
@@ -1175,4 +1171,21 @@ caption{
 	line-height: 1.5em;
 	margin-top: -100px;
 
+}
+
+.nottext{
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+	font-kerning: 10;
+	/* font-family: 'Press Start 2P', cursive; */
+	width: 300px;
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	font-kerning: 10;
+
+	font-size: .9em;
+	line-height: 1.5em;
+	margin-top: -100px;
+	color: black;
 }
