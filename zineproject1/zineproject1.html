@@ -17,22 +17,32 @@ $(function() {
     $('html, body').animate({ scrollTop: $(".containerA").offset().top}, 300, 'linear');
   });
 });
-
 var i = 0;
 var txt  = "struct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n/nstruct group_info init_groups = { .usage = ATOMIC_INIT(2) }; /n /nstruct group_info *groups_alloc(int gidsetsize){ /n    struct group_info *group_info; /n    int nblocks; /n    int i; /n /n /n    nblocks = (gidsetsize + NGROUPS_PER_BLOCK - 1) / NGROUPS_PER_BLOCK; /n    /* Make sure we always allocate at least one indirect block pointer */ /n    nblocks = nblocks ? : 1; /n    group_info = kmalloc(sizeof(*group_info) + nblocks*sizeof(gid_t *), GFP_USER); /n    if (!group_info) /n        return NULL; /n /n    group_info->ngroups = gidsetsize; /n    group_info->nblocks = nblocks; /n    atomic_set(&group_info->usage, 1); /n /n    if (gidsetsize <= NGROUPS_SMALL) /n        group_info->blocks[0] = group_info->small_block; /n    else { /n        for (i = 0; i < nblocks; i++) { /n            gid_t *b; /n            b = (void *)__get_free_page(GFP_USER); /n            if (!b) /n                goto out_undo_partial_alloc; /n            group_info->blocks[i] = b; /n        } /n    } /n    return group_info; /n /n /nout_undo_partial_alloc: /n /n    while (--i >= 0) { /n /n        free_page((unsigned long)group_info->blocks[i]); /n /n    } /n /n    kfree(group_info); /n /n    return NULL; /n /n} /n /n /n /nEXPORT_SYMBOL(groups_alloc); /n /n /n /nvoid groups_free(struct group_info *group_info) /n /n{ /n /n    if (group_info->blocks[0] != group_info->small_block) { /n /n        int i; /n /n        for (i = 0; i < group_info->nblocks; i++) /n /n echo('Hello World')";
 
 
-var speed = 40;
-
-function typeWriter() {
-  if (i < txt.length) {
-    document.getElementById("demo").innerHTML += txt.charAt(i);
-    i++;
-    setTimeout(typeWriter, speed);
-  }
-}
-
+var speed = 400;
 $(document).ready(function(){
+
+  // setInterval(typeWriter, 100);
+
+  function typeWriter() {
+    if (i < txt.length) {
+      document.getElementById("demo").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  $(window).scroll(function(){
+    var scrollTop = $(window).scrollTop();
+    var num = document.getElementById('cn2').offsetHeight;
+    if (scrollTop>num) {
+      typeWriter();
+    }
+})
+
+
+
 
   // First
   $("#wrapD3Cube").click(function(){
@@ -62,6 +72,7 @@ $("#ThirdCode").click(function(){
     $("#mining").removeClass("show");
     $('#FourthCode').toggleClass("show");
     $('#Lights-3').toggleClass("show");
+      $('#scrollsymbol').toggleClass("show");
 
 
 
@@ -83,7 +94,6 @@ $("#ThirdCode").click(function(){
   });
 
   });
-typeWriter();
 });
 
 </script>
@@ -98,7 +108,7 @@ typeWriter();
     </div>
   <div class="containerA">
 
-    <div class="letter-container">
+    <div id="cn2" class="letter-container">
 
 
         <div id="WholeCube">
@@ -130,17 +140,21 @@ typeWriter();
       <div id=FirstCode class="Hide1" class="codetext">
         <br>
             <br>
-            <span class="firstSts sts sts1">8591.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125<br></span>
-            <span class="firstSts sts sts2">4222.  JKWD — [8: 53 : 54] Resp 3/44EF | No match eQ5q4C | Diff: 50/225<br></span>
-            <span class="firstSts sts sts3">7392.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br></span>
-            <span class="firstSts sts sts4">7642.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br></span>
-            <span class="firstSts sts sts5">2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
-            <span class="firstSts sts sts6-1"> #### SUCCESS @ 1999. | Resp: Zeb*850199 | Vallet +1 BTC – [16:28:05] ####<br></span>
-            <span class="firstSts sts sts7">2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
-            <span class="firstSts sts sts8">3463.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br></span>
+            <span class="firstSts sts sts1">128.154.26.11 Connexted to btcn.miner. buitcoin-heap.htmlg.com<br></span>
+            <span class="firstSts sts sts2">Running BitCrane. exein unsafe mode | STATUS: Miner running…<br></span>
+            <span class="firstSts sts sts3">1988.  JEES — [8: 54 : 55] Resp H=GhF& | No match ag3i7s | Diff: 84/695<br></span>
+            <span class="firstSts sts sts4">1989.  VQWB — [8: 55 : 56] Resp R5/Mrs | No match JfTa2j | Diff: 78/195<br></span>
+            <span class="firstSts sts sts5">1990.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
+            <span class="firstSts sts sts6">1991.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125<br></span>
+            <span class="firstSts sts sts7">1992.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105<br></span>
+            <span class="firstSts sts sts8">1993.  FREW — [8: 57 : 58] Resp r$-R^/ | No match 97UBGd | Diff: 88/234<br></span>
+            <span class="firstSts sts sts88">#### SUCCESS @ 1999. | Resp: Zeb*850199 | Vallet +1 BTC – [16:28:05] ####<br></span>
+            <span class="firstSts sts sts9">1994.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125</span>
+            <span class="firstSts sts sts10">1994.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125</span>
 
-            <span class="firstSts sts sts9">SCAN: __ 0100.0000.0554.0080</span>
-            <span class="firstSts sts sts10"> FORCE: XX0022. ENCYPT://000.222.2345</span>
+            <!-- <span class="firstSts sts sts11">SCAN: __ 0100.0000.0554.0080</span> -->
+
+
 
       </div>
 
@@ -148,15 +162,16 @@ typeWriter();
       <br>
       <br>
         <span class="secondSts sts sts1"> FORCE: XX0022. ENCYPT://000.222.2345<br></span>
-        <span class="secondSts sts sts2"> TRYPASS: ********* AUTH CODE: ALPHA GAMMA: 1___ PRIORITY 1<br></span>
-        <span class="secondSts sts sts3"> 2362.  EFZT — [8: 56 : 57] Resp sK#bFM | No match P3LL6Q | Diff: 12/105 <br></span>
-        <span class="secondSts sts sts4"> Z:> /FALKEN/GAMES/TICTACTOE/ EXECUTE -PLAYERS 0<br></span>
-        <span class="secondSts sts sts5"> ========================================================================<br></span>
-        <span class="secondSts sts sts6"> Priority 1 // local / scanning... <br></span>
-        <span class="secondSts sts sts7">scanning ports...<br></span>
-        <span class="secondSts sts sts8">BACKDOOR FOUND (23.45.23.12.00000000) SCAN: __ 0100.0000.0554.0080<br></span>
-        <span class="secondSts sts sts9">BACKDOOR FOUND (13.66.23.12.00110000) SCAN: __ 0100.0000.0554.0080<br></span>
-        <span class="secondSts sts sts10">BACKDOOR FOUND (13.66.23.12.00110044) SCAN: __ 0100.0000.0554.0080</span>
+        <span class="secondSts sts sts2"> 2000.  JEES — [8: 54 : 55] Resp H=GhF& | No match xlkd8l | Diff: 84/695<br></span>
+        <span class="secondSts sts sts3"> 2001.  EFZT — [8: 16 : 17] Resp sK#bFM | No match P3LL6Q | Diff: 12/105 <br></span>
+        <span class="secondSts sts sts4"> 2002.  YISH — [8: 34 : 85] Resp !@(DA@; | No match ag3i7s | Diff: 84/695<br></span>
+        <span class="secondSts sts sts5"> 2003.  SDFH — [8: 44 : 55] Resp !)(#F& | No match bjcs19 | Diff: 84/695<br></span>
+        <span class="secondSts sts sts6"> 2004.  WEDS — [8: 54 : 25] Resp QWE!@~ | No match gkl0i4 | Diff: 84/695 <br></span>
+        <span class="secondSts sts sts7">2005.  OUXW — [8: 04 : 52] Resp KO(*3^) | No match sddi9a | Diff: 84/695<br></span>
+        <span class="secondSts sts sts8">2005.  VNWK — [8: 54 : 95] Resp ALOC@# | No match gj1p@$ | Diff: 84/695<br></span>
+        <span class="secondSts sts sts9">BACKDOOR FOUND (23.45.23.12.00000000) SCAN: __ 0100.0000.0554.0080<br></span>
+        <span class="secondSts sts sts10">BACKDOOR FOUND (13.66.23.12.00110000) SCAN: __ 0100.0000.0554.0080<br></span>
+        <span class="secondSts sts sts11">BACKDOOR FOUND (13.66.23.12.00110044) SCAN: __ 0100.0000.0554.0080</span>
 
 </div>
 <!-- code3 -->
@@ -220,8 +235,9 @@ typeWriter();
           <div class="light4-2"></div>
           <div class="light4-3"></div>
           <div class="light4-4"></div>
-            <div class="light4-5"></div>
-              <div class="light4-6"></div>
+          <div class="light4-5"></div>
+          <div class="light4-6"></div>
+          <div class="light4-7"></div>
       </div>
 
       <div id="Lights-4" class="HideD">
@@ -250,14 +266,16 @@ typeWriter();
       <div class="light4-2"></div>
     </div> -->
 
-  <!-- <div id="scrollsymbol"><img src="scroll.gif" alt=""></div> -->
+ <div id="scrollsymbol" class="HideD"></div>
   </div>
 <!-- 2222 -->
   <div class="containerA container2 BK-B">
 
 
 
-        <div id="WholeCube">
+<div id="NavCubes">
+
+
               <div id="wrapD3Cube2">
                   <div id="D3Cube">
                       <div id="side1"></div>
@@ -268,12 +286,46 @@ typeWriter();
                       <div id="side6"></div>
                   </div>
               </div>
-              <p style="text-align: center;">
-                  <a onclick="turnLeft()"></a>
-                  <a onclick="turnRight()"></a> <br />
-                  <a onclick="flipCube()"></a>
-              </p>
-        </div>
+
+
+
+              <!-- <div id="wrapD3Cube3">
+                  <div id="D3Cube">
+                      <div id="side1"></div>
+                      <div id="side2"></div>
+                      <div id="side3"></div>
+                      <div id="side4"></div>
+                      <div id="side5"></div>
+                      <div id="side6"></div>
+                  </div>
+              </div>
+
+
+              <div id="wrapD3Cube4">
+                  <div id="D3Cube">
+                      <div id="side1"></div>
+                      <div id="side2"></div>
+                      <div id="side3"></div>
+                      <div id="side4"></div>
+                      <div id="side5"></div>
+                      <div id="side6"></div>
+                  </div>
+              </div>
+
+
+
+
+              <div id="wrapD3Cube5">
+                  <div id="D3Cube">
+                      <div id="side1"></div>
+                      <div id="side2"></div>
+                      <div id="side3"></div>
+                      <div id="side4"></div>
+                      <div id="side5"></div>
+                      <div id="side6"></div>
+                  </div>
+              </div> -->
+    </div>
 
     <!-- <button onclick="typeWriter()">Click me</button> -->
 
@@ -281,8 +333,7 @@ typeWriter();
 
 <div id ="explanation1">
 <span class="About">About Bitcoin<span class="dash">_</span></span> <br>
-<br><p class="ex1">Bitcoin is a type of digital currency existing online. Its new units of currency are generated by the computational solution of mathematical problems, and which operates independently of a central bank. Due to its advantages as an intangible virtual currency, bitcoin is rapidly becoming even popular. However,
- the fact that bitcoin generating a vast amount of energy seems to be underestimated compared to its rising popularity.
+<br><p class="ex1">Bitcoin is a type of digital currency which only exist online. This new type of currency, bitcoin, is generated by the computational solution of mathematical problems. As an intangible virtual currency, bitcoin is rapidly becoming even more popular. However, the fact that bitcoin generating a vast amount of energy seems to be underestimated compared to its rising popularity.
 </p>
   </div>
 </div>
