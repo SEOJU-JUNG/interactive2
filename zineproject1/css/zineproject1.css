@@ -1193,9 +1193,12 @@ margin-top: 200px;
 	  height: 30%;
 	  display: inline-block;
 		top: 0;
+		padding: 0;
 }
 
 .ccc{
+
+
 		font-family: 'Montserrat', sans-serif;
 		font-size: .7em;
 		text-align: left;
@@ -1204,14 +1207,26 @@ margin-top: 200px;
 	  font-size: .9;
 	  color: white;
 	  z-index: 999;
-		margin: 660px 0px 10vw 40vw;
+		margin: 0;
 	  color: white;
 	  font-weight: 400;
+		position: absolute;
+		left: 38vw;
+		top: 670px;
+		width: 395px;
+		height: 16px;
+
+
+}
+a{
+		text-decoration: none;
+		 color: white;
 }
 
-.ccc:hover {
+a:hover {
 
-	background: white;
+	z-index: 99999999;
+	background-color: white;
 	color: black;
 }
 
@@ -1227,9 +1242,10 @@ columns: 2;
 
 	z-index: 999;
 	top: 270px;
-	width: 54vw;
-	height: 47vw;
-	margin: 0px 0px 10vw 40vw;
+	width: 52vw;
+
+	left: 38vw;
+	margin: 0;
 		line-height: 1.7em;
 		float: left;
 		color: white;
