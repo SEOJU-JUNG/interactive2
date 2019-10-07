@@ -21,22 +21,43 @@
     height: 213px;
 }
 
- #scrollsymbol{
+ #arrow{
+
 	position: absolute;
 	left: 50%;
 	top: 55%;
 	margin-left: -75px;
-
 	align-items: center;
-
 z-index: 9999;
 	    width: 150px;
 	    height: 150px;
-	    background-image: url(../img/scroll2.gif);
+	    background-image: url(../img/arrow.png);
 	    background-repeat: no-repeat;
 	    background-size: contain;
+}
 
+#circle{
+ position: absolute;
+ left: 50%;
+ top: 55%;
+ margin-left: -75px;
+ align-items: center;
+z-index: 999;
+		 width: 150px;
+		 height: 150px;
+		 background-image: url(../img/circle.png);
+		 background-repeat: no-repeat;
+		 background-size: contain;
+		 animation: rotation2 8s infinite linear;
+		 }
 
+		 @keyframes rotation2 {
+		 from {
+		 		transform: rotate(0deg);
+		 }
+		 to {
+		 		transform: rotate(360deg);
+		 }
 }
 
 .miner{
