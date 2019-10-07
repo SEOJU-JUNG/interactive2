@@ -411,19 +411,19 @@ h1{
 
 
 #demo {
-	opacity: 0.8;
+	opacity: 0.9;
 color: #FFD04E;
 font-family: courier-prime,monospace;
 font-weight: 400;
 font-style: normal;
-font-size: 0.7em;
+font-size: 0.75em;
 line-height: 1.7em;
 font-weight: normal;
 text-align: right;
 float: right;
 right: 0;
 width: 20%;
-height: 47%;
+height: 80%;
 display: inline-block;
 top: 0;
 overflow: hidden;
