@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 
 
-  // First
+  // CUBE
   $("#wrapD3Cube").click(function(){
     $(this).toggleClass("disappear");
 
@@ -52,19 +52,28 @@ $(document).ready(function(){
 
     $('#FirstCode').addClass("show");
     $("#mining").toggleClass("show");
+    $(".money1").toggleClass("show");
+    $(".money111").toggleClass("show");
     $(".firstSts").addClass("stsmv");
-
+    $(".money111").addClass("moneymv1");
+// First
     $("#FirstCode").click(function(){
         $(this).removeClass("show");
         $('#SecondCode').toggleClass("show");
         $('#Lights-1').toggleClass("show");
         $(".secondSts").addClass("stsmv");
+        $(".money222").addClass("moneymv2");
+        $(".money1").addClass("disappear");
+          $(".money111").addClass("disappear");
+        $('.money2').toggleClass("show");
+
 // Second
     $("#SecondCode").click(function(){
         $(this).removeClass("show");
         $('#ThirdCode').toggleClass("show");
         $('#Lights-2').toggleClass("show");
         $('#Lights-1').addClass("disappear");
+        $(".money").addClass("moneymv");
 
 // Third
 $("#ThirdCode").click(function(){
@@ -150,12 +159,22 @@ $("#ThirdCode").click(function(){
             <span class="firstSts sts sts88">#### SUCCESS @ 1999. | Resp: Zeb*850199 | Vallet +1 BTC – [16:28:05] ####<br></span>
             <span class="firstSts sts sts9">1994.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125</span>
             <span class="firstSts sts sts10">1994.  KUHD — [8: 52 : 53] Resp J&US$Q | No match c6d8xo | Diff: 18/125</span>
+            </div>
+            <div class="money1" >
+              <div class="money1-0 money111" >
+              </div>
+              <div class="money1-3 money111">
+              </div>
+              <div class="money1-17 money111">
+              </div>
+            </div>
+
 
             <!-- <span class="firstSts sts sts11">SCAN: __ 0100.0000.0554.0080</span> -->
 
 
 
-      </div>
+
 
       <div id=SecondCode class="Hide2" class="codetext">
         <span class="secondSts sts sts1"> FORCE: XX0022. ENCYPT://000.222.2345<br></span>
@@ -169,8 +188,16 @@ $("#ThirdCode").click(function(){
         <span class="secondSts sts sts9">BACKDOOR FOUND (23.45.23.12.00000000) SCAN: __ 0100.0000.0554.0080<br></span>
         <span class="secondSts sts sts10">BACKDOOR FOUND (13.66.23.12.00110000) SCAN: __ 0100.0000.0554.0080<br></span>
         <span class="secondSts sts sts11">BACKDOOR FOUND (13.66.23.12.00110044) SCAN: __ 0100.0000.0554.0080</span>
-
 </div>
+        <div class="money2">
+          <div class="money17-2 money222" >
+          </div>
+          <div class="money2-25 money222">
+          </div>
+          <div class="money2-34 money222">
+          </div>
+        </div>
+
 <!-- code3 -->
       <div id=ThirdCode class="Hide3" class="codetext">
 <span class="firstSts sts sts1">127.0.0.1>nulping -n 2 127.0.0.1>nulping -n 4 SCAN: __ 0020.0$%0.0553.<br></span>
