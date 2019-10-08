@@ -5,6 +5,7 @@
 
 /* scroll */
 .money1{
+	top:7%;
 	position: absolute;
 	width: 10vw;
 	height: 170px;
@@ -50,6 +51,51 @@
 				background-repeat: no-repeat;
 				background-size: contain;
 			 }
+/* .money2-25{
+position: absolute;
+width: 10vw;
+height: 170px;
+left: 0;
+padding: 0;
+margin: 0;
+background-image: url(../img/money2-25.svg);
+background-repeat: no-repeat;
+background-size: contain;
+			 			 }
+ .money2-34{
+ position: absolute;
+ width: 10vw;
+ height: 170px;
+ left: 0;
+ padding: 0;
+ margin: 0;
+ background-image: url(../img/money2-34.svg);
+ background-repeat: no-repeat;
+ background-size: contain;
+					 			 			 }
+
+.money3-45{
+position: absolute;
+width: 10vw;
+height: 170px;
+left: 0;
+padding: 0;
+margin: 0;
+background-image: url(../img/money3-45.svg);
+background-repeat: no-repeat;
+background-size: contain;
+	}
+	.money3-99{
+	position: absolute;
+	width: 10vw;
+	height: 170px;
+	left: 0;
+	padding: 0;
+	margin: 0;
+	background-image: url(../img/money3-99.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+		} */
 
 		 .money111{
 	 		opacity: 0;
@@ -65,7 +111,7 @@
 	 		animation-delay: 1300ms;
 	 	}
 		.money1-17{
-		animation-duration: 1000000000ms;
+		animation-duration: 100000ms;
 		animation-delay: 2800ms;
 	}
 	 	.moneymv1{
@@ -87,6 +133,7 @@
 
 /* money2 */
 .money2{
+top:7%;
 	position: absolute;
 	width: 10vw;
 	height: 170px;
@@ -97,14 +144,14 @@
 		 background-repeat: no-repeat;
 		 background-size: contain;
 	 }
-.money17-2{
+.money2-17{
 	 	position: absolute;
 	 	width: 10vw;
 	 	height: 170px;
 	 	left: 0;
 	 	padding: 0;
 		margin: 0;
-	 	background-image: url(../img/money1-17.svg);
+	 	background-image: url(../img/money2-17.svg);
 	 	background-repeat: no-repeat;
 	 	background-size: contain;
 	 	 }
@@ -133,23 +180,23 @@
 				background-size: contain;
 			 }
 
-		 .money222{
-	 		opacity: 0;
-	 		animation-duration: 300ms;
-	 		animation-fill-mode: forwards;
-	 	}
-	 	.money17-2{
-			/* animation-duration: 1000ms; */
-	 		animation-delay: 300ms;
-	 	}
-	 	.money2-25{
-			/* animation-duration: 1500ms; */
-	 		animation-delay: 1300ms;
-	 	}
-		.money2-34{
-		/* animation-duration: 1000000000ms; */
-		animation-delay: 2800ms;
-	}
+			 .money222{
+		 		opacity: 0;
+		 		animation-duration: 300ms;
+		 		animation-fill-mode: forwards;
+		 	}
+		 	.money2-17{
+				animation-duration: 1000ms;
+		 		/* animation-delay: 300ms; */
+		 	}
+		 	.money2-25{
+				animation-duration: 1500ms;
+		 		animation-delay: 1200ms;
+		 	}
+			.money2-34{
+			animation-duration: 100000ms;
+			animation-delay: 2800ms;
+		}
 	 	.moneymv2{
 	 		animation-name: moneyprss2;
 	 	}
@@ -161,10 +208,98 @@
 			99%{
 				opacity: 1;
 			}
+			99.9%{
+				opacity: 0;
+			}
 	 		100%{
 	 			opacity: 0;
 	 		}
 	 	}
+
+	/* money3 */
+
+	.money3{
+		top:7%;
+		position: absolute;
+		width: 10vw;
+		height: 170px;
+		left: 10vw;
+		padding: 0;
+		margin: 0;
+			 background-image: url(../img/money3.svg);
+			 background-repeat: no-repeat;
+			 background-size: contain;
+		 }
+	.money3-45{
+		 	position: absolute;
+		 	width: 10vw;
+		 	height: 170px;
+		 	left: 0;
+		 	padding: 0;
+			margin: 0;
+		 	background-image: url(../img/money3-45.svg);
+		 	background-repeat: no-repeat;
+		 	background-size: contain;
+		 	 }
+			 .money3-52{
+					 position: absolute;
+					 width: 10vw;
+					 height: 170px;
+					 left: 0;
+					 padding: 0;
+					 margin: 0;
+					 background-image: url(../img/money3-52.svg);
+					 background-repeat: no-repeat;
+					 background-size: contain;
+						}
+
+	.money3-99{
+			 	position: absolute;
+			 	width: 10vw;
+			 	height: 170px;
+			 	left: 0;
+			 	padding: 0;
+				margin: 0;
+			 	background-image: url(../img/money3-99.svg);
+			 	background-repeat: no-repeat;
+			 	background-size: contain;
+			 	 }
+
+				 .money333{
+			 		opacity: 0;
+			 		animation-duration: 300ms;
+			 		animation-fill-mode: forwards;
+			 	}
+			 	.money3-45{
+					animation-duration: 1000ms;
+			 		animation-delay: 300ms;
+			 	}
+			 	.money3-52{
+					animation-duration: 2400ms;
+			 		animation-delay: 1300ms;
+			 	}
+				.money3-99{
+				animation-duration: 100000ms;
+				animation-delay: 3700ms;
+			}
+		 	.moneymv3{
+		 		animation-name: moneyprss2;
+		 	}
+
+		 	@keyframes moneyprss3 {
+		 		0%{
+		 			opacity: 1;
+		 		}
+				99%{
+					opacity: 1;
+				}
+				99.9%{
+					opacity: 0;
+				}
+		 		100%{
+		 			opacity: 0;
+		 		}
+		 	}
 
 
 
@@ -590,6 +725,7 @@ h1{
 
 
 #demo {
+	margin-top: 35px;
 	opacity: 0.9;
 color: #FFD04E;
 font-family: courier-prime,monospace;
@@ -602,7 +738,7 @@ text-align: right;
 float: right;
 right: 0;
 width: 20%;
-height: 80%;
+height: 70%;
 display: inline-block;
 top: 0;
 overflow: hidden;
@@ -622,6 +758,9 @@ overflow: hidden;
 }
 
 .money2{
+	display: none;
+}
+.money3{
 	display: none;
 }
 
