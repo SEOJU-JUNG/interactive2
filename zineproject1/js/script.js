@@ -27,20 +27,3 @@ $(function() {
       }
    });
 });
-
-
-$(document).ready(function(){
-  //Navigation
-  // $('.circle_MON').hover(function(){
-  //   $(this).toggleClass('hovered');
-  // });
-  // $('.circle_MON').click(function(){
-  //   $(this).addClass('hovered');
-  //   $('.circle_TUES').removeClass('hovered');
-  // });
-  // $('.circle_TUES').click(function(){
-  //   $(this).addClass('hovered');
-  //   $('.circle_MON').removeClass('hovered');
-  // });
-
-  
