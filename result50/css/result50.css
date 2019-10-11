@@ -8,9 +8,12 @@
 body {
   background: #F2EBDF;
   font-family: 'Montserrat', sans-serif;
-
-
 }
+span{
+  position: relative;
+  z-index: 10;
+}
+
 
 /* container */
 
@@ -22,11 +25,11 @@ body {
 
 .item {
 	height: 200px;
-	width: 410px;
+	width: 400px;
 	background: #F2E0DF;
-	color: color:#260B10;
+
 	margin: 10px auto;
-	padding: 10px;
+
 	box-sizing: border-box;
 	transition: all 500ms ease;
 	cursor: pointer;
@@ -130,11 +133,12 @@ body {
   width:200px;
   height:200px;
   position: absolute;
-  top:0;
-  left:100px;
+
+  left:10px;
   background-color: skyblue;
   border-radius: 50%;
   z-index: 1;
+  top: -100;
 }
 #element4 span {
   position: relative;
@@ -204,6 +208,13 @@ body {
     box-shadow: 30px 30px 200px rgba(0,0,0,.5);
     animation: bit 1s linear infinite;
     transform: scale(1);
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+    animation-play-state: paused;
+}
+.heartVisible .heart2 {
+  opacity: 1;
+  animation-play-state: running;
 }
 @keyframes bit{
   0%
@@ -354,20 +365,7 @@ transform-origin: 50% 50%;
   display: flex;
   height: 200px;
 }
-#element11{
-  width: 400px;
-  height: 200px;
-  position: relative;
-  display: flex;
-  height: 200px;
-}
-#element12{
-  width: 400px;
-  height: 200px;
-  position: relative;
-  display: flex;
-  height: 200px;
-}
+
 
 /* $bodycolor: #FEFFEA;
 $fontcolor: #FF5D6E;
@@ -475,3 +473,399 @@ $newcolor: #FF5D6E;
  }
 
 .button2
+
+#element-11{
+  transition: none;
+}
+
+/* 12 */
+
+#element-12{
+
+	position: relative;
+}
+
+#element-12:hover {
+background: #F2EBDF;
+
+}
+#element-12:hover .kid12-1{
+  transform-origin: 0px 200px;
+  	transform: scaleX(0);
+    transition-duration: 400ms;
+
+}
+/* purple */
+#element-12:hover .kid12-2{
+  transform-origin: 200px 0px;
+    transform: scaleX(0);
+      transition-duration: 200ms;
+      transition-delay: 400ms;
+}
+
+
+@keyframes scaleXprss {
+	0%{
+		transform: scaleX(0);
+	}
+	100%{
+		transform: scaleX(1);
+	}
+}
+
+.kid12-1 {
+  position: absolute;
+
+  width: 200px;
+  height: 200px;
+  background: #F2E0DF;
+	/* border-top-right-radius:40px; */
+	right: 0px;
+	top: 0px;
+	transition: transform 400ms;
+	transform-origin:0px 40px;
+}
+
+
+.kid12-2 {
+  position: absolute;
+    background: #F2E0DF;
+  width: 200px;
+  height: 200px;
+	/* border-top-left-radius:40px; */
+	left: 0px;
+	top: 0px;
+	transition: transform 400ms;
+	transition-delay: 200ms;
+	transform-origin:0px 80px;
+}
+
+
+#element-13{
+	position: relative;
+}
+#element-13:hover .circle131  {
+  transform: scale(0);
+}
+
+#element-13:hover .circle132  {
+  transform: scale(1);
+}
+
+
+.circle131 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+border-radius:200px;
+background: red;
+  right: 0px;
+	top: 0px;
+
+	transition: transform 150ms;
+	transition-delay: 150ms;
+	transform-origin: 50%;
+}
+
+.circle132 {
+  position: absolute;
+
+  background: blue;
+  width: 200px;
+	height: 200px;
+  right: 0px;
+	top: 0px;
+	border-radius: 200px;
+	z-index: 1;
+	transform-origin: 50% 50%;
+	transform: scale(0);
+  transition: transform 150ms;
+	transition-delay: 150ms;
+}
+
+#element-14:hover {
+    animation: flash 0.7s infinite;
+}
+
+@keyframes flash {
+
+    0% {
+        background: #ec4cec;
+    }
+
+    50% {
+        background: #ffbd42
+    }
+
+    100% {
+        background: rgb(114, 170, 255)
+    }
+}
+#element-15:hover{
+
+animation: flicker 2s linear both;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+#element-16:hover .kid16{
+
+animation: rrr .5s ease-out both;
+}
+
+
+@keyframes rrr {
+  0% {
+    transform: rotate(-540deg) scale(0);
+
+    opacity: 0;
+  }
+  100% {
+
+            transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.kid16{
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+/* 17 */
+#element-17:hover .kid17{
+
+ animation: roll 0.6s infinite;
+}
+
+@keyframes roll{
+  0% {
+            transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+            transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.kid17{
+  width: 100px;
+  height: 100px;
+  background: red;
+}
+
+/* 18 */
+
+#element-18:hover .kid18{
+
+animation: bounce 1.1s both;
+}
+
+
+@keyframes bounce {
+  0% {
+            transform: translateY(-500px);
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+            transform: translateY(-65px);
+            animation-timing-function: ease-in;
+  }
+  72% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+  81% {
+            transform: translateY(-28px);
+            animation-timing-function: ease-in;
+  }
+  90% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+  95% {
+            transform: translateY(-8px);
+            animation-timing-function: ease-in;
+  }
+  100% {
+            transform: translateY(0);
+            animation-timing-function: ease-out;
+  }
+}
+
+.kid18{
+
+  margin-top: 100px;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: red;
+}
+
+/* 19 */
+#element19 {
+  padding: 0;
+}
+
+#element-19:hover .kid19{
+
+ animation: bounce2 1.1s both;
+}
+
+
+@keyframes bounce2 {
+  0% {
+            transform: scale(7);
+            animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+            transform: scale(1);
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+            transform: scale(1.5);
+            animation-timing-function: ease-in;
+  }
+  72% {
+            transform: scale(1);
+            animation-timing-function: ease-out;
+  }
+  81% {
+            transform: scale(1.24);
+            animation-timing-function: ease-in;
+  }
+  89% {
+            transform: scale(1);
+            animation-timing-function: ease-out;
+  }
+  95% {
+            transform: scale(1.04);
+            animation-timing-function: ease-in;
+  }
+  100% {
+            transform: scale(1);
+            animation-timing-function: ease-out;
+  }
+}
+
+
+.kid19{
+
+  width: 400px;
+  height: 200px;
+  background: #F2E0DF;
+  	position: absolute;
+}
+
+
+#element-19 span{
+  position: absolute;
+  z-index: 10;
+padding: 0;
+margin: 0;
+}

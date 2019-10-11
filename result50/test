@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Project 2_Revised</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="css/project2_2.css" type=>
+	<link rel="stylesheet" href="css/project2_2ko.css" type=>
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400,700,900&amp;subset=latin-ext" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700|Raleway:900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,700,800&amp;subset=latin-ext" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(window).scroll(function(){
+				var scrollTop = $(window).scrollTop();
+		    var num = document.getElementById('about-page').offsetTop;
+		    if (scrollTop>num) {
+		      $('.nav').addClass('fixed');
+		    }else{
+		      $('.nav').removeClass('fixed');
+		    }
+			});
+		});
+</script>
+
+</head>
+
+<body>
+
+	<nav class="nav">
+
+		<div class="bttnplace">
+
+					<a href="project2.html">
+						<div class="bttn bttn1">
+							<br>HOME	</div></a>
+<br><br>
+			<a href="#about-page">
+				<div class="bttn bttn2">
+						<br>ABOUT	</div></a>
+<br><br>
+
+			<a href="#nemo-page">
+					<div class="bttn bttn3">
+						<br><span class="nemolittle">NEMO</span></div></a>
+</div>
+
+	</nav>
+
+
+	<section class="screen-container RED">
+		<div id="gray1"></div>
+		<div class="letter-container">
+
+<!-- video -->
+ <video src="bg3.mp4" autoplay loop muted>
+	 <source src="bg3.mp4" type="video/mp4">
+
+	 </video>
+
+		<div class="letter-center">
+			<div class="letter-scale">
+				<div class="letter-width">
+
+					<!-- A -->
+				<span id="Both-A">
+
+					<div class="letter" id="A">
+						<div class="vertical left"></div>
+						<div class="vertical right"></div>
+						<div class="horizontal top"></div>
+					</div>
+
+					<div class="letter" id="A_ko">
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 top2"></div>
+					</div>
+
+				</span>
+
+				<span id="Both-B">
+					<div class="letter" id="B">
+						<div class="vertical left"></div>
+						<div class="vertical right"></div>
+						<!-- <div class="horizontal middle"></div> -->
+						<div class="horizontal bottom"></div>
+					</div>
+
+					<div class="letter" id="B_ko">
+						<div class="vertical2 right2"></div>
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 middle2"></div>
+					</div>
+
+				</span>
+
+							<!-- C -->
+				<span id="Both-C">
+					<div class="letter" id="C">
+						<div class="vertical left"></div>
+						<div class="horizontal top"></div>
+						<div class="horizontal bottom"></div>
+					</div>
+
+					<div class="letter" id="C_ko">
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 top2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+			</span>
+										<!-- D -->
+				<span id="Both-D">
+					<div class="letter" id="D">
+						<div class="vertical left"></div>
+						<div class="vertical right"></div>
+					</div>
+					<div class="letter" id="D_ko">
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 top2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+						<!-- E -->
+						<span id="Both-E">
+					<div class="letter" id="E">
+						<div class="vertical left"></div>
+						<div class="horizontal top"></div>
+						<div class="horizontal bottom"></div>
+					</div>
+					<div class="letter" id="E_ko">
+						<div class="horizontal2 middle2"></div>
+						<div class="vertical2 left2"></div>
+						<div class="vertical2 right2"></div>
+					</div>
+				</span>
+
+				<!-- F -->
+					<span id="Both-F">
+						<div class="letter" id="F">
+						<div class="vertical left"></div>
+						<div class="horizontal top"></div>
+					</div>
+					<div class="letter" id="F_ko">
+					<div class="vertical2 left2"></div>
+					<div class="horizontal2 top2"></div>
+				</div>
+						</span>
+
+						<!-- G -->
+							<span id="Both-G">
+					<div class="letter" id="G">
+						<div class="vertical left"></div>
+						<div class="horizontal top"></div>
+						<div class="horizontal bottom"></div>
+					</div>
+					<div class="letter" id="G_ko">
+						<div class="vertical2 right2"></div>
+						<div class="horizontal2 top2"></div>
+					</div>
+				</span>
+
+				<!-- H -->
+					<span id="Both-H">
+					<div class="letter" id="H">
+						<div class="vertical left"></div>
+						<div class="vertical right"></div>
+						<!-- <div class="horizontal middle"></div> -->
+					</div>
+					<div class="letter" id="H_ko">
+						<div class="vertical2 top2"></div>
+						<div class="horizontal2 middle2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+				<!-- I -->
+					<span id="Both-I">
+					<div class="letter" id="I">
+						<div class="vertical middle"></div>
+						<div class="horizontal top"></div>
+						<div class="horizontal bottom"></div>
+					</div>
+					<div class="letter" id="I_ko">
+						<div class="vertical2 middle2"></div>
+					</div>
+				</span>
+
+				<!-- J -->
+					<span id="Both-J">
+						<div class="letter" id="J">
+						<div class="vertical right"></div>
+						<div class="horizontal bottom"></div>
+					</div>
+
+					<div class="letter" id="J_ko">
+						<div class="horizontal2 top2"></div>
+						<div class="vertical2 right2"></div>
+						<div class="vertical2 left2"></div>
+
+					</div>
+				</span>
+
+
+				<!-- K -->
+					<span id="Both-K">
+					<div class="letter" id="K">
+						<div class="vertical left"></div>
+						<div class="horizontal top"></div>
+						<div class="horizontal bottom"></div>
+					</div>
+					<div class="letter" id="K_ko">
+						<div class="vertical2 right2"></div>
+						<div class="horizontal2 top2"></div>
+						<div class="horizontal2 middle2"></div>
+					</div>
+				</span>
+
+
+				<!-- L -->
+					<span id="Both-L">
+					<div class="letter" id="L">
+						<div class="vertical left"></div>
+						<div class="horizontal bottom"></div>
+					</div>
+					<div class="letter" id="L_ko">
+						<div class="horizontal2 top2"></div>
+						<div class="vertical2 right2"></div>
+						<div class="horizontal2 middle2"></div>
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+				<!-- M -->
+					<span id="Both-M">
+					<div class="letter" id="M">
+						<div class="top left"></div>
+						<div class="top right"></div>
+						<div class="bottom right-2"></div>
+						<div class="bottom left-2"></div>
+					</div>
+					<div class="letter" id="M_ko">
+						<div class="horizontal2 top2"></div>
+						<div class="vertical2 left2"></div>
+						<div class="vertical2 right2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+				<!-- N -->
+					<span id="Both-N">
+					<div class="letter" id="N">
+						<div class="top left-t"></div>
+						<div class="bottom left"></div>
+						<div class="vertical right"></div>
+					</div>
+					<div class="letter" id="N_ko">
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+
+				<!-- O -->
+					<span id="Both-O">
+					<div class="letter" id="O">
+						<div class="vertical left"></div>
+						<div class="vertical right"></div>
+						<!-- <div class="horizontal one"></div> -->
+
+					</div>
+					<div class="letter" id="O_ko">
+						<div class="vertical2 middle2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+				<!-- P -->
+					<span id="Both-P">
+					<div class="letter" id="P">
+						<div class="vertical left"></div>
+						<div class="horizontal bottom"></div>
+						<div class="horizontal top"></div>
+					</div>
+					<div class="letter" id="P_ko">
+						<div class="vertical2 left2"></div>
+						<div class="vertical2 right2"></div>
+						<div class="horizontal2 top2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+
+				<!-- Q QRCODE -->
+					<span id="Both-Q">
+					<div class="letter" id="Q">
+						<div class="vertical left"></div>
+						<div class="vertical right"></div>
+
+					</div>
+					<div class="letter" id="Q_ko">
+						<div class="vertical2 left2"></div>
+						<div class="vertical2 right2"></div>
+						<div class="bottom2 right2"></div>
+					</div>
+				</span>
+
+				<!-- R QRCODE -->
+					<span id="Both-R">
+					<div class="letter" id="R">
+						<div class="vertical left"></div>
+						<div class="horizontal top"></div>
+							<div class="horizontal bottom"></div>
+					</div>
+					<div class="letter" id="R_ko">
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 top2"></div>
+							<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+						<!-- S QRCODE -->
+							<span id="Both-S">
+							<div class="letter" id="S">
+
+								<div class="vertical top"></div>
+									<div class="vertical bottom"></div>
+							</div>
+					<div class="letter" id="S_ko">
+						<div class="vertical2 left2"></div>
+					</div>
+				</span>
+
+									<!-- T QRCODE -->
+										<span id="Both-T">
+					<div class="letter" id="T">
+						<div class="horizontal top"></div>
+						<div class="vertical middle"></div>
+					</div>
+					<div class="letter" id="T_ko">
+						<div class="vertical2 left2"></div>
+						<div class="horizontal2 top2"></div>
+						<div class="horizontal2 middle2"></div>
+						<div class="horizontal2 bottom2"></div>
+					</div>
+				</span>
+
+				<!-- U QRCODE -->
+					<span id="Both-U">
+					<div class="letter" id="U">
+						<div class="vertical right"></div>
+							<div class="vertical left"></div>
+					</div>
+					<div class="letter" id="U_ko">
+						<div class="vertical2 middle2"></div>
+						<div class="horizontal2 top2"></div>
+					</div>
+				</span>
+
+
+				<!-- V QRCODE -->
+					<span id="Both-V">
+					<div class="letter" id="V">
+						<div class="top right"></div>
+						<div class="top left"></div>
+						<div class="bottom rightB"></div>
+						<div class="bottom leftB"></div>
+					</div>
+					<div class="letter" id="V_ko">
+						<div class="top2 right2"></div>
+						<div class="top2 left2"></div>
+						<div class="bottom2 right2B"></div>
+						<div class="bottom2 left2B"></div>
+					</div>
+				</span>
+
+			<!-- W QRCODE -->
+				<span id="Both-W">
+					<div class="letter" id="W">
+						<div class="top right"></div>
+						<div class="top left"></div>
+						<div class="bottom rightB"></div>
+						<div class="bottom leftB"></div>
+					</div>
+					<div class="letter" id="W_ko">
+						<div class="top2 right2"></div>
+						<div class="top2 left2"></div>
+						<div class="bottom2 right2B"></div>
+						<div class="bottom2 left2B"></div>
+					</div>
+				</span>
+
+					<!-- X QRCODE -->
+						<span id="Both-X">
+							<div class="letter" id="X">
+								<div class="top right"></div>
+								<div class="top left"></div>
+								<div class="bottom rightB"></div>
+								<div class="bottom leftB"></div>
+							</div>
+							<div class="letter" id="X_ko">
+								<div class="top2 right2"></div>
+								<div class="top2 left2"></div>
+								<div class="bottom2 right2B"></div>
+								<div class="bottom2 left2B"></div>
+							</div>
+					</span>
+
+					<!-- Y QRCODE -->
+						<span id="Both-Y">
+					<div class="letter" id="Y">
+						<div class="top right"></div>
+						<div class="top left"></div>
+						<div class="vertical middle"></div>
+					</div>
+					<div class="letter" id="Y_ko">
+						<div class="top2 right2"></div>
+						<div class="top2 left2"></div>
+						<div class="vertical2 middle2"></div>
+					</div>
+				</span>
+
+				<!-- Z QRCODE -->
+					<span id="Both-Z">
+						<div class="letter" id="Z">
+							<div class="top right"></div>
+							<div class="top left"></div>
+							<div class="bottom leftB"></div>
+							<div class="bottom rightB"></div>
+						</div>
+						<div class="letter" id="Z_ko">
+							<div class="top2 right2"></div>
+							<div class="top2 left2"></div>
+							<div class="bottom2 right2B"></div>
+							<div class="bottom2 left2B"></div>
+						</div>
+					</span>
+
+				</div>
+
+			</div>
+		</div>
+
+		</div>
+	</section>
+
+	<!---about -->
+	<section id="about-page"class="screen-container">
+		<div id="gray2"></div>
+
+		<div id="about-text">
+
+			<h1 >ABOUT</h1>
+			<p><span class="M">M</span>y website introduces abstract English letterforms, that are made of CSS code and shows an interaction between English and Korean letters. The interaction is based on a system called Romanization of Korean. — it refers to writing Korean words using the Latin script : either romanizing individual words in a Korean text or writing an entire Korean text in the Latin script.
+			</p>
+
+			<p>
+				<span class="ttt"></span>To make the connection, when you hover the Black English letter form, it transforms into White Korean letterform, which is either a singular Korean consonant or vowel, that has a similar sound as the English letterform.: A, B, D, E, G, H, I, J, K, L, M, N, O, P, S, T, U.
+  If a letter returns back as black, it means it doesn't have any sound match with one single Korean character.: C, F, Q, R, V, W, X, Y, Z.
+ To be specific, when writing a letter 'C' sound in Korean, it needs to combine more than one Korean consonant and vowel. In other words, there is no single Korean character that sounds match with letter C
+			</p>
+		</div>
+
+	</section>
+
+	<section id="nemo-page" class="screen-container overflowHidden">
+		<div id="gray3">
+
+		</div>
+		<div id="nemo-text">
+			<h1 class="C2">NEMO </h1>
+			<p class""numnum>Letter forms on the left side represent numbers, 0 to 9 in order. <br>The rest two are Exclamation mark and question mark.  </p>
+			<p >
+<span class="M">M<span class="M">y font name is Nemo, which means square in Korean. The letterforms are all fit into the same size square, which proposition is 8:9. So all the width and the height of the letterforms are the same. I was inspired by Bauhaus font so they look pretty abstract and feels heavy. Also, elements of letterforms are composed of basic shapes: square, circle, and triangle.
+</p>
+		</div>
+		<div class="numbers-container">
+			<div class="numbers-scale">
+				<div class="numbers-width">
+					<div class="letter" id="Zero">
+						<div class="basic right"></div>
+						<div class="basic left"></div>
+					</div>
+					<div class="letter" id="One">
+						<div class="basic left"></div>
+						<div class="basic right"></div>
+					</div>
+					<div class="letter" id="Two">
+						<div class="basic left top"></div>
+						<div class="basic right top"></div>
+						<div class="basic left bottom"></div>
+						<div class="basic right bottom"></div>
+					</div>
+					<div class="letter" id="Three">
+						<div class="basic right"></div>
+						<div class="basic top"></div>
+						<div class="basic bottom"></div>
+					</div>
+					<div class="letter" id="Four">
+						<div class="basic top"></div>
+						<div class="basic bottom"></div>
+						<div class="basic right"></div>
+					</div>
+					<div class="letter" id="Five">
+						<div class="basic left"></div>
+						<div class="basic right"></div>
+						<div class="basic middle"></div>
+						<div class="basic bottom"></div>
+					</div>
+					<div class="letter" id="Six">
+						<div class="basic left"></div>
+						<div class="basic top"></div>
+						<div class="basic bottom"></div>
+					</div>
+					<div class="letter" id="Seven">
+						<div class="basic left"></div>
+						<div class="basic right"></div>
+					</div>
+					<div class="letter" id="Eight">
+						<div class="basic top"></div>
+						<div class="basic bottom"></div>
+					</div>
+					<div class="letter" id="Nine">
+						<div class="basic top left"></div>
+						<div class="basic top right"></div>
+						<div class="basic bottom left"></div>
+					</div>
+
+					<div class="letter" id="Punc">
+						<div class="basic left"></div>
+						<div class="basic right"></div>
+					</div>
+					<div class="letter" id="Ques">
+						<div class="basic top right"></div>
+						<div class="basic left"></div>
+						<div class="basic bottom right"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+</body>
+
+</html>

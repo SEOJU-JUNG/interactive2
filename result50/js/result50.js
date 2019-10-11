@@ -5,6 +5,7 @@ let element4 = document.querySelector('#element-4')
 let element5 = document.querySelector('#element-5')
 let element6 = document.querySelector('#element-6')
 let element2 = document.querySelector('#element2')
+let element11 = document.querySelector('#element-11')
 
 
 element3.addEventListener('click',function() {
@@ -110,3 +111,38 @@ function draw() {
   // ellipse(random(height),200, random(40, 30));
   window.requestAnimationFrame(draw)
   }
+
+// 11
+  element11.addEventListener("click", function () {
+    var adder = 10
+
+    var x = 0
+    element11.style.position = 'relative'
+
+    function draw() {
+        x = x + adder
+
+        let width = window.innerWidth - element11.clientWidth
+        let hasLeftScreen = x > width || x < -width
+        if (hasLeftScreen) {
+            adder *= -1
+            // x = -width
+        }
+        console.log(x)
+        element11.style.left = x + "px"
+        window.requestAnimationFrame(draw)
+    }
+
+
+    window.requestAnimationFrame(draw)
+});
+
+
+
+
+let heart = document.querySelector('.heart1')
+let element6a = document.querySelector('#element6')
+
+heart.addEventListener('click',function(){
+  element6a.classList.add('heartVisible')
+})
