@@ -118,6 +118,7 @@ function draw() {
 
     var x = 0
     element11.style.position = 'relative'
+  element11.style.background = `rgb(${253},${235},${95})`
 
     function draw() {
         x = x + adder
@@ -145,4 +146,31 @@ let element6a = document.querySelector('#element6')
 
 heart.addEventListener('click',function(){
   element6a.classList.add('heartVisible')
+})
+
+// 13
+let circle131 = document.querySelector('.circle13-1 ')
+let circle132 = document.querySelector('.circle13-2')
+let circle133 = document.querySelector('.circle13-3')
+
+
+circle132.addEventListener('click',function(){
+  circle133.classList.add('redcircleVisible')
+})
+
+// 30
+// let element330 = document.querySelector('#element-30')
+// let circir = document.querySelector('.circle')
+//
+// element330.addEventListener('click',function() {
+// element330.classList.add('cirVisible')
+// })
+
+
+// 37
+let element37 = document.querySelector('#element-37')
+let cir37 = document.querySelector('.circle37')
+
+element37.addEventListener('click',function() {
+element37.classList.add('cir37Visible')
 })
