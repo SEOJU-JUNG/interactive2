@@ -95,15 +95,15 @@ function myMove() {
 function draw() {
   // console.log('hi')
 
-  let circle = document.querySelector('#element4 .circle')
+  let circle4a = document.querySelector('#element4 .circle4')
   let r = Math.random() * 255
   let g = Math.random() * 255
   let b = Math.random() * 255
-  circle.style.background = `rgb(${r},${g},${b})`
+  circle4a.style.background = `rgb(${r},${g},${b})`
 
   let height = Math.random()
 // circle.style.transform = `scale(1,${height})`
-  circle.style.transform = `scale(${height})`
+  circle4a.style.transform = `scale(${height})`
   // frameRate(20);
   // background(200, 40);
   // noStroke();
