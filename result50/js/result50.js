@@ -1,51 +1,8 @@
 
 
-let element3 = document.querySelector('#element-3')
-let element4 = document.querySelector('#element-4')
-let element5 = document.querySelector('#element-5')
-let element6 = document.querySelector('#element-6')
+// let element4 = document.querySelector('#element-4')
 let element2 = document.querySelector('#element2')
 let element11 = document.querySelector('#element-11')
-
-
-element3.addEventListener('click',function() {
-
-  element3.animate([{
-			opacity: 0,
-			marginLeft: getComputedStyle(this).marginLeft,
-			fontSize: '100px',
-			borderWidth:  getComputedStyle(this).borderWidth
-		},
-    {
-			opacity: 0.4,
-			marginLeft: '125px',
-			fontSize: '24px',
-			borderWidth: '10px'
-		}], {
-      duration: 200,
-      iterations: 1,
-      fill:'forwards'
-  });
-
-})
-
-element6.addEventListener('pointermove',function(e){
-  var xPos = e.pageX-125;
-  var yPos = e.pageY-125;
-
-  this.style.position = 'absolute'
-  this.style.top = yPos+'px'
-  this.style.left = xPos+'px'
-
-})
-
-element4.addEventListener('click',function(){
-  this.classList.add('gradient-background')
-})
-
-element5.addEventListener('click', function(){
-  this.nextElementSibling.classList.toggle('circle');
-})
 
 
 // element2
@@ -67,7 +24,6 @@ element2.addEventListener('click',function() {
       iterations: 1,
       fill:'forwards'
   });
-
 })
 
 function myFunction() {
@@ -92,10 +48,12 @@ function myMove() {
 // element4
 
 
+// 4
+
 function draw() {
   // console.log('hi')
 
-  let circle4a = document.querySelector('#element4 .circle4')
+  let circle4a = document.querySelector('#element-4 .circle4')
   let r = Math.random() * 255
   let g = Math.random() * 255
   let b = Math.random() * 255
@@ -115,14 +73,12 @@ function draw() {
 // 11
   element11.addEventListener("click", function () {
     var adder = 10
-
     var x = 0
+      element11.style.height = '100px'
     element11.style.position = 'relative'
-  element11.style.background = `rgb(${253},${235},${95})`
-
+    element11.style.background = `rgb(${253},${235},${95})`
     function draw() {
         x = x + adder
-
         let width = window.innerWidth - element11.clientWidth
         let hasLeftScreen = x > width || x < -width
         if (hasLeftScreen) {
@@ -133,7 +89,6 @@ function draw() {
         element11.style.left = x + "px"
         window.requestAnimationFrame(draw)
     }
-
 
     window.requestAnimationFrame(draw)
 });
@@ -158,13 +113,13 @@ circle132.addEventListener('click',function(){
   circle133.classList.add('redcircleVisible')
 })
 
-// 30
-// let element330 = document.querySelector('#element-30')
-// let circir = document.querySelector('.circle')
-//
-// element330.addEventListener('click',function() {
-// element330.classList.add('cirVisible')
-// })
+//30
+let element330 = document.querySelector('#element-30')
+let circir = document.querySelector('.circle30')
+
+element330.addEventListener('click',function() {
+element330.classList.add('cirVisible')
+})
 
 
 // 37
