@@ -1266,6 +1266,7 @@ color: black;
 		height: 200px;
 		overflow: hidden;
 	}
+
 	.circle30 {
 	margin-top: 0;
   position: relative;
@@ -1390,7 +1391,7 @@ color: black;
 	margin-left: 200px;
   position: absolute;
   transform: translate(-50%, -50%);
-  border-radius: 50%;
+  /* border-radius: 50%; */
   width: 15px;
   height: 15px;
   box-shadow: 0px 0px 0px 5px green;
@@ -1400,6 +1401,7 @@ color: black;
 
 @keyframes cir37 {
   0% {
+		transform: rotate(0deg);
     box-shadow: 0px 0px 0px 5px red;
     width: 1px;
     height: 1px;
@@ -1425,6 +1427,7 @@ color: black;
     height:150px;
   }
   100% {
+		transform: rotate(500deg);
     box-shadow: 0px 0px 0px 0px red;
     width: 145px;
     height: 145px;

@@ -119,6 +119,8 @@ let circir = document.querySelector('.circle30')
 
 element330.addEventListener('click',function() {
 element330.classList.add('cirVisible')
+element330.style.borderRadius = '50%'
+  element330.style.width = '200px'
 })
 
 
