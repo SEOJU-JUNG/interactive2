@@ -131,3 +131,28 @@ let cir37 = document.querySelector('.circle37')
 element37.addEventListener('click',function() {
 element37.classList.add('cir37Visible')
 })
+
+// 32
+$(function() {
+  $('a[href*=#]').on('click', function(e) {
+    e.preventDefault();
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
+});
+
+
+// 45
+let element45 = document.querySelector("#element-45");
+
+element45.addEventListener("pointermove", function (e) {
+    var xPos = e.pageX - 50;
+    var yPos = e.pageY - 50;
+
+    document.querySelector(".circleA").style.position = "absolute";
+    document.querySelector(".circleA").style.top = yPos + "px";
+    document.querySelector(".circleA").style.left = xPos + "px";
+});
+
+element22.addEventListener("click", function () {
+    this.classList.add("gradient-background");
+});

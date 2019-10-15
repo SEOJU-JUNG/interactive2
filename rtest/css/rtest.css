@@ -1,0 +1,587 @@
+/* reset padding and margins */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: helvetica, arial, sans-serif;
+    height: 500vh;
+    background-color: #e9d9b8;
+}
+
+/* container */
+
+.container {
+    position: relative;
+}
+
+/* items */
+
+.item {
+    height: 200px;
+    width: 410px;
+    background: rgb(33, 223, 90);
+    color: white;
+    margin: 10px auto;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+/* example element 1 */
+
+#element-1:hover {
+    transform: scale(0.2);
+    opacity: .3;
+}
+
+/* #element-1:active {
+    background: pink;
+    opacity: 1;
+} */
+
+/* example element 2 */
+
+#element-2:hover {
+    transform: skewY(20deg);
+    background-color: #300030;
+}
+
+
+
+/* example element 3 */
+#element-3 {
+    transition: none;
+}
+
+/* example element 4 */
+/* background: linear-gradient(blue, pink);
+    color: transparent; */
+#element-4 {
+    transition: none;
+}
+
+/* example element 5 */
+/* .circle {
+    border-radius: 125px;
+} */
+
+/* example element 6 */
+#element-5:hover {
+    background-image: linear-gradient(to bottom right, rgb(0, 255, 213), rgb(182, 182, 182));
+}
+
+#element-6:hover {
+    transform: rotateY(130deg);
+    background-color: #ffb429;
+}
+
+#element-7:hover {
+    transform: rotate(45deg);
+    transform-origin: 20% 40%;
+}
+
+#element-8:hover {
+    transform: rotateY(80deg);
+    transform-style: preserve-3d;
+}
+
+#element-9:hover {
+    transform: rotateX(180deg);
+    transform-style: preserve-3d;
+}
+
+#element-10:hover {
+    transition: 2s;
+    width: 900px;
+}
+
+#element-11:hover {
+    background-color: #7DD4B2;
+    transition: 4s;
+    width: 1600px;
+    height: 900px;
+}
+
+#element-12:hover {
+    background-color: #BB413E;
+    transition: 1s;
+    border-radius: 50%;
+    transform: scale(0.2);
+}
+
+#element-13:active {
+    transform: rotate(120deg);
+}
+
+#element-14:hover {
+    transition: 2s;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgb(225, 240, 27);
+}
+
+#element-15:hover {
+
+    animation: element15Animation 1000ms ease-in 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes element15Animation {
+    0% {
+        border-radius: 0;
+        width: 410px;
+        background-color: #ec4c4c;
+    }
+
+    50% {
+        border-radius: 50%;
+        width: 200px;
+        background-color: #ffbd42;
+    }
+
+    70% {
+        border-radius: 100%;
+        width: 200px;
+        background-color: rgb(114, 170, 255);
+    }
+
+    100% {
+        border-radius: 100%;
+        width: 200px;
+        background-color: rgb(223, 188, 33);
+    }
+}
+
+#element-16 {
+    position: relative;
+    background: transparent;
+}
+
+#element-16:hover {
+
+    /* background-image: linear-gradient(white 1px, transparent 1px), linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 51px 51px;
+    background-position: -1px -1px; */
+    background: transparent;
+    transition: none;
+}
+
+#element-16 .square {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: rgb(230, 203, 82);
+    transition: all 100ms ease-in;
+}
+
+/*
+#square1 {
+    top: 0;
+    left: 0;
+}
+
+#square2 {
+    top: 0;
+    left: 0;
+}
+
+#square3 {
+    top: 0;
+    left: 0;
+} */
+
+/* #square4 {} */
+
+
+
+
+
+
+
+
+
+
+#element-17.beenHovered {
+    animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-elliptic-top-fwd {
+    0% {
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform: translateY(-600px) rotateX(-30deg) scale(0);
+        transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotateX(0) scale(1);
+        transform: translateY(0) rotateX(0) scale(1);
+        transform-origin: 50% 1400px;
+        transform-origin: 50% 1400px;
+        opacity: 1;
+    }
+}
+
+#element-18:hover {
+    animation: flash 0.7s infinite;
+}
+
+@keyframes flash {
+
+    0% {
+        background: #ec4cec;
+    }
+
+    50% {
+        background: #ffbd42;
+    }
+
+    100% {
+        background: rgb(114, 170, 255)
+    }
+}
+
+#element-19:hover {
+    background-color: #ffffff;
+
+}
+
+#element-20.beenHovered {
+    animation: bounce-in-fwd 1.1s both ease-in 1;
+}
+
+@keyframes bounce-in-fwd {
+    0% {
+        transform: scale(0);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+
+    38% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+        opacity: 1;
+        background: rgb(131, 252, 167);
+    }
+
+    55% {
+        transform: scale(0.7);
+        animation-timing-function: ease-in;
+        background: rgb(220, 238, 141);
+    }
+
+    72% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+        background: #ffb429;
+    }
+
+    81% {
+        transform: scale(0.84);
+        animation-timing-function: ease-in;
+        background: #f09df0;
+    }
+
+    89% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+        background: #f09df0;
+    }
+
+    95% {
+        transform: scale(0.95);
+        animation-timing-function: ease-in;
+        background: #ffb429;
+    }
+
+    100% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
+
+#element-25:hover {
+    transform: rotate(90deg) scale(1.5);
+    opacity: .3;
+}
+
+#element-25:active {
+    background: pink;
+    opacity: 1;
+}
+
+/* example element 2 */
+
+#element-26::after {
+    content: 'this is added after the content inside the element';
+    color: white;
+}
+
+
+#element-26:hover::after {
+    content: 'this text changes on hover';
+    color: red;
+}
+
+/* example element 21 is changed only via js */
+
+/* example element 22 */
+#element-22.gradient-background {
+    background: linear-gradient(rgb(250, 188, 73), rgb(243, 107, 159));
+    color: transparent;
+}
+
+#element-22 {
+    overflow: hidden;
+}
+
+
+/* example element 23 */
+.NetA {
+    position: relative;
+    left: 110px;
+    width: 150px;
+    height: 150px;
+    background: none;
+}
+
+.NetB {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgb(20, 150, 59);
+    transform-origin: 50% 50%;
+    transition: 1200ms all;
+}
+
+.NetC {
+    background: #BB413E;
+}
+
+.NetB:hover .NetB {
+    transition-delay: 200ms;
+    transform: rotate(720deg);
+}
+
+/* example element 24 */
+#element-24:hover {
+    transition: none;
+}
+
+.circleA {
+    width: 100px;
+    height: 100px;
+    background: tan;
+}
+
+.circle {
+    border-radius: 125px;
+}
+
+
+
+#element-27 {
+    position: relative;
+    background: transparent;
+}
+
+#element-27:hover {
+    background: transparent;
+    transition: none;
+}
+
+#element-27 .square1 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: rgb(230, 203, 82);
+    transition: all 100ms ease-in;
+}
+
+.NetD {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgb(20, 150, 59);
+    ;
+    transform-origin: 50% 50%;
+    transition: 1200ms all;
+}
+
+.NetF {
+    background: #BB413E;
+}
+
+.NetD:hover .NetD {
+    transition-delay: 200ms;
+    transform: scale(.8);
+}
+
+#element-29.beenHovered {
+    animation: slide-in-left 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#element-30 {
+    position: relative;
+    background: transparent;
+}
+
+#element-30:hover {
+    background: transparent;
+    transition: none;
+}
+
+#element-30 .square1 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background: rgb(230, 203, 82);
+    transition: all 100ms ease-in;
+}
+
+.NetG {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgb(20, 150, 59);
+    ;
+    transform-origin: 50% 50%;
+    transition: 1200ms all;
+    border-radius: 50%;
+}
+
+.NetH {
+    background: #BB413E;
+}
+
+.NetG:hover .NetG {
+    animation-delay: 100ms;
+    /* transform: skew(20deg); */
+    animation: bounce-in 800ms infinite;
+}
+
+
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+        animation-timing-function: ease-in;
+        opacity: 1;
+    }
+
+    38% {
+        transform: scale(1.14);
+        animation-timing-function: ease-out;
+        opacity: 1;
+
+    }
+
+    55% {
+        transform: scale(0.7);
+        animation-timing-function: ease-in;
+    }
+
+    72% {
+        transform: scale(1.14);
+        animation-timing-function: ease-out;
+    }
+
+    81% {
+        transform: scale(0.84);
+        animation-timing-function: ease-in;
+    }
+
+    89% {
+        transform: scale(1.14);
+        animation-timing-function: ease-out;
+    }
+
+    95% {
+        transform: scale(0.95);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: scale(1.0);
+        animation-timing-function: ease-out;
+    }
+}
+
+.NetA32 {
+    position: relative;
+    top: -30px;
+    left: -60px;
+    width: 410px;
+    height: 200px;
+    background: none;
+}
+
+.NetK {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 100%;
+    height: 90%;
+    background: rgb(20, 150, 59);
+    ;
+    transform-origin: 50% 50%;
+    transition: 1200ms all;
+    border-radius: 50%;
+}
+
+.NetL {
+    background: #BB413E;
+}
+
+.NetK:hover .NetK {
+    animation-delay: 200ms;
+    transform: skewY(10deg) rotate(10deg);
+    /* animation: bounce-in 800ms infinite; */
+}
+
+.NetI {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgb(20, 150, 59);
+    ;
+    transform-origin: 50% 50%;
+    transition: 1200ms all;
+    border-radius: 50%;
+}
+
+.NetJ {
+    background: #BB413E;
+}
+
+.NetI:hover .NetI {
+    animation-delay: 200ms;
+    transform: skew(20deg);
+    /* animation: bounce-in 800ms infinite; */
+}
