@@ -153,6 +153,93 @@ element45.addEventListener("pointermove", function (e) {
     document.querySelector(".circleA").style.left = xPos + "px";
 });
 
-element22.addEventListener("click", function () {
+
+// 46
+
+
+let element46 = document.querySelector("#element-46");
+
+
+let squares1 = []
+
+for (let y = 0; y < 5; y++) {
+
+    for (let x = 0; x < 10; x++) {
+
+        let square1 = document.createElement('div')
+        square1.classList.add('square1')
+
+        square1.style.top = y * 40 + 'px'
+        square1.style.left = x * 40 + 'px'
+
+        element46.appendChild(square1)
+        squares1.push(square1)
+    }
+
+
+}
+
+element46.addEventListener('mouseenter', function () {
+    for (let counter = 0; counter < squares1.length; counter++) {
+
+        let x = Math.random() * 400 - 200;
+        let y = Math.random() * 200 - 100;
+        let s = Math.random() * 2;
+        let r = Math.random() * 360;
+
+        squares1[counter].style.transform = 'translate(' + x + 'px,' + y + 'px)'
+        // squares[counter].style.transform = 'rotate(' + r + 'deg)';
+        // squares[counter].style.transform = 'scale(' + s + ')';
+        // squares[counter].style.transform = 'scale(' + s + ')' + 'rotate(' + r + 'deg)';
+    }
+})
+element46.addEventListener('mouseleave', function () {
+    console.log('27-leave')
+})
+
+
+// 48
+let element48 = document.querySelector('#element-48')
+
+let squares2 = []
+
+for (let y = 0; y < 7; y++) {
+
+    for (let x = 0; x < 14; x++) {
+
+        let square2 = document.createElement('div')
+        square2.classList.add('square1')
+
+        square2.style.top = y * 30 + 'px'
+        square2.style.left = x * 29.5 + 'px'
+
+        element48.appendChild(square2)
+        squares2.push(square2)
+    }
+
+
+}
+
+element48.addEventListener('mouseenter', function () {
+    for (let counter = 0; counter < squares2.length; counter++) {
+
+        let x = Math.random() * 400 - 200;
+        let y = Math.random() * 200 - 150;
+        let s = Math.random() * 2;
+        let r = Math.random() * 1090;
+
+        // squares2[counter].style.transform = 'translate(' + x + 'px,' + y + 'px)'
+        squares2[counter].style.transform = 'rotate(' + r + 'deg)';
+        // squares2[counter].style.transform = 'scale(1.3)';
+
+        // squares[counter].style.transform = 'scale(' + s + ')';
+        // squares[counter].style.transform = 'scale(' + s + ')' + 'rotate(' + r + 'deg)';
+    }
+})
+element48.addEventListener('mouseleave', function () {
+    console.log('30-leave')
+})
+
+element48.addEventListener("click", function () {
     this.classList.add("gradient-background");
 });

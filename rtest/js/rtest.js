@@ -181,14 +181,6 @@ element24.addEventListener("pointermove", function (e) {
     document.querySelector(".circleA").style.left = xPos + "px";
 });
 
-element22.addEventListener("click", function () {
-    this.classList.add("gradient-background");
-});
-
-// element23.addEventListener("click", function () {
-//     this.nextElementSibling.classList.toggle("circle");
-// });
-
 
 let squares1 = []
 
