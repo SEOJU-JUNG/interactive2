@@ -275,9 +275,21 @@ margin: 0;
 }
 
 #element7:hover{
+	background: transparent;
+
+
+
+
+
+
+}
+
+#element7:hover .kid7{
   width: 150px;
 	height: 150px;
-
+	position: absolute;
+  left: 125px;
+	top: 25px;
   text-decoration: none;
 	color: black;
 	font-size: 0.7em;
@@ -710,7 +722,26 @@ transform-origin: 50%;
         background: rgb(114, 170, 255)
     }
 }
-#element-15:hover{
+
+#element-15 {
+    overflow: scroll;
+		scroll-behavior: smooth;
+
+    /* size: 50%; */
+}
+.kid15{
+	width: 400px;
+	height: 200px;
+	background: #F2EB8D;
+}
+
+#element-15:hover .kid15{
+	display: none;
+
+}
+
+
+/* #element-15:hover{
  background: #FDEB5F;
 
 animation: flicker 1.5s linear both;
@@ -810,7 +841,7 @@ animation: flicker 1.5s linear both;
   100% {
     opacity: 1;
   }
-}
+} */
 
 
 #element-16:hover .kid16{
