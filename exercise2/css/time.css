@@ -1,0 +1,136 @@
+body {
+
+/* font-family: 'Noto Sans', sans-serif; */
+	background: #673AB7;
+	display: grid;
+	align-items: center;
+  justify-items: center;
+min-height: 100vh;
+display: flex;
+
+height: 100vh;
+
+
+}
+
+
+#clockW{
+	/* position: absolute; */
+	align-items: center;
+	justify-content: center;
+	width: 600px;
+	height: 600px;
+	display: inline-block;
+}
+#time{
+	display: inline-block;
+	font-family: 'Gothic A1', sans-serif;
+	width: 400px;
+	height: 400px;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	color: white;
+position: absolute;
+}
+
+#time2{
+	z-index: 99999999;
+margin: 50px;
+	display: inline-block;
+	font-family: 'Gothic A1', sans-serif;
+	width: 400px;
+	height: 400px;
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+	color: white;
+position: absolute;
+}
+
+#clock {
+margin-top: -200px;
+border-radius: 100px;
+background: #ffffff;
+font-family: "Montserrat";
+border: 5px solid white;
+box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+position: absolute;
+overflow: hidden;
+position: relative;
+width: 200px;
+height: 200px;
+border-radius: 100%;
+display: block;
+}
+
+#clock2 {
+	margin-top: -200px;
+
+	margin-left: 200px;
+border-radius: 100px;
+background: #ffffff;
+font-family: "Montserrat";
+border: 5px solid white;
+box-shadow: inset 2px 3px 8px 0 rgba(0, 0, 0, 0.1);
+position: absolute;
+overflow: hidden;
+position: relative;
+width: 200px;
+height: 200px;
+border-radius: 100%;
+display: block;
+}
+
+#secondHand, #secondHand2 {
+position: absolute;
+ height: 70px;
+ width: 2px;
+ margin: auto;
+ top: -26%;
+ left: 0;
+ bottom: 0;
+ right: 0;
+ border-radius: 4px;
+ background: #FF4B3E;
+ transform-origin: bottom center;
+ transform: rotate(180deg);
+ z-index: 1;
+}
+
+.aFiveMinute {
+	background: white;
+}
+
+
+.hour ,.hour2 {
+  position: absolute;
+  height: 70px;
+  width: 6px;
+  margin: auto;
+  top: -20%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: black;
+  transform-origin: bottom center;
+  /* transform: rotate(360deg); */
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+	display: block;
+}
+
+.minute ,.minute2 {
+	position: absolute;
+	height: 70px;
+	width: 6px;
+	margin: auto;
+	top: -20%;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: black;
+	transform-origin: bottom center;
+	 transform: rotate(90deg);
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+	display: block;
+}
