@@ -38,7 +38,7 @@ function getTime(){
 
 
 
-  let timeText= h + "H" + m + "m" + s + "s"
+  let timeText= h + ":" + m + ":" + s + ""
   timeEl.innerText = timeText
 
   // let timeText2 = h + "시" + m + "분" + s + "s"
@@ -73,19 +73,11 @@ function getTime(){
     //KOREA TIME//
 
       let d2 = koreaTime
-
-      // get hours, minutes, and seconds from the date object
-
       let h2 = addZeroIfNeeded(d2.getHours());
       let m2 = addZeroIfNeeded(d2.getMinutes());
       let s2 = addZeroIfNeeded(d2.getSeconds());
-
-      // update the clock's text with our time vars
-
-      let timeText2 = h2 + "시" + m2 + "분" + s2 + "s"
+      let timeText2 = h2 + ":" + m2 + ":" + s2 + ""
       timeEl2.innerText = timeText2
-
-
 
       secondHand2.style.transform = 'rotate('+ s2 * 6 +'deg)'
 
@@ -97,8 +89,6 @@ function getTime(){
       var koreaTime = new Date().toLocaleString("en-US", {timeZone: "Asia/Seoul"});
       koreaTime = new Date(koreaTime);
       console.log('koreaTime time: '+koreaTime.toLocaleString())
-
-      // detect if its a minute divisible by 5
 
       if(m % 5 == 0){
       	clockEl.classList.add('aFiveMinute');
