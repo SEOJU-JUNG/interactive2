@@ -1520,7 +1520,7 @@ html{
 	color: #51E2C1;
 
 }
-/* 32 */
+/* -32 */
 .NetA {
 	margin: 0;
 	padding: 0;
@@ -1537,7 +1537,7 @@ html{
 
     position: absolute;
     left: 5%;
-    top: 9%;
+    top: 5%;
     width: 90%;
     height: 90%;
     background: #5897A6;
