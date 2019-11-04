@@ -3,6 +3,8 @@
 <head>
     <title>Typography3 | Map</title>
     <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://use.typekit.net/nnh3gng.css">
     <link rel="stylesheet" href="https://use.typekit.net/nnh3gng.css">
     <link rel="stylesheet" type="text/css" href="./css/map.css">
@@ -11,47 +13,64 @@
 <!-- screen#1 -->
 <section class="screen-container page1">
   <video src="1bk2.mp4" autoplay loop muted>
-	   <source src="1bk2.mp4" type="video/mp4">
-	 </video>
-    <h1>THE GREAT PACIFIC <span class="patch">GARBAGE PATCH</span></h1>
-    <h2>
-      <!-- The Great Pacific Garbage Patch (GPGP) is the largest of the five offshore plastic accumulation zones in the world’s oceans, flowing on the vast Pacific Ocean. -->
-    </h2>
+	<source src="1bk2.mp4" type="video/mp4"></video>
+  <h1>THE GREAT PACIFIC <span class="patch">GARBAGE PATCH</span></h1>
 </section>
+
+<!--
+<script type="text/javascript">
+$(window).on("load",function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".page1-2Text").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity")==0) {$(this).fadeTo(500,1);}
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity")==1) {$(this).fadeTo(500,0);}
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+}); -->
+<!-- // $(window).scroll(function () {
+//
+//       /* Check the location of each desired element */
+//       $('.page1-2Text').each(function (i) {
+//
+//           var bottom_of_object = $(this).position().top + $(this).outerHeight();
+//           var bottom_of_window = $(window).scrollTop() + $(window).height();
+//
+//           /* If the object is completely visible in the window, fade it it */
+//           if (bottom_of_window > bottom_of_object) {
+//
+//               $(this).animate({
+//                   'opacity': '1'
+//               }, 500);
+//
+//           }
+//
+//       });
+//
+//   });
+// var vip2= 600; //스크롤 위치값
+// $(window).scroll(function(){
+// var num=$(window).scrollTop();
+//   if(num>vip2){
+//     $(".page1-2Text").fadeIn();
+//   }else{
+//     $(".page1-2Text").fadeOut();
+//   }
+// });
+</script> -->
 
 <!-- screen#1-2 -->
 <section class="screen-container page1-2">
-<div class="letter lefttextbox1">
-    <span class="plasticBy plasticBy-1">Plastic by mass of the GPGP
-    </span>       <br>
- <span class="equi">Equivalent to 500 jumbo jects
-      </span>
-      <br>
-  <span class="ttt ttt1 tones80">80,000 tonnes
-  </span>
+<div class="page1-2Text">
 
-
-</div>
-
-
-<div class="letter lefttextbox2">
-  <span class="plasticBy">Plastic by particle count of GPGP
-  </span><br>
-  <span class="equi">Equivalent to 250 pieces of debris for every human
-  </span>
-      <br>
-  <span class="ttt ttt18">1.8 trillion
-  </span>
-      <br>
-
-</div>
-<div class="head2">
-  The Great Pacific Garbage Patch (GPGP)
-  <br>is the largest of the five offshore plastic accumulation zones
-  <br>located in the Pacific Ocean.
-
-
-</div>
+<div class="rightleftText">
   <div class="righttextbox">
     Located in ocean gyres, which are systems of circular ocean currents, garbage patches could have a major impact on our planet's future. Among the five biggest ocean garbage patches, the Great Pacific garbage patch is the biggest and the most problematic with pollution levels increasing exponentially.
 
@@ -62,14 +81,56 @@
 <!-- <p>
 The term, "The Great Pacific Garbage Patch (GPGP)" was coined by Charles J. Moore, returning home through the North Pacific Gyre after competing in the Transpac sailing race in 1997.
 </p> -->
+
+
+  </div>
+
+  <div class="lefttext lefttext-top">
+    <span class="plasticBy plasticBy-1">Surface area of the GPGP</span>
+    <br>
+    <span class="equi equi-1"> AN AREA FOUR TIMES THE SIZE OF CALIFORNIA</span>
+    <br>
+    <span class="num num-km">1.6 Million Km&sup2;</span>
+    </div>
+    <div class="lefttext lefttext-bottom">
+      <span class="plasticBy plasticBy-1">Plastic by mass of the GPGP</span>
+      <br>
+      <span class="equi">Equivalent to 500 jumbo jects</span>
+      <br>
+      <span class="num num-ton">80,000 Tonnes</span>
+      </span>
+          <br>
+
+    </div>
+    </div>
+
+
+
+<div class="head2">
+  The Great Pacific Garbage Patch (GPGP)
+  <br>is the largest plastic accumulation zones in the world,
+  <br>located in the Pacific Ocean.
+
+
+</div>
+
   </div>
 </section>
 
 <!-- screen#2 -->
 <section class="screen-container page2">
+  <!-- <div class="text-orange-middle">
+  The GPGP covers 1.6 million km&sup2;,
+an area four times the size of California.
+  </div> -->
+  <div class="text-orange-middle2">
+    <span class="hoverCir">HOVER</span> on each circle to see surface area
+    <br>
+    <span class="hoverCir">ZOOM IN</span> to see more data of the GPGP
+  </div>
 <div id="page2">
-<img id="map-img" src="map3.svg" alt="">
-<img id="map-img333" src="map333.svg" alt="">
+<img id="map-img" src="img/map3.svg" alt="">
+<img id="data" src="img/data.svg" alt="">
 <!-- <img id="circle-img" src="circle.svg" alt=""> -->
 <!-- <img id="circle-img2" src="Asset 17.svg"  alt="Smiley face" height="90px"width="90px" > -->
 <div class="circle-k circle-1">
@@ -87,13 +148,13 @@ The term, "The Great Pacific Garbage Patch (GPGP)" was coined by Charles J. Moor
                                                           <div class="NetD3 NetF3">
                                                               <div class="NetD1">
                                                                   <div class="NetD1 NetF1">
-
+  <div class="NetD1">
                                                                   </div>
                                                               </div>
                                                           </div>
                                                       </div>
                                                   </div>
-
+</div>
                                       </div>
                                   </div>
 
@@ -121,29 +182,14 @@ The term, "The Great Pacific Garbage Patch (GPGP)" was coined by Charles J. Moor
 <div class="text45">107,5200 <br>  km&sup2;</div>
 </div>
 
-<div class="textmap ca">california</div>
+<div class="textmap california">california</div>
 <div class="textmap zone1">Great Pacific </div>
 <div class="textmap zone2">North Atlantic </div>
 <div class="textmap zone3">South Atlantic</div>
 <div class="textmap zone4">South Pacific </div>
 <div class="textmap zone5">Indian Ocean </div>
 
-
-
-
-
-
 </div>
-<div class="text2-size">
-The GPGP covers 1.6 million square kilometers,
-<br>an area four times the size of California.
-<br>
-<!-- <br>Hover each ocean gyres (circles) to see surface area.
-<br>
-Zoom to see more info -->
-</div>
-<!-- an estimated surface area of -->
-
 
 
 </section>
@@ -152,8 +198,10 @@ Zoom to see more info -->
 
 <section class="screen-container page3">
   <div class="head3">
-    Not only does plastic pollution in the Great Pacific Garbage Patch pose risks for the safety and health of marine animals, <br>there are health and economic implications for humans too.
-<img id="map-img222" src="map222.svg" alt="">
+    Not only does plastic pollution in the Great Pacific Garbage <br>Patch
+    pose risks for the safety and health of marine animals, <br>there are health and economic implications for humans too.
+<img id="map-img222" src="img/map222.svg" alt="">
+<img id="whale" src="img/whale.svg" alt="">
 <div class="Bio-k Bio-1">ocean species Feed the patch
   </div>
   <div class="Bio-k Bio-2">
@@ -168,16 +216,7 @@ ISSN 2045-2322 (online) </span><br>
   <br>
     <span class="ci-3"> © 2019 Seoju Jung</span>
 </div>
-<!--
-    <footer>
-      <p class="footertext">Typography3 Map © 2019 Seoju Jung.</p>
-    </footer> -->
   </section>
-
-
-
-
-
 
 </body>
 
