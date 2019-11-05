@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	padding: 0;
-  background-color: #18293f;
+	background-color: #18293f;
 	font-family: proxima-nova, sans-serif;
 	scroll-behavior: auto;
 }
@@ -16,10 +16,11 @@ body {
 .page1{
 	position: absolute;
 	width: 100vw;
-	height: 100vh;
+	height: 1450px;
 	background-color: #1C2E48;
   overflow: hidden;
 	display: block;
+
 }
 h1{
 	letter-spacing: -.025em;
@@ -30,7 +31,7 @@ h1{
   text-align: center;
   position: absolute;
   left: 50%;
-  top: 54%;
+  top: 34%;
   margin-left: calc(-700px/2);
   margin-top: -265px;
 	margin-bottom: 0;
@@ -507,6 +508,8 @@ width: 200px;
 
 }
 .lefttextbox2 {
+	background-color:#1C2E48;
+
 	position: absolute;
 
 	top: 242px;
