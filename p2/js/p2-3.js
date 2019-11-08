@@ -14,8 +14,8 @@
 
 //BK move
 
-var blendAmount = 100;
-var delay = -10;
+var blendAmount = 70;
+var delay = 10;
 var windowWidth = window.innerWidth;
 var bg = document.getElementById("bg");
 
