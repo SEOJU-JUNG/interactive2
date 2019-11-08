@@ -51,7 +51,7 @@ $("#bg").mousemove(function(e) {
 
 	parallaxIt(e, ".organic3", -40);
 	parallaxIt(e, ".organic1", -90);
-	parallaxIt(e, ".organic2", -10);
+	parallaxIt(e, ".organic2", -59);
 
 
 
