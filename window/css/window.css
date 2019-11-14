@@ -11,15 +11,14 @@ font: 15px/1.5 'raleway', sans-serif;
 
 
 #desktop {
-  padding: 0;
-  margin: 0;
-     background-color: #acd7ed;
+background: hsl(198,69%,76%);
      width: 100vw;
      height:100vh;
-   background-image:  url("../bear1-2.png");
+   background-image:  url("../bear1-1.png");
    background-repeat:no-repeat;
    background-size: contain;
    background-position: 50% 50%;
+   background-size: 100vw;
  }
    #tablet,
    #mobile,
@@ -28,14 +27,14 @@ font: 15px/1.5 'raleway', sans-serif;
    }
 
 .hoverNose{
-width: 500px;
+width: 100vw;
  font-size:3.5vw;
   color:201715;
   font-family: 'Gaegu', cursive;
   top: 30px;
-  position: absolute;
-  margin-left: calc(100vw/3);
-  padding-right: 200px;
+  text-align: center;
+  top: 100px;
+  position:absolute;
 
 }
 
