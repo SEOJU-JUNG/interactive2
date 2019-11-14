@@ -1,0 +1,39 @@
+body {
+  background: red;
+  font-size:2vw;
+  font-family:Menlo, monospace;
+}
+.copy {
+  max-width: 500px;
+  margin:0 auto;
+}
+
+.square {
+  position:fixed;
+  top:calc(50vh - 25vmin);
+  left:calc(50vw - 25vmin);
+  width:50vmin;
+  height:50vmin;
+  background:#eee;
+  z-index:-1;
+}
+
+.big, .small {
+  display:none;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top:25vh;
+  }
+  .small {
+    display:block;
+  }
+
+}
+
+@media only screen and  (min-width: 601px) {
+  .big {
+    display:block;
+  }
+}
