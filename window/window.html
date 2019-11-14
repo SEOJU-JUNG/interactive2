@@ -11,20 +11,42 @@
     <link rel="stylesheet" href="css/window.css">
     <!-- import the webpage's javascript file -->
     <script src="js/window.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $("#location").click(function(){
+          $(".location-list").css({'display':'block'});
+        });
+        $(".overlay3").click(function(){
+          $(".overlay3").css({'display':'none'});
+        });
+      });
+    </script>
+
   </head>
+
   <body>
     <!-- show by default -->
     <div id="desktop">
+      <div class="hoverNose">
+        Hover My Nose
+      </div>
       <div class="overlay-trigger3">
         <div class="overlay3">
-          <p>
-            I'm Ryan!
-          </p>
+          <p>I'm Ryan!</p>
+          <div id="location-button">
+            <br><h4 id="location"><span id="symbol"></span></h4><br><br>
+            <div class="location-list">
+              <div class="location-list-container">
+                <div class="location-list-button">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        </div>
-      </div>
-
-    </div>
 
 
     <!-- show on tablet -->

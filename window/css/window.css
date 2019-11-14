@@ -1,11 +1,12 @@
 body {
-
+margin: 0;
+padding: 0;
 font-size:2vw;
 font-family:Menlo, monospace;
 font-family: 'Coming Soon', cursive;
-font-family: 'Schoolbell', cursive;
 font-family: 'Gaegu', cursive;
 font-family: 'Walter Turncoat', cursive;
+font: 15px/1.5 'raleway', sans-serif;
 }
 
 
@@ -13,7 +14,6 @@ font-family: 'Walter Turncoat', cursive;
      background-color: lightpink;
      width: 100vw;
      height:100vh;
-
    background-image:  url("../bear1.png");
    background-repeat:no-repeat;
    background-size: contain;
@@ -25,13 +25,23 @@ font-family: 'Walter Turncoat', cursive;
        display: none;
    }
 
-   .overlay-trigger3{
+.hoverNose{
+  text-align: center;
+  font-size:4vw;
+  color:201715;
+  font-family: 'Gaegu', cursive;
+  top: 90px;
+  position: absolute;
 
+
+}
+
+   .overlay-trigger3{
      width: 50px;
      height: 50px;
      /* background: blue; */
      position: absolute;
-     left: 51%;
+     left: 48.5%;
      top: 46%;
      margin-left: calc(-50px/2);
      margin-top: calc(-50px/2);
@@ -91,15 +101,16 @@ font-family: 'Walter Turncoat', cursive;
 }
 
 .overlay-trigger2{
-
+  /* background: blue; */
+  border-radius: 100%;
   width: 80px;
   height: 80px;
-  /* background: blue; */
   position: absolute;
-  left: 50%;
+  left: 48.5%;
   top: 35%;
   margin-left: calc(-50px/2);
   margin-top: calc(-50px/2);
+
 }
 .overlay-trigger2:hover .overlay2{
   height: 100vh;
