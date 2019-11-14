@@ -7,7 +7,7 @@ body{
   z-index: -999999999999;
 	position: fixed;
 	top: 0; left: 0;
-	width: 100vw; height: 100%;
+	width: 100%; height: 100%;
 	transition: all 2s ease-out;
 	background-image: linear-gradient(45deg, #a8edea 10%, #fed6e3 100%);
 }
@@ -15,7 +15,7 @@ body{
 .organic {
   background:transparent;
   position: absolute;
-  transform: translate(-50%, -50%);
+  /* transform: translate(-50%, -50%); */
   margin: 0;
   padding: 0;
 }
