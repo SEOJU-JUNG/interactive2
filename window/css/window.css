@@ -26,13 +26,14 @@ font: 15px/1.5 'raleway', sans-serif;
    }
 
 .hoverNose{
-width: 4vw;
+width: 500px;
  font-size:4vw;
   color:201715;
   font-family: 'Gaegu', cursive;
   top: 90px;
   position: absolute;
-
+  margin-left: calc(100vw/3);
+  padding-right: 200px;
 
 }
 
@@ -72,7 +73,7 @@ width: 4vw;
      position: absolute;
      color: white;
      left: 50%;
-     top: 50%;
+     top: 45%;
      transform: translateX(-50%) translateY(-85%);
      display: inline;
    }
@@ -141,7 +142,7 @@ width: 4vw;
   /*bear outline brown*/
   color: #f7b253;
   left: 50%;
-  top: 50%;
+  top: 45%;
   transform: translateX(-50%) translateY(-60%);
   display: block;
 
@@ -197,7 +198,7 @@ width: 4vw;
       position: absolute;
       color: white;
       left: 50%;
-      top: 50%;
+      top: 45%;
       transform: translateX(-50%) translateY(-85%);
       display: inline;
     }
