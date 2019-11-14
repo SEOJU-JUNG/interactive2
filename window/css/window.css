@@ -26,8 +26,8 @@ font: 15px/1.5 'raleway', sans-serif;
    }
 
 .hoverNose{
-  text-align: center;
-  font-size:4vw;
+width: 4vw;
+ font-size:4vw;
   color:201715;
   font-family: 'Gaegu', cursive;
   top: 90px;
