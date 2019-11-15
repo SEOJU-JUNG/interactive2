@@ -15,11 +15,22 @@ background: hsl(198,69%,76%);
      width: 100vw;
      height:100vh;
    background-image:  url("../bear1-1.png");
+
    background-repeat:no-repeat;
    background-size: contain;
    background-position: 50% 50%;
-   background-size: 100vw;
+   background-size: 170vw;
  }
+
+ .hover{
+   width: 100vw;
+   height:100vh;
+   background-image:  url("../Asset 2.svg");
+   background-repeat:no-repeat;
+   background-size: contain;
+   background-position: 50% 50%;
+   background-size: 170vw;
+}
    #tablet,
    #mobile,
    #print {
@@ -35,16 +46,17 @@ width: 100vw;
   text-align: center;
   top: 100px;
   position:absolute;
-
+color:#221714;
 }
 
    .overlay-trigger3{
-     width: 50px;
-     height: 50px;
+     transform-origin: 50% 50%;
+     width: 67px;
+     height: 72px;
      /* background: blue; */
      position: absolute;
      left: 51%;
-     top: 46%;
+     top: 41%;
      margin-left: calc(-50px/2);
      margin-top: calc(-50px/2);
    }
