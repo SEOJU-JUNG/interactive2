@@ -1,0 +1,360 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+
+}
+#desktop {
+  background-color: white;
+  width: 100vw;
+  height:100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+#desktop-img{
+  position: absolute;
+  width: 1540px;
+  height: auto;
+  left: 50%;
+  top: -50px;
+  margin-left: -780px;
+}
+
+#Sfmood{
+  margin-top: 15px;
+font-size: 70px;
+text-align: center;
+color: #13d0f3;
+/* skyblue */
+font-family: futura-pt-bold, sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+
+span{
+  color:#13d0f3;
+  padding-left:7px;
+  padding-right:7px;
+  text-decoration: none;
+}
+
+a {
+  color:#13d0f3;
+  text-decoration: none;
+}
+a:hover{
+
+  color: white;
+  text-shadow: 0 0 2px #23d0f3;
+}
+span:hover{
+  color: white;
+  text-shadow: 0 0 2px #23d0f3;
+}
+
+.menu{
+  top:85px;
+  width: 700px;
+  height: 50px;
+  left: 50%;
+  margin-left: calc(-700px/2);
+font-size: 40px;
+text-align: center;
+
+font-family: acumin-pro-condensed, sans-serif;
+font-weight: 700;
+font-style: normal;
+position: absolute;
+}
+
+/* start loc-container */
+.loc{
+  position: absolute;
+  left: 50%;
+}
+.loc-1{
+  top: 293px;
+  margin-left: 276px;
+}
+.loc-2{
+  top: 374px;
+  margin-left: 410px;
+}
+.loc-3{
+  top: 391px;
+  margin-left: 270px;
+}
+.loc-4{
+  top: 509px;
+  margin-left: 303px;
+}
+.loc-5{
+  top: 492px;
+  margin-left: 416px;
+}
+.loc-6{
+  top: 608px;
+  margin-left: 401px;
+}
+.loc-7{
+  top: 689px;
+  margin-left: 303px;
+}
+.loc-8{
+  top: 789px;
+  margin-left: 323px;
+}
+.loc-9{
+  top: 719px;
+  margin-left: 87px;
+}
+/* end loc-container mobile */
+.FISHERMEN,.RUSSIAN,.TELEGRAPH,.NOB,.CHINA,.UNION,
+.CIVIC,.MARKET,.ALAMO{
+  color: #0B0A0A;
+  display: inline-block;
+  font-family: acumin-pro, sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  text-decoration: none;
+
+}
+/* hover color */
+.FISHERMEN:hover,.RUSSIAN:hover,.TELEGRAPH:hover,
+.NOB:hover,.CHINA:hover,.UNION:hover,
+.CIVIC:hover,.MARKET:hover,.ALAMO:hover{
+  color: #0B0A0A;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: none;
+
+  /* color: #dc9265; */
+}
+
+/* .FISHERMEN:hover,.RUSSIAN,.TELEGRAPH,.NOB,.CHINA,.UNION,
+.CIVIC,.MARKET,.ALAMO{
+  color: #0B0A0A;
+  font-weight: bold;
+  text-decoration: none; */
+
+/* footer for desktop */
+  footer {
+
+  text-align: center;
+  background-color: #13d0f3;
+  padding: 15px;
+
+  font-family: acumin-pro, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 0.875em;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  border-top:3px solid white;
+  z-index: 1;
+  }
+
+#tablet,
+#mobile,
+#print {
+    display: none;
+}
+/* tablet */
+/* @media (min-width: 670px) and (max-width: 1024px) {
+    body {
+        background: grey;
+    }
+    #tablet {
+        display: inline;
+        color: white;
+    }
+    #desktop,
+    #mobile,
+    #print {
+        display: none;
+    }
+} */
+
+
+
+
+
+
+
+/* mobile */
+@media (max-width: 670px) {
+    body {
+        background: white;
+    }
+    #mobile {
+      display: inline;
+      width: 100vw;
+      height:100vh;
+      position: absolute;
+      overflow: hidden;
+    }
+    #moblie-img{
+      width: 710px;
+      height: auto;
+      position: absolute;
+      top: 160px;
+      left: 50%;
+      margin-left: -400px
+    }
+
+    #Sfmood{
+      margin-top: 15px;
+    font-size: 60px;
+    text-align: center;
+    color: #13d0f3;
+    /* skyblue */
+    font-family: futura-pt-bold, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    }
+
+    /* start loc-container-M */
+    .loc-M{
+      position: absolute;
+      left: 50%;
+    }
+    .loc-1-M{
+      top: 240px;
+margin-left: -49px;
+
+    }
+    .loc-2-M{
+      top: 289px;
+margin-left: 63px;
+    }
+    .loc-3-M{
+      top: 306px;
+      margin-left: -61px;
+    }
+    .loc-4-M{
+      top: 389px;
+    margin-left: -21px;
+    }
+    .loc-5-M{
+      top: 382px;
+  margin-left: 61px;
+    }
+    .loc-6-M{
+      top: 470px;
+      margin-left: 62px;
+    }
+    .loc-7-M{
+      top: 523px;
+      margin-left: -26px;
+    }
+    .loc-8-M{
+      top: 583px;
+      margin-left: 12px;
+    }
+    .loc-9-M{
+      top: 541px;
+      margin-left: -175px;
+    }
+
+    .loc-9{
+      color: white;
+      font-size: 0;
+    }
+    /* end loc-container-M */
+    span{
+      color:#13d0f3;
+      padding-left:7px;
+      padding-right:7px;
+      text-decoration: none;
+    }
+
+    a {
+      color:#13d0f3;
+      text-decoration: none;
+    }
+    a:hover{
+
+      color: white;
+      text-shadow: 0 0 2px #23d0f3;
+    }
+    span:hover{
+      color: white;
+      text-shadow: 0 0 2px #23d0f3;
+    }
+
+    .menu{
+      top:75px;
+      width: 700px;
+      height: 50px;
+      left: 50%;
+      margin-left: calc(-700px/2);
+    font-size: 30px;
+    text-align: center;
+
+    font-family: acumin-pro-condensed, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    position: absolute;
+    }
+
+
+
+    .FISHERMEN,.RUSSIAN,.TELEGRAPH,.NOB,.CHINA,.UNION,
+    .CIVIC,.MARKET,.ALAMO{
+      color: #0B0A0A;
+      display: inline-block;
+      font-family: acumin-pro, sans-serif;
+      font-weight: 400;
+      font-size: 0.8em;
+      text-decoration: none;
+
+    }
+    /* hover color */
+    .FISHERMEN:hover,.RUSSIAN:hover,.TELEGRAPH:hover,
+    .NOB:hover,.CHINA:hover,.UNION:hover,
+    .CIVIC:hover,.MARKET:hover,.ALAMO:hover{
+      color: #0B0A0A;
+      font-weight: bold;
+      text-decoration: none;
+      text-shadow: none;
+
+      /* color: #dc9265; */
+    }
+
+    /* footer for mobile */
+
+    footer {
+
+    text-align: center;
+    background-color: #13d0f3;
+    padding: 15px;
+
+    font-family: acumin-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 0.8em;
+    text-align: center;
+    color: white;
+    position: fixed;
+  width: 100%;
+  bottom: 0px;
+  z-index: 100;
+    }
+
+    #desktop,
+    #tablet,
+    #print {
+        display: none;
+    }
+
+
+}

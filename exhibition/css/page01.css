@@ -1,39 +1,61 @@
 body {
   font-size:2vw;
   font-family:Menlo, monospace;
-  background: black;
+  background: #0e0e0e;
   margin:0;
   padding:0;
   font-family: proxima-nova,sans-serif;
-  color: white;
 }
 
-.gird01 {
-  opacity: 0.7;
-  background: white;
-  width:1px;
-  height: 100vh;
-  position: absolute;
-left: 200px;
+/* logo icon */
+.logo-Wrap{
+    position: absolute;
+    width: 25vw;
+    height: 50vh;
+        /* left: 75%; */
+        /* background: red; */
+      top: 0;
+
+}
+.logo{
+position: relative;
+z-index:1;
+width: 25vw;
+height: 50vh;
+transform-origin: center;
+transform: scale(.2);
 }
 
-.gird02 {
-  opacity: 0.7;
+/* line start */
+.line-middle{
+  width: 100vw;
+  height: 1px;
   background: white;
-  width:1px;
-  height: 100vh;
   position: absolute;
-left: 700px;
+  top: 50vh;
+  opacity:0.4;
+animation: scale-ho .95s cubic-bezier(0.55,0.05,0.855,0.06) both;
 }
 
-.gird03 {
-  opacity: 0.7;
-  background: white;
-  width:1px;
+.line-vertical{
+  opacity:0.4;
+  width: 1px;
   height: 100vh;
   position: absolute;
-left: 1200px;
+  background: white;
+animation: scale-ver .95s cubic-bezier(0.55,0.05,0.855,0.06) both;
 }
+.line-vertical-1{
+  left: 25vw;
+}
+.line-vertical-2{
+  left: 50vw;
+}
+.line-vertical-3{
+  left: 75vw;
+}
+
+/* line end */
 
 .img-page01-1{
   position: absolute;
@@ -42,6 +64,126 @@ left: 1200px;
 .img-page01-1.clicked{
   transform: scale(2);
 }
+
+/* A img */
+.Aimg-Wrap{
+    position: relative;
+    width: 25vw;
+    height: 50vh;
+    top: 0vh;
+    left: 50%;
+    background: red;
+    text-align: center;
+}
+.Aimg{
+  width: 25vw;
+  margin: 0;
+    background: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+
+
+/* Menu-icon start */
+
+.menu-icon-Wrap{
+  top: 0;
+    position: absolute;
+    width: 25vw;
+    height: 50vh;
+        left: 75%;
+        background: red;
+}
+/* .halfbox{
+    top: 0;
+    position: absolute;
+    width: calc(25vw/2);
+    height: 25vh;
+    left: 75%;
+    background: blue;
+    z-index: 111;
+} */
+.x-icon{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 5px;
+  z-index: 9999;
+}
+  .menu-line{
+    width: 40px;
+    margin-left: -20px;
+    background: white;
+    height: 2.5px;
+    position: absolute;
+    left: 50%;
+  }
+  .menu-line-1{
+    top: 50%;
+    margin-top:-1px;
+
+  }
+  .menu-line-2{
+    top: 50%;
+    margin-top:-11px;
+
+  }
+  .menu-line-3{
+    top: 50%;
+    margin-top:9px;
+  }
+
+  .x-icon{
+    width: 40px;
+    margin-left: -20px;
+    background: white;
+    height: 2.5px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top:-1px;
+    transform-origin: center;
+  }
+.x-icon-1{
+transform:rotate(-45deg);
+transform-origin: center;
+
+}
+.x-icon-2{
+transform:rotate(45deg);
+transform-origin: center;
+
+}
+.x-icon-Wrap{
+  transition: width 1s, height 1s, transform 1s;
+  transform-origin: center;
+
+}
+
+.hoverbox{
+  width: 40px;
+  margin-left: -20px;
+  background: pink;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top:-20px;
+  transform-origin: 50% 50%;
+
+}
+
+.hoverbox:hover .x-icon-Wrap{
+  transform: rotate(360deg);
+  transform-origin: center;
+
+}
+
+  /* Menu-icon end */
 
 
 #scrollMarker {
