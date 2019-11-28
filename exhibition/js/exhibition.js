@@ -23,7 +23,7 @@ page01Link.addEventListener('click',function(event){
 
   setTimeout(function(){
     window.location.href = page01Link.href
-  },1000)
+  },800)
 
   return false
 })

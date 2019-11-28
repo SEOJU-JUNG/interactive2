@@ -13,3 +13,20 @@ exIcon.addEventListener('click',function(e){
   e.preventDefault()
   return false
 })
+
+
+// prevent animation time
+
+let page01Link = document.querySelector('#page01Link')
+
+page01Link.addEventListener('click',function(event){
+  event.preventDefault()
+
+  document.body.classList.add('pageChangeAnimation')
+
+  setTimeout(function(){
+    window.location.href = page01Link.href
+  },1200)
+
+  return false
+})
