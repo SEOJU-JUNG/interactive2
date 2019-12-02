@@ -755,10 +755,11 @@ position: absolute;
 display: block;
 padding-left: 17vw;
 padding-right: 17vw;
-	margin-top: 50px;
+
 }
 .LeftWrap-2{
-	width: calc(66vw/2);
+		margin-top: 50px;
+	width: 66vw;
 position: relative;
 text-align: left;
 }
@@ -806,87 +807,22 @@ padding-top:10px;
 top: 25px;
 width: 480px;
 color: #003755;
+ column-count: 2;
+ width: 66vw;
 
 }
-
-
 .RightWrap-2{
-width: calc(66vw/2);
-	right: 3vw;
+width: 66vw;
+background: red;
+margin: 0 auto;
 
+align-items: center;
 }
-
-.graph-cont{
-	right: -43vw;
-	width: 45vw;
-	position: absolute;
-	top: 0px;
-}
-
 
 .bar{
-  height: 15px;
-  width: 400px;
-  margin: 0 auto 11px auto;
-  line-height: 16px;
-  font-size: 12px;
-  color: white;
-  padding: 0 0 0 5px;
-  position: relative;
-	font-weight: 400;
-	text-transform: uppercase;
-}
-.bar::before{
-	height: 15px;
-  content: '';
-  width: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -2;
-  background: #ecf0f1;
-}
-.bar::after{
-	height: 15px;
-  content: '';
-  background: #2ecc71;
-  transition: 0.7s;
-  display: block;
-  width: 100%;
-  -webkit-animation: bar-before 1 1.8s;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-@-webkit-keyframes bar-before{
-  0%{
-    width: 0px;
-  }
-  100%{
-    width: 100%;
-  }
-}
-
-.bar1::after{
-  max-width: 60%;
-}
-.bar2::after{
-  max-width: 30%;
-}
-
-.country{
-	position: absolute;
-right: 412px;
-		text-transform: uppercase;
-		text-align: right;
-		width: 200px;
-		color: #003755;
-
-
-}
-span .korea{
-
+	width: 20px;
+	height: 19.772px;
+	  margin: 0;
 }
 
 
