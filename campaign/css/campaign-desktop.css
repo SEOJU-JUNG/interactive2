@@ -651,7 +651,7 @@ vertical-align: middle;
 
 /* screen-33 *//* screen-33 *//* screen-33 *//* screen-33 */
 .screen-33{
-	z-index: -9;
+	z-index: -99;
 	display: block;
 	position: absolute;
 	width: 100vw;
@@ -686,13 +686,19 @@ font-weight: 400;
 .screen-3{
 	font-family: proxima-nova, sans-serif;
 	width: 100vw;
-	height: 1000000px;
+	height: 2400px;
 	display: block;
 	position: absolute;
 	overflow: hidden;
 	background: #f0f0f0;
-	z-index: -1;
+	z-index: -19;
 top: calc(100vh + 2130px);
+}
+
+.diaimg3{
+	z-index: 999999999999;
+	position: relative;
+		position: absolute;
 }
 
 
@@ -712,6 +718,7 @@ width: 66vw;
 padding-left: 17vw;
 padding-right: 17vw;
 height: 1000px;
+z-index: 999;
 
 }
 .LeftWrap-2{
@@ -721,8 +728,8 @@ text-align: left;
 }
 
 .line-sub-02{
-	width: 150px;
-	height: 2px;
+	width: 66vw;
+	height: 1px;
 position: relative;
 background: #01cbe1;
 }
@@ -766,12 +773,33 @@ color: #003755;
  line-height: 1.5;
 
  padding-top:35px;
+ /* background: red; */
 
+}
+
+.body-222{
+	font-family: proxima-nova, sans-serif;
+color: #003755;
+ column-count: 2;
+ width: 66vw;
+ padding: 0;
+ column-gap: 40px;
+
+
+ font-size: 18px;
+ font-weight: 400;
+ line-height: 1.45;
+ letter-spacing: .005em;
+ position: relative;
+ line-height: 1.5;
+
+ padding-top:35px;
+ /* background: blue; */
 
 }
 .RightWrap-2{
 width: 66vw;
-background: red;
+/* background: red; */
 margin: 0 auto;
 align-items: center;
 }
@@ -809,7 +837,7 @@ align-items: center;
 	overflow: hidden;
 	background: #f0f0f0;
 	z-index: -1;
-top: calc(100vh + 4130px);
+top: calc(100vh + 3130px);
 
 }
 .textWrap-4{
@@ -863,7 +891,10 @@ width: 800px;
 			padding-top:10px;
 }
 
-
+.barW2{
+	position: relative;
+	top: 50px;
+}
 /* grp */
 
 
@@ -872,4 +903,24 @@ width: 800px;
     display: none;
 
 
+}
+
+
+.screen-5{
+	font-family: proxima-nova, sans-serif;
+	width: 100vw;
+	height: 1209px;
+
+	display: block;
+	position: absolute;
+	overflow: hidden;
+	background: #f0f0f0;
+	z-index: 19;
+top: calc(100vh + 4130px);
+
+	/* background:red; */
+
+}
+.textWrap-222{
+	height: 1000px;
 }
