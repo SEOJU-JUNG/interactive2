@@ -1,0 +1,21 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: blue;
+}
+
+
+
+
+
+video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+
+  display: inline;
+  position: absolute;
+  background-repeat: repeat;
+
+}

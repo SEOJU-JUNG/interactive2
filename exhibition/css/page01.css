@@ -3,6 +3,9 @@ HTML CSS JSResult
 *{
   font-family:proxima-nova,sans-serif;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
 
   background: #0e0e0e;
@@ -26,14 +29,10 @@ body {
   background: #0e0e0e;
   scroll-snap-align: start;
   overflow: hidden;
- height: 250vh;
+ height: 300vh;
  z-index: -99999999999999999;
 }
-.imgWrap-page01-4{
-  top: -150vh;
-  left: 50%;
 
-}
 /* logo icon */
 .logo-Wrap{
     position: absolute;
@@ -464,7 +463,7 @@ float: right;
     width: 25vw;
     height: 50vh;
     left: 50%;
-    top: 200vh;
+    top: 250vh;
     z-index: 99999;
     font-family: proxima-nova, sans-serif;
     background: #0e0e0e;
@@ -534,6 +533,7 @@ text-transform:uppercase;
   justify-content: center
   z-index: 9999;
   background: red;
+  overflow: hidden;
 }
 
 .img{
@@ -546,13 +546,21 @@ text-transform:uppercase;
     z-index: 99;
     top: 50vh;
     left: 50%;
-    animation: slide-in-bottom2 2.5s  ease-in-out;
+    overflow: hidden;
+}
+.img1 img {
+  animation: slide-in-bottom2img 2.5s ease-in-out;
 }
 .img2{
   z-index: 99;
   top: 50vh;
   left: 75%;
-  animation: slide-in-bottom1 2s  ease-in-out;
+  /* animation: slide-in-bottom1 2s  ease-in-out; */
+  overflow: hidden;
+}
+.img2 img {
+  animation: slide-in-bottom2img 2s ease-in-out;
+
 }
 
 .img3{
@@ -570,6 +578,54 @@ text-transform:uppercase;
   z-index: 999;
   top: 100vh;
   left: 50%;
+}
+
+.img6{
+  z-index: 999;
+  top: 100vh;
+  left: 75%;
+transform: scale(1);
+background: pink;
+z-index: -9;
+}
+.img7{
+  z-index: 999;
+  top: 150vh;
+  left: 0%;
+transform: scale(1);
+background: pink;
+}
+
+.img8{
+  z-index: 999;
+  top: 150vh;
+  left: 25%;
+transform: scale(1);
+background: pink;
+}
+
+.img9{
+  z-index: 999;
+  top: 150vh;
+  left: 50%;
+transform: scale(1);
+background: red;
+}
+
+.img10{
+  z-index: 999;
+  top: 150vh;
+  left: 75%;
+transform: scale(1);
+background: pink;
+}
+
+.img11{
+  z-index: 999;
+  top: 200vh;
+  left: 0%;
+transform: scale(1);
+background: pink;
 }
 @keyframes slide-in-bottom1 {
 
@@ -602,6 +658,21 @@ text-transform:uppercase;
   }
 }
 
+@keyframes slide-in-bottom2img {
+
+  0% {
+            transform: translateY(50vh) ;
+    opacity: 0;
+  }
+  50% {
+            transform: translateY(50vh) translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+            transform: translateY(-50%) translateX(-50%);
+    opacity: 1;
+  }
+}
 
 
 .bkbox1{
@@ -613,7 +684,7 @@ text-transform:uppercase;
   left: 50%;
 z-index: 9;
 }
-.bkbox2{
+/* .bkbox2{
   width: 25vw;
   height: 50vh;
   background: #0e0e0e;
@@ -621,15 +692,22 @@ z-index: 9;
   top: 100vh;
   left: 75%;
 z-index: 9;
-}
-.Bigimg1, .Bigimg2, .Bigimg3, .Bigimg4, .Bigimg5{
+} */
+
+
+/*
+*/
+
+
+.Bigimg1, .Bigimg2, .Bigimg3, .Bigimg4, .Bigimg5, .Bigimg6, .Bigimg7, .Bigimg8, .Bigimg9, .Bigimg10, .Bigimg11{
 opacity: 0;
 }
-.Big-textW, .Big-text{
+.Big-textWWW, .Big-text, .Big-text2{
+
 opacity: 0;
 }
 
-.Big-textW{
+.Big-textWWW{
   width: 25vw;
   height: 50vh;
   background: orange;
@@ -641,6 +719,8 @@ opacity: 0;
  display: flex;
  align-items: center;
  justify-content: center;
+z-index: 9999;
+pointer-events: none;
 }
 .Big-text{
   margin: 0;
@@ -682,11 +762,25 @@ opacity: 0;
  .active-0 .Big-text{
      opacity: 1;
  }
- .active-0 .Big-textW{
+ .active-0 .Big-textWWW{
   opacity: 1;
  animation: slide-in-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 animation-delay: 1.5s;
 }
+
+.active-1 .Big-text2{
+    opacity: 1;
+}
+.active-1 .Big-textWWW{
+ opacity: 1;
+animation: slide-in-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation-delay: 1.5s;
+}
+
+
+
+
+
 @keyframes slide-in-bottom {
  0% {
            transform: translateY(1000px);
@@ -750,7 +844,7 @@ transform-origin: center;
 .active-0 .img4{
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
-.active-0 .img5{
+.active-0 .{
 
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
@@ -771,7 +865,7 @@ transform-origin: center;
 .active-1 .img4{
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
-.active-1 .img5{
+.active-1 .{
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
 
@@ -792,7 +886,7 @@ transform-origin: center;
 .active-2 .img4{
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
-.active-2 .img5{
+.active-2 .{
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
 
@@ -812,7 +906,7 @@ transform-origin: center;
 .active-3 .img4{
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
-.active-3 .img5{
+.active-3 .{
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
 
@@ -832,7 +926,7 @@ transform-origin: center;
 
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
-.active-4 .img5{
+.active-4 .{
   z-index: -9;
   animation: slide-out-bottom 1.5s cubic-bezier(0.755, 0.050, 0.855, 0.060) both;
 }
@@ -958,12 +1052,12 @@ transform-origin: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    /* background: red; */
     position: absolute;
     top: 0;
  }
-.active-1 .Bigimg2{
+ .active-1 .Bigimg2{
   /* position: fixed; */
+  left: 25vw;
     z-index: 99999;
     position:absolute;
     top: 0;
@@ -976,24 +1070,26 @@ transform-origin: center;
     animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
 }
 
-/* Click Big image appear end -2    */
+/* Click Big image appear end -2   */
 /* Click Big image appear -3 */
-.active-2 .BigimgW
+
+  .active-2 .BigimgW
 {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background: red; */
-    position: absolute;
-    top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: red; */
+  position: absolute;
+  top: 0;
+  z-index: -9999;
  }
 .active-2 .Bigimg3{
   background: yellow;
     z-index: 99999;
     position:absolute;
-    top: 50vh;
+    top: 0vh;
     width: 50vw;
     margin: 0;
     display: block;
@@ -1016,11 +1112,12 @@ transform-origin: center;
     /* background: red; */
     position: absolute;
     top: 0;
+    z-index: -99
  }
 .active-3 .Bigimg4{
   z-index: 99999;
   position:absolute;
-  top: 50vh;
+  top: 0vh;
   width: 50vw;
   margin: 0;
   display: block;
@@ -1048,7 +1145,7 @@ animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s bo
 .active-4 .Bigimg5{
   z-index: 99999;
   position:absolute;
-  top: 50vh;
+  top: 0vh;
   width: 50vw;
   margin: 0;
   display: block;
@@ -1057,6 +1154,167 @@ animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s bo
   opacity:1;
      animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
 }
+
+/* Click Big image appear end -5    */
+/* Click Big image appear -6 */
+.active-5 .BigimgW
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+ }
+.active-5 .Bigimg6{
+  z-index: 99999;
+  position:absolute;
+  top: 0vh;
+  width: 50vw;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+
+/* Click Big image appear end -6    */
+/* Click Big image appear -7 */
+.active-6 .BigimgW
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+ }
+.active-6 .Bigimg7{
+  z-index: 99999;
+  position:absolute;
+  top: 0vh;
+  width: 50vw;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+/* Click Big image appear end -7    */
+/* Click Big image appear -8 */
+.active-7 .BigimgW
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+ }
+.active-7 .Bigimg8{
+  z-index: 99999;
+  position:absolute;
+  top: 0vh;
+  width: 50vw;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+
+/* Click Big image appear end -8    */
+/* Click Big image appear -9 */
+.active-8 .BigimgW
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+ }
+.active-8 .Bigimg9{
+  z-index: 99999;
+  position:absolute;
+  top: 0vh;
+  width: 50vw;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+/* Click Big image appear end -9    */
+/* Click Big image appear -10 */
+.active-9 .BigimgW
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+ }
+.active-9 .Bigimg10{
+  z-index: 99999;
+  position:absolute;
+  top: 0;
+  width: 50vw;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+
+
+
+
+}
+/* Click Big image appear end -10   */
+/* Click Big image appear -11 */
+ .active-10 .BigimgW
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: red; */
+    position: absolute;
+    top: 0;
+ }
+ .active-10 .Bigimg11{
+  z-index: 99999;
+  position:absolute;
+  top: 0vh;
+  width: 50vw;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+
+
+
+
 @keyframes slide-in-bottom {
   0% {
             transform: translateY(1000px);
