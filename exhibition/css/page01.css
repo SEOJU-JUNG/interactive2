@@ -463,13 +463,12 @@ float: right;
     position: absolute;
     width: 25vw;
     height: 50vh;
-    left: 75%;
-    top: 100vh;
+    left: 50%;
+    top: 200vh;
     z-index: 99999;
     font-family: proxima-nova, sans-serif;
     background: #0e0e0e;
-
-
+        background: red;
   }
 
 .copyright-text-Wrap{
