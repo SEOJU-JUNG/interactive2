@@ -40,9 +40,9 @@ body {
     width: 25vw;
     height: 50vh;
     top: 0;
-  position:  fixed;
+  /* position:  fixed; */
   z-index: 99999999;
-  background: red;
+  /* background: red; */
 }
 
 .logo{
@@ -197,8 +197,8 @@ align-items: center;
 justify-content: center;
 background: #0e0e0e;
 z-index: 9999;
-background: red;
-position: fixed;
+/* background: red; */
+/* position: fixed; */
 
 }
 
@@ -603,12 +603,7 @@ text-transform:uppercase;
   }
 }
 
-.Bigimg1, .Bigimg2, .Bigimg3, .Bigimg4, .Bigimg5{
-opacity: 0;
-}
-.Big-textW{
-opacity: 0;
-}
+
 
 .bkbox1{
   width: 25vw;
@@ -628,7 +623,29 @@ z-index: 9;
   left: 75%;
 z-index: 9;
 }
+.Bigimg1, .Bigimg2, .Bigimg3, .Bigimg4, .Bigimg5{
+opacity: 0;
+}
+.Big-textW, .Big-text{
+opacity: 0;
+}
 
+.Big-textW{
+  width: 25vw;
+  height: 50vh;
+  background: orange;
+  top: 50vh;
+  left: 75vw;
+  position: absolute;
+  z-index: 999999999;
+  height: 50vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+.Big-text{
+  margin: 0;
+}
 
 
 /* Click function */
@@ -659,6 +676,31 @@ z-index: 9;
 /* .img-page01, .quatation-Wrap, .menu-icon-Wrap{
   display: none;
 } */
+
+/* explanation animation start  */
+
+
+ .active-0 .Big-text{
+     opacity: 1;
+ }
+ .active-0 .Big-textW{
+  opacity: 1;
+ animation: slide-in-bottom 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+animation-delay: 1.5s;
+}
+@keyframes slide-in-bottom {
+ 0% {
+           transform: translateY(1000px);
+   opacity: 0;
+ }
+ 100% {
+           transform: translateY(0);
+   opacity: 1;
+ }
+}
+/* explanation animation end  */
+
+
 .active-0 .bkbox1{opacity:1;} .active-1 .bkbox1{opacity:1;} .active-2 .bkbox1{opacity:1;} .active-3 .bkbox1{opacity:1;} .active-4 .bkbox1{opacity:1;}
 .active-0 .bkbox2{opacity:1;} .active-1 .bkbox2{opacity:1;} .active-2 .bkbox2{opacity:1;} .active-3 .bkbox2{opacity:1;} .active-4 .bkbox2{opacity:1;}
 
@@ -690,20 +732,7 @@ transform-origin: center;
   }
 }
 
-.active-0 .Big-textW{
-  animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-animation-delay: .5s;
-}
-@keyframes slide-in-bottom {
-  0% {
-            transform: translateY(1000px);
-    opacity: 0;
-  }
-  100% {
-            transform: translateY(0);
-    opacity: 1;
-  }
-}
+
 
 /* small disappear *//* disappear *//* disappear *//* disappear */
 
@@ -935,7 +964,7 @@ animation-delay: .5s;
     top: 0;
  }
 .active-1 .Bigimg2{
-  position: fixed;
+  /* position: fixed; */
     z-index: 99999;
     position:absolute;
     top: 0;
@@ -1045,8 +1074,8 @@ animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s bo
 
 /* Click Big image appear end -5    */
 
-
-.active-0 .Big-textW{
+/*
+ .Big-textW{
   width: 25vw;
   height: 50vh;
   position: relative;
@@ -1054,7 +1083,7 @@ animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s bo
   left: 75vw;
   z-index: 999999999999999;
 }
-.active-0 .Big-text{
+ .Big-text{
   margin: 0;
   position: absolute;
   top: 50%;
@@ -1069,7 +1098,8 @@ color: #f0f0f0;
 font-weight: 400;
 text-align: left;
 line-height: 1.6;
-}
+} */
+
 .active-0 .lightText{
   font-weight: 300;
   opacity: 0.6;
@@ -1120,6 +1150,7 @@ font-weight: 500;
 }
 
  .active-0 .menu-icon-Wrap2{
+   /* position: fixed; */
 top: 0;
 position: absolute;
 width: 25vw;
@@ -1130,7 +1161,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 z-index: 99999;
-position: fixed;
 background: : yellow;
 
 }
@@ -1218,6 +1248,7 @@ transform-origin:center;
 }
 
  .active-1 .menu-icon-Wrap2{
+   /* position: fixed; */
 top: 0;
 position: absolute;
 width: 25vw;
@@ -1228,7 +1259,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 z-index: 99999;
-position: fixed;
+
 background: : yellow;
 
 }
@@ -1316,6 +1347,7 @@ transform-origin:center;
 }
 
  .active-2 .menu-icon-Wrap2{
+   /* position: fixed; */
 top: 0;
 position: absolute;
 width: 25vw;
@@ -1326,7 +1358,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 z-index: 99999;
-position: fixed;
+
 background: : yellow;
 
 }
@@ -1414,6 +1446,7 @@ transform-origin:center;
 }
 
  .active-3 .menu-icon-Wrap2{
+   /* position: fixed; */
 top: 0;
 position: absolute;
 width: 25vw;
@@ -1424,7 +1457,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 z-index: 99999;
-position: fixed;
+
 background: : yellow;
 }
 
@@ -1521,7 +1554,7 @@ display: flex;
 align-items: center;
 justify-content: center;
 z-index: 99999;
-position: fixed;
+/* position: fixed; */
 background: : yellow;
 }
 
