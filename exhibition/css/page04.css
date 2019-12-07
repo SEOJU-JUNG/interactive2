@@ -14,7 +14,7 @@ body {
   font-family: proxima-nova,sans-serif;
  /* overflow: hidden; */
 /* height: 120vh; */
-background: pink;
+
 }
 
 /* artist code start here */
@@ -72,9 +72,22 @@ width: 50vw;
     left: 25vw;
     top: 150vh;
     z-index: 99999999999;
-    font-size: 1.25em;
-    background: red;
+    font-size: 2em;
+font-style: normal;
+
     border-left:  solid 1px  rgba(255,255,255,0.4);
+}
+
+.quatation-Wrap3{
+    position: absolute;
+    width: 25vw;
+    height: 50vh;
+    left: 0vw;
+
+    z-index: 99999999999;
+    font-size: 1.25em;
+    border-left:  solid 1px  rgba(255,255,255,0.4);
+        top: 100vh;
 }
 
 .quatation-Wrap3{
@@ -85,7 +98,31 @@ width: 50vw;
     top: 150vh;
     z-index: 99999999999;
     font-size: 1.25em;
-    background: red;
+
+    border-left:  solid 1px  rgba(255,255,255,0.4);
+}
+
+
+.quatation-Wrap4{
+    position: absolute;
+    width: 25vw;
+    height: 50vh;
+    left: 0vw;
+    top: 200vh;
+    z-index: 99999999999;
+    font-size: 1.25em;
+
+    border-left:  solid 1px  rgba(255,255,255,0.4);
+}
+.quatation-Wrap5{
+  width: 25vw;
+  height: 50vh;
+    position: absolute;
+    left: 0vw;
+    top: 100vh;
+    z-index: 99999999999;
+    font-size: 1.25em;
+    /* background: red; */
     border-left:  solid 1px  rgba(255,255,255,0.4);
 }
 
@@ -128,11 +165,11 @@ float: right;
     width: 25vw;
     height: 50vh;
     left: 50%;
-    top: 250vh;
+    top: 200vh;
     z-index: 99999;
     font-family: proxima-nova, sans-serif;
     background: #0e0e0e;
-        background: red;
+
   }
 
 .copyright-text-Wrap{
@@ -206,7 +243,7 @@ float: right;
   background: #0e0e0e;
   scroll-snap-align: start;
   overflow: hidden;
- height: 300vh;
+ height: 250vh;
  z-index: -99999999999999999;
 }
 
