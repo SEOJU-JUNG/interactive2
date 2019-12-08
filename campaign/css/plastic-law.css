@@ -15,8 +15,16 @@ body {
   line-height: 1.5;
 
 }
-video {
+/* video {
   width: 1700px;
+	overflow: visible;
+	z-index: -1;
+	position: absolute;
+	background-repeat: repeat;
+} */
+
+#main-img{
+	width: 1700px;
 	overflow: visible;
 	z-index: -1;
 	position: absolute;
