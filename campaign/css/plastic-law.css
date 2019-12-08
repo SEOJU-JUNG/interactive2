@@ -24,11 +24,13 @@ body {
 } */
 
 #main-img{
-	width: 1700px;
+	width: 100vw;
 	overflow: visible;
 	z-index: -1;
 	position: absolute;
 	background-repeat: repeat;
+	scroll-behavior: auto;
+
 }
 
 #desktop{
