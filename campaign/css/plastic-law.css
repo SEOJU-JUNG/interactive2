@@ -17,6 +17,7 @@ body {
 	width: 100vw;
 	height: 100%;
 	overflow-x: hidden;
+
 }
 /* video {
   width: 1700px;
@@ -36,7 +37,6 @@ height: auto;
 	position: absolute;
 	background-repeat: repeat;
 	z-index: -1;
-	overflow: hidden;
 
 }
 
@@ -48,7 +48,7 @@ height: auto;
 .main-screen{
 	width: 100vw;
 	height: 100vh;
-  overflow: hidden;
+
 	display: block;
 	z-index: -999;
 }
@@ -74,20 +74,20 @@ margin: 0;
 	width: auto;
 position:absolute;
 right: 8vw;
-		font-weight: 500;
+font-weight: normal;
 		top: 30px;
 }
 .koko{font-family: 'Nanum Gothic', sans-serif;
 		font-size: 1rem;
-		font-weight: bold;
+		font-weight: normal;
 		color: white;
 		padding-right: 20px;
 }
-.eng-ko:hover{
-	color: #cccccc;
+.engeng:hover{
+	opacity: 0.8;
 }
 .koko:hover{
-		color: #cccccc;
+	opacity: 0.8;
 }
 
 
@@ -449,6 +449,8 @@ text-align: left;
 	color: #f0f0f0;
 	padding-top:35px;
 	width: 480px;
+	padding-bottom:80px;
+
 }
 .RightWrap-1{
 	width: calc(66vw/2);
@@ -575,7 +577,7 @@ top: 269px;
 	overflow: hidden;
 	background: #01cbe1;
 	z-index: -99;
-	top: calc(100vh + 1116px);
+	top: calc(100vh + 1150px);
 	text-align: center;
 	}
 
@@ -687,16 +689,13 @@ vertical-align: middle;
  	display: block;
  	position: absolute;
  	width: 100vw;
-	he
 	overflow: hidden;
-	top: calc(100vh + 1900px);
+	top: calc(100vh + 1919px);
 background: #f0f0f0;
 margin-bottom: 80px;
-
-
 }
 .textWrap-m2{
-	padding: 80px 0px 80px 0;
+	padding: 80px 0px 60px 0;
 	font-family: proxima-nova, sans-serif;
 color: #003755;
  text-align: center;
@@ -720,46 +719,54 @@ font-weight: 400;
 /* screen-3 */
 .screen-3{
 	font-family: proxima-nova, sans-serif;
-	width: 100vw;
-
 	display: block;
 	position: absolute;
+	z-index: -9;
 	overflow: hidden;
 	background: #f0f0f0;
-	z-index: -19;
-top: calc(100vh + 2130px);
-}
-
-.screen-3{
-	font-family: proxima-nova, sans-serif;
 	width: 100vw;
+	height: 1200px;
+	top: calc(100vh + 2165px);
+	margin-bottom: 80px;
 }
 
-
-
+.screen-4{
+	 font-family: proxima-nova, sans-serif;
+	 display: block;
+	 position: absolute;
+	 z-index: 1;
+	 overflow: hidden;
+	 background: #f0f0f0;
+	 width: 100vw;
+	 height: 1000px;
+	 top: calc(100vh + 3165px);
+	 margin-bottom: 80px;
+		}
 
 
 .bar{
-	width: 60vw;
-	height: auto;
+		width: 60vw;
+		height: auto;
 		display: block;
-	    margin-left: auto;
-	    margin-right: auto;
-			position: relative;
-			top: 40px;
-			position: re
-			\absolute;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		top: 40px;
+		margin-bottom: 80px;
+		/* background: red; */
+		padding: 0;
 
 }
 
 .textWrap-2{
-width: 66vw;
-padding-left: 17vw;
-padding-right: 17vw;
-height: 1000px;
-z-index: 999;
-top: 60px;
-position: relative;
+	width: 66vw;
+	    padding-left: 17vw;
+	    padding-right: 17vw;
+	    height: 900px;
+	    z-index: 999;
+	    top: 60px;
+	    position: relative;
+	    margin-bottom: 80px;
 
 }
 .LeftWrap-2{-4
@@ -858,18 +865,7 @@ color: #003755;
  }
  /* 4444444 */
  /* page2 */
- .screen-4{
- 	font-family: proxima-nova, sans-serif;
- 	width: 100vw;
- 	height: 1000px;
- 	display: block;
- 	position: absolute;
-  	overflow: hidden;
-  	background: #f0f0f0;
-  	z-index: 1;
-		top: calc(100vh + 3130px);
 
-		 }
 		 .textWrap-4{
 		 position: absolute;
 		 animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
