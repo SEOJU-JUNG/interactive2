@@ -882,7 +882,7 @@ color: #003755;
 		 	position: absolute;
 		 }
 		 .subtitle-04{
-		 		padding-top:10px;
+		 padding-top:10px;
 		 position: absolute;
 		 letter-spacing: -.035em;
 		 color: #01cbe1;
@@ -1297,10 +1297,10 @@ opacity: 1;
 .signbig-box{
 	position: absolute;
 	background: #ef4325;
-	width: calc(170px * 3);
-	height: calc(55px * 2.5);
+	width: calc(170px * 2.5);
+	height: calc(55px * 2.1);
 	display: block;
-	top: 230px;
+	top: 250px;
 	border-radius: 1%;
 	display: flex;
 	align-items: center;
@@ -1323,7 +1323,7 @@ font-weight: 400;
 	font-size: 21px;
 color: #003755;
 font-weight: 300;
- padding-top:95px;
+ padding-top:105px;
  text-align: center;
  display: block;
    margin: 0;
