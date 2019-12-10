@@ -1,8 +1,7 @@
 html {
   scroll-snap-type: y mandatory;
   overscroll-behavior: none;
-   /* overflow: hidden;
-  height: 100vh; */
+
   overflow: auto;
 
 
@@ -167,6 +166,24 @@ animation: scale-ver 1.4s .5s cubic-bezier(0.55,0.005,0.855,0.06) both;
   height:50vmin;
   z-index:-1;
   transform: scale(1);
+  transform-origin: center;
+  transition: transform .5s ease-in-out;
+  z-index: 99999999999999999999;
+  animation: intro 3.3s ease-in-out;
+}
+
+#main-img2{
+  position:absolute;
+  top:calc(50vh - 25vmin);
+  left:calc(50vw - 25vmin);
+  width: 100%;
+  position:absolute;
+  top:calc(50vh - 25vmin);
+  left:calc(50vw - 25vmin);
+  width:50vmin;
+  height:50vmin;
+  z-index:-1;
+  transform: scale(1.15);
   transform-origin: center;
   transition: transform .5s ease-in-out;
   z-index: 99999999999999999999;
