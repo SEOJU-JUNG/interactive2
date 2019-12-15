@@ -219,41 +219,31 @@ left: 75%;
 
 /* scroll */
 .scroll-Wrap{
-    position: absolute;
-    width: 25vw;
-    height: 50vh;
-    top: 50vh;
-    text-align: center;
-    display: flex;
- align-items: center;
- justify-content: center
-}
+  position: absolute;
+  width: 25vw;
+  height: 50vh;
+  top: 50vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.scroll-Wrap3{
-  top: 10px;
-  position: relative;
-  background: red;
 }
 
 
 .scroll-text{
-  z-index: 111;
-margin: 0;  /* height: 100px; */
-    font-family: proxima-nova,sans-serif;
-    font-weight: 300;
-    font-size:1.2rem;
-    color: white;
-    text-transform: capitalize;
-    letter-spacing: 0.25em;
-    position: absolute;
-    animation: slide-in-leftW 2s ease-in-out both;
-    transform-origin: center;
-  	transform: scaleX(1);
+
+  margin: 0;
+  font-family: proxima-nova,sans-serif;
+  font-weight: 300;
+  font-size:1.2rem;
+  color: white;
+  text-transform: capitalize;
+  letter-spacing: 0.25em;
+  position: absolute;
+  animation: intro 1.5s ease-in-out;
 }
-.scroll-text3{
-  position:relative;
-  top: 10px;
-}
+
 
 .line-scroll{
   z-index: 99;
@@ -838,7 +828,7 @@ animation: line-up 1.5s 2s infinite ease-in-out both;
   margin: 0;  /* height: 100px; */
   font-family: proxima-nova,sans-serif;
   font-weight: 300;
-  font-size:1rem;
+  font-size:.9rem;
   color: white;
   text-transform: capitalize;
   letter-spacing: 0.25em;
@@ -881,13 +871,11 @@ animation: line-up 1.5s  1.5s infinite ease-in-out both;
   width: 50vw;
   height: 25vh;
   transform-origin: center;
-  transform: scale(.3);
+  transform: scale(.25);
 }
 
 /* Menu-icon start */
 .menu-icon-Wrap-m{
-  pointer-events: visible;
-  pointer-events: visibleFill;
   position: absolute;
   width: 50vw;
   height: 25vh;
@@ -896,7 +884,9 @@ animation: line-up 1.5s  1.5s infinite ease-in-out both;
   overflow: hidden;
 }
 .menu-line-m{
-  width: 30px;
+  pointer-events: visible;
+  pointer-events: visibleFill;
+  width: 40px;
   margin-left: -10px;
   background: white;
   height: 2.5px;
@@ -937,7 +927,7 @@ text-align: center;
 .ArtWork-m{
 /* background: black; */
 margin: 0;
-font-size: 1.75rem;
+font-size: 1.6rem;
 font-weight: 500;
 transition: transform .3s ease-in-out;
 margin-top: 15px;

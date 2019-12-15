@@ -467,8 +467,6 @@ opacity: 1;
 /* text end */
 
 .Aimg-Wrap-m{
-  pointer-events: visible;
-  pointer-events: visibleFill;
   position: absolute;
   width: 50vw;
   height: 25vh;
@@ -480,7 +478,6 @@ opacity: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: scale(1.2);
   }
 
   .Aimg-m{
@@ -574,12 +571,14 @@ opacity: 1;
   }
   .x-icon-m{
     margin: 0;
-    height: 55px;
-    width: 1.4px;
+    height: 70px;
+    width: 1.5px;
     position: absolute;
     left: 50%;
     transition: 0.7s ease-in-out;
     background: white;
+
+
   }
   .x-icon-1-m{
   transform:rotate(-45deg);
@@ -705,7 +704,7 @@ opacity: 1;
   width: 50vw;
   height: 25vh;
   transform-origin: center;
-  transform: scale(.25);
+  transform: scale(.3);
   }
   .text-01-Wrap-m{
   width: 50vw;
