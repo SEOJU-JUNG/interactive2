@@ -4,9 +4,6 @@ html {
 
   overflow: auto;
 
-
-
-
 }
 body {
 
@@ -711,6 +708,24 @@ justify-content: center
         height:50vmin;
         z-index:-1;
         transform: scale(1);
+        transform-origin: center;
+        transition: transform .5s ease-in-out;
+        z-index: 99999999999999999999;
+        animation: intro 3.3s ease-in-out;
+      }
+
+      #main-img-m2{
+        position:absolute;
+        top:calc(50vh - 25vmin);
+        left:calc(50vw - 25vmin);
+        width: 100%;
+        position:absolute;
+        top:calc(50vh - 25vmin);
+        left:calc(50vw - 25vmin);
+        width:50vmin;
+        height:50vmin;
+        z-index:-1;
+        transform: scale(1.125);
         transform-origin: center;
         transition: transform .5s ease-in-out;
         z-index: 99999999999999999999;
