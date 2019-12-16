@@ -4,6 +4,7 @@ html {
   overflow: smooth;
   pointer-events: none;
   z-index: -999999999999;
+  scroll-behavior: smooth;
 }
 
 a{

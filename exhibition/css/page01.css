@@ -60,6 +60,8 @@ width: 25vw;
 height: 50vh;
 transform-origin: center;
 transform: scale(.2);
+pointer-events: visible;
+pointer-events: visibleFill;
 }
 
 /* line start */
