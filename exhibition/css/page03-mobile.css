@@ -404,7 +404,7 @@ display: flex;
   }
 
 
-
+  /* X icon */
 .menuWrap-m{
     top: 0;
     position: absolute;
@@ -414,30 +414,9 @@ display: flex;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #0e0e0e;
-    z-index: 9999;
+    z-index: 999999;
     animation: fade-in 1s ease;
-
 }
-
-/* X icon */
-  .xw{
-    background: orange;
-    width: 60px;
-    height: 60px;
-    position: relative;
-    background: yellow;
-    background: #0e0e0e;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    transition: 0.7s ease-in-out;
-    transform-origin: center;
-    animation: intro 1.5 ease-in-out;
-
-  }
-
-
   .xwww{
   width: 60px;
   height: 60px;
@@ -446,36 +425,29 @@ display: flex;
   align-items: center;
   transform-origin: center;
   transition: 0.7s ease-in-out;
-  /* background: yellow; */
   z-index: 99999999;
   pointer-events: visible;
   pointer-events: visibleFill;
-
   }
   .x-icon-m{
     margin: 0;
-    height: 55px;
+    height: 60px;
     width: 1.4px;
-    position: absolute;
+    position: relative;
     left: 50%;
     transition: 0.7s ease-in-out;
     background: white;
-
+    transform-origin: center;
   }
   .x-icon-1-m{
   transform:rotate(-45deg);
-  transform-origin: center;
-
   }
   .x-icon-2-m{
   transform:rotate(45deg);
-  transform-origin:center;
-
   }
   .xwww:hover{
     /* transition: 0.7s ease-in-out; */
     transform: rotate(90deg);
-    transform-origin: center;
   }
 /* X icon END *//* X icon END *//* X icon END *//* X icon END */
 
