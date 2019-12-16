@@ -211,44 +211,6 @@ left: 50%;
 left: 75%;
 }
 
-/* scroll */
-.scroll-Wrap{
-  position: absolute;
-  width: 25vw;
-  height: 50vh;
-  top: 50vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll-text{
-  margin: 0;
-  font-family: proxima-nova,sans-serif;
-  font-weight: 300;
-  font-size:1.2rem;
-  color: white;
-  text-transform: capitalize;
-  letter-spacing: 0.25em;
-  position: absolute;
-  animation: intro 1.5s ease-in-out;
-}
-
-.line-scroll{
-  z-index: 99;
-  position: absolute;
-  height: 90px;
-  width: 1.3px;
-  background: rgba(255,255,255,.4);
-margin-top: 80px;
-  animation: line 1.5s 2s infinite ease-in-out both;
-  }
-  .scroll-up{
-margin-top: -80px;
-animation: line-up 1.5s 2s infinite ease-in-out both;
-
-  }
 
   @-webkit-keyframes line {
     0% {

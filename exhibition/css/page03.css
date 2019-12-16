@@ -337,6 +337,11 @@ width: 25vw;
 height: 50vh;
 transform-origin: center;
 transform: scale(.2);
+transition: width 2s ease-in-out;
+
+}
+.logo:hover{
+width: 30vw;
 }
 
 /* line start */

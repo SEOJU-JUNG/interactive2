@@ -307,17 +307,17 @@ opacity: 1;
     .img1-m{
     z-index: 99999;
     pointer-events: none;
-    transform: scale(.1);
+    transform: scale(.05);
     }
     .img2-m{
-    transform: scale(.07);
+    transform: scale(.04);
     }
     /* img 3*/
     .imgWrap3-m{
     top: 100vh;
     }
     .img3-m{
-    transform: scale(.08);
+      transform: scale(.04);
     }
     /* img 4*/
     .imgWrap4-m{
@@ -383,7 +383,7 @@ opacity: 1;
     top: 200vh;
     }
     .img11-m{
-    transform: scale(.07);
+      transform: scale(.04);
     }
 /* img end */
 /* img end */
