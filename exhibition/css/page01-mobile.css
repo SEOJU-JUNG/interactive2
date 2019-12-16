@@ -308,17 +308,17 @@ opacity: 1;
     .img1-m{
     z-index: 99999;
     pointer-events: none;
-    transform: scale(.05);
+    transform: scale(.25);
     }
     .img2-m{
-    transform: scale(.04);
+      transform: scale(.2);
     }
     /* img 3*/
     .imgWrap3-m{
     top: 100vh;
     }
     .img3-m{
-      transform: scale(.04);
+      transform: scale(.2);
     }
     /* img 4*/
     .imgWrap4-m{
@@ -327,14 +327,14 @@ opacity: 1;
     z-index: 9999;
     }
     .img4-m{
-    transform: scale(.07);
+      transform: scale(.18);
     }
     /* img 5*/
     .imgWrap5-m{
     top: 125vh;
     }
     .img5-m{
-    transform: scale(.07);
+      transform: scale(.18);
     }
     /* img 6*/
     .imgWrap6-m{
@@ -343,7 +343,7 @@ opacity: 1;
     }
     .img6-m{
     margin-top: 14.8px;
-    transform: scale(.04);
+    transform: scale(.2);
     }
     /* img 7*/
     .imgWrap7-m{
@@ -351,7 +351,7 @@ opacity: 1;
     }
     .img7-m{
     margin-top: -35px;
-    transform: scale(.06);
+    transform: scale(.3);
     }
     /* img 8*/
     .imgWrap8-m{
@@ -360,7 +360,7 @@ opacity: 1;
     }
     .img8-m{
     margin-top: 26px;
-    transform: scale(.05);
+    transform: scale(.25);
     }
 
     /* img 9*/
@@ -368,7 +368,7 @@ opacity: 1;
     top: 175vh;
     }
     .img9-m{
-    transform: scale(.08);
+      transform: scale(.2);
     }
     /* img 10*/
     .imgWrap10-m{
@@ -377,14 +377,14 @@ opacity: 1;
 
     }
     .img10-m{
-    transform: scale(.1);
+      transform: scale(.25);
 
     }  /* img 11*/
     .imgWrap11-m{
     top: 200vh;
     }
     .img11-m{
-      transform: scale(.04);
+      transform: scale(.2);
     }
 /* img end */
 /* img end */
@@ -685,7 +685,7 @@ opacity: 1;
 
   /* grid *//* grid *//* grid *//* grid *//* grid */
   .line-middle-m{
-    z-index: 99999999999999999999999;
+    z-index: 999999999999999999999999999999999999999999999999;
     width: 100vw;
     height: 1px;
     background: white;
@@ -693,6 +693,7 @@ opacity: 1;
     opacity:0.4;
     animation: scale-ho 1.4s .5s cubic-bezier(0.55,0.005,0.855,0.06) both;
   }
+
   .middle1-m{
   top: 25vh;
   }
@@ -727,6 +728,15 @@ opacity: 1;
   top: 250vh;
   z-index: 99999999999999999999999999;
   }
+  .middle11-m{
+bottom:0vh;
+  position: absolute;
+
+  width: 100vw;
+  z-index: 9999999999999999999999999999999;
+  }
+
+
 
   .line-vertical-m{
   z-index: 99999999999999999999999999;
@@ -754,9 +764,13 @@ opacity: 1;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+
 }
 
 .quatation5m{
+
   overflow: hidden;
   margin: 0;
   position: absolute;
