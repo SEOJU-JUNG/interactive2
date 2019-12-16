@@ -1468,91 +1468,122 @@ transform-origin: center;
 {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: absolute;
     top: 0;
+    display: flex;
+  align-items: center;
+  justify-content: center;
  }
+
  .active-1 .Bigimg2{
   /* position: fixed; */
-  left: 25vw;
-    z-index: 99999;
+    z-index: 999999;
     position:absolute;
-    top: 0;
-    width: 50vw;
+    width: 40vw;
     margin: 0;
-    display: block;
+    opacity:1;
+    top: 40px;
+    animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+.active-1 .Bk-img2{
+ background:#0e0e0e;
+ z-index: 999998;
+ position:absolute;
+ width: 50vw;
+ height: 100vh;
+ margin: 0;
+ display: block;
     margin-left: auto;
     margin-right: auto;
-    opacity:1;
-    animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+ opacity:1;
+ left: 25%;
+ animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
 }
 
 /* Click Big image appear end -2   */
 /* Click Big image appear -3 */
 
-  .active-2 .BigimgW
+.active-2 .BigimgW
 {
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background: red; */
   position: absolute;
   top: 0;
-  z-index: -9999;
+  z-index: 999999;
  }
-.active-2 .Bigimg3{
+ .active-2 .Bigimg3{
   background: yellow;
-    z-index: 99999;
-    position:absolute;
-    top: 0vh;
-    width: 50vw;
+ z-index: 999999;
+ position:absolute;
+    top: 47px;
+    width: 45vw;
     margin: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
     opacity:1;
     animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
-
+}
+.active-2 .Bk-img3{
+ background:#0e0e0e;
+ z-index: 999998;
+ position:absolute;
+ width: 50vw;
+ height: 100vh;
+ margin: 0;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+ opacity:1;
+ left: 25%;
+ animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
 }
 
 /* Click Big image appear end -3    */
 /* Click Big image appear -4 */
+
 .active-3 .BigimgW
 {
-  z-index: 99999;
-  position:absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
   top: 0;
-  width: 50vw;
-  margin: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  opacity:1;
-  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
-
+  z-index: 999999;
  }
-.active-3 .Bigimg4{
+ .active-3 .Bigimg4{
   background: yellow;
-    z-index: 99999;
-    position:absolute;
-    top: 0vh;
-    left: 25vw;
-    width: 50vw;
+ z-index: 999999;
+ position:absolute;
+    top: 55px;
+    width: 40vw;
     margin: 0;
     display: block;
     margin-left: auto;
     margin-right: auto;
     opacity:1;
     animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+.active-3 .Bk-img4{
+ background:#0e0e0e;
+ z-index: 999998;
+ position:absolute;
+ width: 50vw;
+ height: 100vh;
+ margin: 0;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+ opacity:1;
+ left: 25%;
+ animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
 
-}
-.active-3 .Bigimg4{
-  z-index: 999999999999999999999999999;
-}
 
 /* Click Big image appear end -4    */
 /* Click Big image appear -5 */
@@ -1568,16 +1599,30 @@ transform-origin: center;
     top: 0;
  }
 .active-4 .Bigimg5{
-  z-index: 99999;
+  z-index: 999991;
   position:absolute;
-  top: 0vh;
-  width: 50vw;
+  width: 45vw;
   margin: 0;
   display: block;
   margin-left: auto;
   margin-right: auto;
   opacity:1;
-     animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+ .active-4 .Bk-img5{
+  background:#0e0e0e;
+  z-index: 99999;
+  position:absolute;
+  top: 0px;
+  width: 50vw;
+  height: 100vh;
+  margin: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  opacity:1;
+  left: 25%;
+  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
 }
 
 /* Click Big image appear end -5    */
@@ -1596,7 +1641,6 @@ transform-origin: center;
     top: 0;
  }
 
-
 .active-5 .Bigimg6{
   position:absolute;
   width: 50vw;
@@ -1605,7 +1649,6 @@ z-index: 999999999;
   margin-left: auto;
   margin-right: auto;
   opacity:1;
-
   animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
 }
 
@@ -1716,30 +1759,41 @@ z-index: 999999999;
 }
 /* Click Big image appear end -10   */
 /* Click Big image appear -11 */
- .active-10 .BigimgW
+.active-10 .BigimgW
 {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* background: red; */
     position: absolute;
     top: 0;
+    display: flex;
+  align-items: center;
+  justify-content: center;
  }
- .active-10 .Bigimg11{
-  z-index: 99999;
-  position:absolute;
-  top: 0vh;
-  width: 50vw;
-  margin: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  opacity:1;
-  animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
-}
 
+ .active-10 .Bigimg11{
+  /* position: fixed; */
+    z-index: 999999;
+    position:absolute;
+    width: 40vw;
+    margin: 0;
+    opacity:1;
+    top: 40px;
+    animation: slide-in-bottom 1.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
+.active-10 .Bk-img11{
+ background:#0e0e0e;
+ z-index: 999998;
+ position:absolute;
+ width: 50vw;
+ height: 100vh;
+ margin: 0;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;
+ opacity:1;
+ left: 25%;
+ animation: slide-in-bottom 1.5s cubic-bezier(0.165, 0.840, 0.440, 1.000) 1.5s both;
+}
 
 
 

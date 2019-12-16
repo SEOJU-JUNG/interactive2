@@ -359,6 +359,8 @@ display: flex;
     left: 50%;
     transition: 0.7s ease-in-out;
     background: white;
+    pointer-events: visible;
+    pointer-events: visibleFill;
 
   }
   .x-icon-1-m{

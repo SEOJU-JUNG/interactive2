@@ -325,6 +325,8 @@ border-right: 1px solid rgba(255,255,255,0.4);
     top: 0;
   /* position:  fixed; */
   z-index: 99999999;
+  pointer-events: visible;
+  pointer-events: visibleFill;
   /* background: red; */
 }
 
@@ -506,6 +508,8 @@ display: flex;
 align-items: center;
 transition: 0.7s ease-in-out;
 transform-origin: center;
+pointer-events: visible;
+pointer-events: visibleFill;
 
 
 

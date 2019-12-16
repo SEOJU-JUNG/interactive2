@@ -227,12 +227,9 @@ left: 75%;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-
 .scroll-text{
-
   margin: 0;
   font-family: proxima-nova,sans-serif;
   font-weight: 300;
@@ -243,7 +240,6 @@ left: 75%;
   position: absolute;
   animation: intro 1.5s ease-in-out;
 }
-
 
 .line-scroll{
   z-index: 99;
@@ -625,8 +621,27 @@ animation: line-up 1.5s 2s infinite ease-in-out both;
 
 
 .pageChangeAnimation #main-img{
+
   animation: bye .9s ease-in-out;
 }
+
+
+
+.pageChangeAnimation .scroll-Wrap{
+    animation: move-left .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
+}
+.pageChangeAnimation .text-01-Wrap{
+  animation: move-right .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
+}
+.pageChangeAnimation .menu-icon-Wrap{
+  animation: move-right .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
+}
+
+/* 22 */
+
+
+
+
 
 @-webkit-keyframes bye {
   0% {
@@ -639,16 +654,6 @@ animation: line-up 1.5s 2s infinite ease-in-out both;
   }
 }
 
-
-.pageChangeAnimation .scroll-Wrap{
-    animation: move-left .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
-}
-.pageChangeAnimation .text-01-Wrap{
-  animation: move-right .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
-}
-.pageChangeAnimation .menu-icon-Wrap{
-  animation: move-right .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
-}
 @keyframes move-left {
 0% {
           transform: translateX(0);
@@ -1026,55 +1031,3 @@ opacity:1;
 
 
       /* Text bottom  end --> */
-
-
-
-
-      /* Click- ANIMATION */
-      /* Click- ANIMATION */
-      /* Click- ANIMATION */
-
-
-      .pageChangeAnimation #main-img{
-        animation: bye .9s ease-in-out;
-      }
-
-      @-webkit-keyframes bye {
-        0% {
-                  transform: scale(1);
-          opacity: 1;
-        }
-        100% {
-                  transform: scale(0);
-          opacity: 1;
-        }
-      }
-
-
-      .pageChangeAnimation .scroll-Wrap{
-          animation: move-left .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
-      }
-      .pageChangeAnimation .text-01-Wrap{
-        animation: move-right .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
-      }
-      .pageChangeAnimation .menu-icon-Wrap{
-        animation: move-right .75s cubic-bezier(0.755,0.05,0.855,0.06) both;
-      }
-      @keyframes move-left {
-      0% {
-                transform: translateX(0);
-      }
-
-      100% {
-                transform: translateX(-500px);
-      }
-      }
-      @keyframes move-right {
-      0% {
-                transform: translateX(0);
-      }
-
-      100% {
-                transform: translateX(500px);
-      }
-      }
