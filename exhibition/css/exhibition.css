@@ -880,6 +880,8 @@ animation: line-up 1.5s  1.5s infinite ease-in-out both;
 
 /* Menu-icon start */
 .menu-icon-Wrap-m{
+  pointer-events: visible;
+  pointer-events: visibleFill;
   position: absolute;
   width: 50vw;
   height: 25vh;
