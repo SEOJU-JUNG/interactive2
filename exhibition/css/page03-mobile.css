@@ -621,6 +621,10 @@ display: flex;
   top: 250vh;
   z-index: 9999999;
   }
+  .middle12-m{
+  bottom:0vh;
+  z-index: 9999999;
+  }
 
   .line-vertical-m{
   z-index: 99999999;

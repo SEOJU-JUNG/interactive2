@@ -520,6 +520,12 @@ display: flex;
   top: 250vh;
   z-index: 9999999;
   }
+  .middle11-m{
+bottom:0vh;
+  position: absolute;
+  width: 100vw;
+  z-index: 9999999999999999999999999999999;
+  }
 
   .line-vertical-m{
   z-index: 99999999;
