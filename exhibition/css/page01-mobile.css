@@ -523,6 +523,8 @@ opacity: 1;
     justify-content: center;
     background: #0e0e0e;
     z-index: 9999;
+    animation: fade-in 1s ease;
+
 }
 
 /* X icon */
