@@ -1,17 +1,25 @@
+
+HTML CSS JSResult
+*{
+  font-family:proxima-nova,sans-serif;
+}
 html {
-  scroll-snap-type: y mandatory;
-  overscroll-behavior: none;
-  overflow: auto;
+  scroll-behavior: smooth;
 }
 body {
-  font-size:2vw;
+
   background: #0e0e0e;
   margin:0;
   padding:0;
   font-family: proxima-nova,sans-serif;
-/* height: 100vh; */
-/* overflow: auto; */
-z-index: -999999999999999999999999999999999;
+ /* overflow: hidden; */
+/* height: 120vh; */
+
+}
+html {
+  scroll-snap-type: y mandatory;
+  overscroll-behavior: none;
+  overflow: auto;
 }
 a{
   text-decoration: none;

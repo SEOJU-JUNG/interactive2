@@ -364,6 +364,8 @@ animation: scale-ho .95s cubic-bezier(0.55,0.05,0.855,0.06) both;
 .img-page01-1.clicked{
   transform: scale(2);
 }
+
+
 /* Ticket */
 .TicketW{
   position: absolute;
@@ -401,6 +403,7 @@ animation: scale-ho .95s cubic-bezier(0.55,0.05,0.855,0.06) both;
   letter-spacing: 0em;
 
 }
+
 /* A img */
 .Aimg-Wrap1{
   pointer-events: visible;
