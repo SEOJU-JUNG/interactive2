@@ -351,21 +351,6 @@ background: black;
 
   /* scorll end */
 
-.quatation-Wrap{
-    top: 0;
-    position: absolute;
-    width: 25vw;
-    height: 50vh;
-    left: 25%;
-    top: 50vh;
-    z-index: 99999999999;
-    font-size: 1.25em;
-
-    /* background: red; */
-
-
-  animation: intro 2s ease-in-out;
-  }
 
 
 
@@ -440,97 +425,106 @@ float: right;
 
 
 /* -img start */
-.imgP1{
-  position: absolute;
-  width: 25vw;
-  margin: 0;
-  /* background: yellow; */
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  /* background: red; */
-  text-align: center;
-  vertical-align: middle;
-  z-index: 999999;
-
-}
-.title{
-  opacity: 1;
-  color: #f0f0f0f0;
-  z-index: 999999;
-  margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: proxima-nova-condensed, sans-serif;
-  letter-spacing: 0.09em;
-text-transform:uppercase;
-}
-
 .imgWrap{
   position: relative;
   width: 25vw;
   height: 50vh;
   display: flex;
   align-items: center;
-  justify-content: center
-  z-index: 9999;
+  justify-content: center;
   background: red;
   overflow: hidden;
+
+}
+.imgP1{
+  position: absolute;
+  width: 25vw;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  vertical-align: middle;
+  cursor:grab;
 }
 
 .img{
   position: absolute;
-  z-index: 999;
   background: #0e0e0e;
-  /* transform: scale(.7); */
 }
-.img1{
-    z-index: 99;
-    top: 50vh;
-    left: 50%;
-    overflow: hidden;
 
-}
 .img1 img {
+  overflow: hidden;
   animation-duration: 1.5s;
   animation: slide-in-bottom2img 2.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
 }
-.img2{
-  z-index: 99;
-  top: 50vh;
-  left: 75%;
 
-  /* animation: slide-in-bottom1 2s  ease-in-out; */
-  overflow: hidden;
-      transform-origin: center;
-}
 .img2 img {
+  overflow: hidden;
 
   animation: slide-in-bottom2img 2.5s cubic-bezier(0.075, 0.820, 0.165, 1.000) both;
+}
+.img1{
+  z-index: -99;
+  top: 50vh;
+  left: 50%;
+  overflow: hidden;
+  /* transition: transform .3s, box-shadow .4s; */
+  transform: scale(1);
+  transition: .3s all;
 
 }
+
+.img2{
+
+  top: 50vh;
+  left: 75%;
+  /* animation: slide-in-bottom1 2s  ease-in-out; */
+  overflow: hidden;
+  transform-origin: center;
+  transform: scale(1);
+}
+
+.img2:hover {
+  width: 25vw;
+  height: 50vh;
+  overflow: hidden;
+  z-index: -9999999;
+  position: absolute;
+
+
+}
+
 
 .img3{
   z-index: 9;
   top: 100vh;
   left: 0%;
-  transform: scale(.95);
+  transform: scale(1);
   transform-origin: center;
 }
 .img4{
   z-index: 9;
   top: 100vh;
   left: 25%;
-  transform: scale(.85);
+  transform: scale(1);
   transform-origin: center;
 
 }
 .img5{
-  z-index: 999;
+  z-index: 99;
   top: 100vh;
   left: 50%;
-  transform: scale(.9);
+  transform: scale(1);
+  transform-origin: center;
+}
+.img5:hover{
+  z-index: -99999999;
+  z-index: 99;
+  top: 100vh;
+  left: 50%;
+  transform: scale(1);
   transform-origin: center;
 }
 
@@ -559,14 +553,33 @@ transform: scale(1);
 }
 .box88{
   position: absolute;
-  z-index: 99999;
+  z-index: 999999;
   width: 25vw;
   height: 50vh;
    left: 25%;
    top: 200vh;
   background: #0e0e0e;
-
-
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.box99{
+  position: absolute;
+  z-index: 99999;
+  width: 25vw;
+  height: 50vh;
+   left: 50%;
+   top: 200vh;
+  background: #0e0e0e;
+}
+.box999{
+  position: absolute;
+  z-index: 99999;
+  width: 25vw;
+  height: 50vh;
+   left: 75%;
+   top: 200vh;
+  background: #0e0e0e;
 }
 
 .img9{
@@ -591,6 +604,244 @@ transform: scale(1);
 transform: scale(1);
 background: #0e0e0e;
 }
+
+
+.img2, .img3, .img4, .img5, .img6, .img7, .img8, .img9, .img10, .img11{
+  transition: .3s all;
+  overflow: hidden;
+
+}
+
+.title{
+  position: absolute;
+  opacity: 1;
+  color: #f0f0f0f0;
+  background: rgba(14, 14, 14, 0.85);
+  width: 25vw;
+  height: 50vh;
+  line-height: 50vh;
+  text-align: center;
+  z-index: 999999;
+  margin: 0;
+  font-size: 55%;
+  font-weight: 600;
+  font-family: proxima-nova-condensed, sans-serif;
+  letter-spacing: 0.3em;
+  text-transform:uppercase;
+  /* transition: .3s all; */
+  opacity: 0;
+  pointer-events: none;
+  cursor:grab;
+}
+
+.img2:hover {
+      overflow: hidden;
+      transition: 0s;
+}
+.img1:hover {
+      z-index: -999;
+      overflow: hidden;
+      transition: 0s;
+      transition: .3s all;
+
+}
+
+
+
+
+
+.img1:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+width: 25vw;
+
+}
+
+.img2:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+width: 25vw;
+}
+
+.img3:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+.img4:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+.img5:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  overflow: hidden;
+  width: 25vw;
+
+
+}
+.img6:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+.img7:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+.img8:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+.img9:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+.img10:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+.img11:hover .title{
+  opacity: 1;
+  cursor:grab;
+  transition: .3s all;
+  width: 25vw;
+}
+
+
+
+
+
+.img1:hover{
+  cursor:grab;
+  transition: .3s all;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+
+}
+
+.img2:hover{
+  cursor:grab;
+  transition: .3s all;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+}
+.img3:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+.img4:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+.img5:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: 99;
+}
+.img6:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+
+.img7:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+.img8:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+
+.img9:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+
+.img10:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+.img11:hover{
+  cursor:grab;
+  transition: .3s all;
+  z-index: -9;
+  transform: perspective(1px) scale(1.048); transform: perspective(1px) scale(1.048);
+  transform: perspective(1px) translateZ(0); transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) scale(1.1);
+    z-index: -9999;
+}
+
+
+
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
 @keyframes slide-in-bottom1 {
 
   0% {
@@ -805,16 +1056,33 @@ z-index: 9;
    justify-content: center;
       pointer-events : none;
 }
+.quatation-Wrap{
+    top: 0;
+    position: absolute;
+    width: 25vw;
+    height: 50vh;
+    left: 25%;
+    top: 50vh;
+    z-index: 99;
+    font-size: 1.25em;
+
+    background: #0e0e0e;
+
+
+  }
 
 
 .quatation-text-Wrap{
   height: 50vh;
   width: 25vw;
-
+  overflow: hidden;
   display: flex;
  align-items: center;
  justify-content: center;
      overflow: hidden;
+     z-index: 99;
+     animation: intro 2s ease-in-out;
+
 }
 .quatation{
 margin: 0;
@@ -2711,3 +2979,39 @@ transform-origin:center;
 }
 /* X-ICON END*/
 /* X-ICON END*/
+
+.active-0 .title{
+  display: none;
+}
+.active-1 .title{
+  display: none;
+}
+.active-2 .title{
+  display: none;
+}
+.active-3 .title{
+  display: none;
+}
+.active-4 .title{
+  display: none;
+}.active-5 .title{
+  display: none;
+}
+.active-6 .title{
+  display: none;
+}
+.active-7 .title{
+  display: none;
+}
+.active-8 .title{
+  display: none;
+}
+.active-9 .title{
+  display: none;
+}
+.active-10 .title{
+  display: none;
+}
+.active-11 .title{
+  display: none;
+}
